@@ -127,3 +127,13 @@ myApp.run(function ($rootScope, $location, $state, AuthService) {
       });
   });
 });
+
+function openNav() {
+    document.getElementsByClassName("sideMenu").style.width = "16vw";
+    document.getElementsByClassName("landing").style.marginLeft = "16vw";
+}
+
+function closeNav() {
+    document.getElementsByClassName("sideMenu").style.width = "0";
+    document.getElementsByClassName("landing").style.marginLeft = "0";
+}
