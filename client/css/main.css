@@ -1,0 +1,245 @@
+@font-face {
+    font-family: 'Hel-Light';
+    src: url('../fonts/Helvetica-Neue-Light.otf');
+}
+
+@font-face {
+    font-family: 'Hel-Bold';
+    src: url('../fonts/Helvetica-Neue-Bold.otf');
+}
+
+body {
+    font-family: Hel-Light;
+}
+
+h3 {
+    font-family: Hel-Bold;
+}
+.landing {
+    overflow: hidden;
+    height: 100vh;
+}
+
+
+
+
+.landing--banner {
+    height: 100vh;
+    width: 60vw;
+    background-color: #2166af;
+    background-size: cover;
+    z-index: 0;
+    text-align: center;
+
+}
+
+#navbar div {
+
+    width: 35px;
+    height: 2px;
+    background-color: black;
+    margin: 8px 0;
+}
+
+.hero-text {
+    padding-top: 23%;
+    padding-bottom: 5%;
+}
+
+.landing--banner h1 {
+    margin-top: 0;
+    font-size: 300%;
+    color: white;
+    text-align: center;
+    padding-left: 15%;
+    padding-right: 45%;
+
+}
+
+.landing--banner a {
+    color: white;
+    text-transform: uppercase;
+    font-size: 140%;
+    text-align: center;
+    padding-right: 30%;
+    padding-bottom:5%;
+
+}
+
+.landing--banner p {
+    font-size: 320%;
+    color: white;
+    text-align: center;
+    width: 35vw;
+    padding-left: 10%;
+
+}
+
+.yellow {
+    background-color: #ffe400;
+    width: 67%;
+
+}
+
+i {
+    border: solid #f4f4f4;
+    border-width: 0 6px 6px 0;
+    display: inline-block;
+    padding: 6px;
+}
+
+.right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+
+#burger {
+    padding-top: 4%;
+}
+
+.mousescroll {
+    height: 7%;
+    color: white;
+}
+
+.skyscraper {
+    width: 23%;
+    position: relative;
+    right: 11%;
+    bottom:50px;
+    clip: rect(0px,60px,200px,0px);
+}
+
+.request {
+    position: relative;
+    top: 400px;
+    left: 113px;
+    background-color: #2166af;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 30px;
+    text-transform: uppercase;
+    z-index: 3;
+    opacity: 0.85;
+}
+
+.navbar {
+    padding-top: 50px;
+}
+
+#logo {
+    height: 200%;
+}
+
+.introduction {
+    height: 100vh;
+    background-color: #eeeeff;
+    background-size: cover;
+    text-align: center;
+}
+
+.intro-filler {
+    height: 60vh;
+    background-color: #fbe778;
+    background-size: cover;
+    text-align: center;
+}
+
+.bulbs {
+    height:100vh;
+    background-image: url('../img/Pirnid.png');
+    background-size: cover;
+}
+
+.introduction h1 {
+    padding-top: 30%;
+    padding-bottom:5%;
+    font-weight: bold;
+}
+
+.introduction p {
+    font-size: 20px;
+    padding-left: 90px;
+    padding-right: 90px;
+}
+
+.team {
+    height:100vh;
+    background-color: #eeeeff;
+    background-size: cover;
+}
+
+
+.team-info {
+    height:100vh;
+    background-image: url('../img/taner.png');
+    background-size: 100%;
+    text-align: center;
+    padding-left: 35%;
+}
+
+.team-info h1 {
+    padding-top: 50%;
+    font-weight: bold;
+}
+
+.team-info p {
+    font-size: 20px;
+    padding-left: 90px;
+    padding-right: 90px;
+}
+
+.name-pics {
+    width: 20%;
+}
+
+.person {
+    text-align: center;
+}
+
+.contact-information {
+    height: 100vh;
+    background-color: #eeeeff;
+    background-size: cover;
+    text-align: center;
+    padding-right: 22%;
+
+}
+
+.send {
+    background-color: #2166af;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    text-transform: uppercase;
+    z-index: 3;
+    opacity: 0.85;
+}
+
+.stuff {
+    background-image: url('../img/powerlines.jpg');
+    background-size: 100vh, 100vw;
+    height: 100vh;
+}
+
+.form {
+    padding-top: 7%;
+}
+
+.partners {
+    height:100vh;
+
+}
+.carousel-inner.onebyone-carosel { margin: auto; width: 90%; }
+.onebyone-carosel .active.left { left: -33.33%; }
+.onebyone-carosel .active.right { left: 33.33%; }
+.onebyone-carosel .next { left: 33.33%; }
+.onebyone-carosel .prev { left: -33.33%; }

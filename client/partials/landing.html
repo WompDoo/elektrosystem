@@ -1,0 +1,182 @@
+<div class="landing">
+    <div class="col-md-8 landing--banner">
+        <div class="hero-text">
+            <h1>Meie tehtud</h1>
+            <div class="yellow">
+                <p>elektrilahendused</p>
+            </div>
+            <h1> on kõrgusi ületavad</h1>
+        </div>
+        <a class="col-md-12">Ettevõttest <i class="arrow right"></i></a>
+
+        <a>
+            <img class="mousescroll" src="img/mousescroll.png">
+        </a>
+
+
+    </div>
+    <div class="col-md-4">
+        <nav class="navbar" ng-controller="navBarCtrl">
+
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                        aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"><img id="logo" src="img/logo.gif"/></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul id="burger" class="nav navbar-nav navbar-right">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </ul>
+            </div><!--/.nav-collapse -->
+
+        </nav>
+
+        <button class="request">Saada päring <i class="arrow right"></i></button>
+
+    </div>
+
+    <img class="skyscraper" src="img/skyscraper.png">
+</div>
+<div class="introduction">
+    <div class="col-md-4">
+        <h1 class="col-md-12">Tutvustus</h1>
+        <p class="col-md-12">Oleme tugev Eesti ettevõte, kes võtnud oma missiooniks lahendada kõik elektritöödega seotud
+            ülesanded.
+            Meie oskustepagas on
+            aastatepikkuse kogemuse
+            taustal arenenud ja
+            peensusteni lihvitud.</p>
+    </div>
+    <div class="col-md-8 bulbs">
+
+    </div>
+
+</div>
+
+<div class="team">
+    <div class="col-md-8 team-info">
+        <h1 class="col-md-12">Meeskond</h1>
+        <p class="col-md-12">Ettevõtte võtmetegijad annavad asjalikku ja profesionaalset nõu ning meie tehtud tööd
+            räägivad enda eest. </p>
+    </div>
+    <div class="col-md-4 people">
+        <div class="col-md-12 person">
+            <h3 class="col-md-12">Priit Laur</h3>
+            <img class="name-pics" src="img/Planeerija.png">
+            <p class="col-md-12">Juhataja</p>
+            <p class="col-md-12">email@elektrosystem.ee</p>
+        </div>
+        <div class="col-md-12 person">
+            <h3 class="col-md-12">Priit Laur</h3>
+            <img class="name-pics" src="img/Planeerija.png">
+            <p class="col-md-12">Projektijuhataja</p>
+            <p class="col-md-12">email@elektrosystem.ee</p>
+        </div>
+        <div class="col-md-12 person">
+            <h3 class="col-md-12">Priit Laur</h3>
+            <img class="name-pics" src="img/Planeerija.png">
+            <p class="col-md-12">Projektijuhataja</p>
+            <p class="col-md-12">email@elektrosystem.ee</p>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="col-md-8">
+    <div class="col-md-8 col-md-offset-2">
+        <div ng-controller="mapCtrl" ng-init="initMap()">
+            <div class="map-name">
+                <h3>
+                    Võtke meiega ühendust!
+                </h3>
+            </div>
+            <div id="map" style="height: 400px; width:450px;">
+            </div>
+            <ui-gmap-google-map center='map.center' zoom='map.zoom'></ui-gmap-google-map>
+        </div>
+    </div>
+    <div class="contact-information">
+        <div class="col-md-6">
+            <h3>Telefon</h3>
+            <p>+372543947</p>
+        </div>
+        <div class="col-md-6">
+            <h3>Meiliaadress</h3>
+            <p>email@elektrosystem.ee</p>
+        </div>
+    </div>
+</div>
+<div class="col-md-4 stuff">
+    <div class="col-md-4 form">
+
+    </div>
+</div>
+<!--
+<div class="container" ng-controller="mapCtrl" ng-init="initMap()">
+    <div class="map-name">
+        <h3>
+            CONTACTS BLA BLA
+        </h3>
+    </div>
+    <div id="map" style="height: 400px;">
+    </div>
+    <ui-gmap-google-map center='map.center' zoom='map.zoom'></ui-gmap-google-map>
+</div>
+<div class="container" ng-controller="landingContactCtrl" style="margin-top:50px;">
+    <div class="col-md-6">
+        <form>
+            <div class="form-group">
+                <label class="add-product-label landing-margin">Name</label>
+                <input type="text" class="form-control-add landing-margin" name="name" ng-model="sendEmailForm.name"/>
+            </div>
+            <div class="form-group">
+                <label class="add-product-label landing-margin">E-mail</label>
+                <textarea class="form-control-add landing-margin" name="information" ng-model="sendEmailForm.email"/>
+            </div>
+            <div class="form-group">
+                <label class="add-product-label landing-margin">Subject</label>
+                <textarea class="form-control-add landing-margin" name="information" ng-model="sendEmailForm.subject"/>
+            </div>
+            <div class="form-group">
+                <label class="add-product-label landing-margin">Message</label>
+                <textarea class="form-control-add-long-landing landing-margin" name="information"
+                          ng-model="sendEmailForm.message"/>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+
+                </div>
+                <div class="col-md-6" style="text-align: right;margin-left: -15px;">
+                    <button class="send-button">SEND</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="col-md-6">
+        <div ng-bind-html="info">
+
+        </div>
+    </div>
+</div>
+<footer>
+    <div class="container">
+        <div class="col-md-6">
+            <img id="logo-footer" src="img/logo.png"/>
+        </div>
+        <div class="col-md-6" style="text-align: right;">
+            <p class="footer-company">
+                &#169; Elektronet OU 2016
+            </p>
+        </div>
+    </div>
+</footer>
+-->
