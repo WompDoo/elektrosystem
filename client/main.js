@@ -5,6 +5,8 @@ var myApp = angular.module('myApp', [
     'productService',
     'productCtrl',
     'allProductsCtrl',
+    'mingiAsiCtrl',
+    'anchorCtrl',
     'testtest',
     'idService',
     'changeProductCtrl',
@@ -29,111 +31,105 @@ var myApp = angular.module('myApp', [
 ]);
 
 myApp.config(function ($stateProvider, $urlRouterProvider) {
-  $stateProvider
-    .state('landing', {
-        url: '/',
-        templateUrl: 'partials/landing.html',
-        controller: 'productCtrl',
-        access: {restricted: false}
-    })
-    .state('admin', {
-      abstract: true,
-      url: '/admin',
-      templateUrl: 'partials/admin.html',
-      access: {restricted: false}
-    })
-    .state('admin.products', {
-        url:'/products',
-        templateUrl: 'partials/products.html',
-        access: {restricted:false}
-    })
-    .state('admin.contacts', {
-        url:'/contacts',
-        templateUrl: 'partials/contact-info-admin.html',
-        access: {restricted: false}
-    })
-    .state('login', {
-      url: '/login',
-      templateUrl: 'partials/login.html',
-      controller: 'loginController',
-      access: {restricted: false}
-    })
-    .state('logout', {
-      url: '/logout',
-      controller: 'logoutController',
-      access: {restricted: false}
-    })
-    .state('register', {
-      url: '/register',
-      templateUrl: 'partials/register.html',
-      controller: 'registerController',
-      access: {restricted: false}
-    })
-    .state('one', {
-      url: '/one',
-      template: '<h1>This is page one!</h1>',
-      access: {restricted: false}
-    })
-    .state('two', {
-      url: '/two',
-      template: '<h1>This is page two!</h1>',
-      access: {restricted: false}
-    })
-    .state('admin.addproduct', {
-        url: '/addproduct',
-        templateUrl: 'partials/add-product.html',
-        controller: 'addProductCtrl',
-        access: {restricted: false}
-    })
-    .state('products', {
-        url:'/products',
-        templateUrl:'partials/products.html',
-        access: {restricted:false}
-    })
-    .state('change', {
-        url: '/change',
-        templateUrl: 'partials/change-product.html',
-        controller: 'changeProductCtrl',
-        access: {restricted: false}
-    })
-    .state('changeContact', {
-        url: '/change/contact',
-        templateUrl: 'partials/change-contact-info.html',
-        controller: 'contactCtrl',
-        access: {restricted: false}
-    })
-    .state('createContact', {
-        url: '/create/contact',
-        templateUrl: 'partials/create-contact.html',
-        controller: 'addInfo',
-        access: {restricted:false}
-    })
+    $stateProvider
+        .state('landing', {
+            url: '/',
+            templateUrl: 'partials/landing.html',
+            controller: 'productCtrl',
+            access: {restricted: false}
+        })
+        .state('admin', {
+            abstract: true,
+            url: '/admin',
+            templateUrl: 'partials/admin.html',
+            access: {restricted: false}
+        })
+        .state('admin.products', {
+            url: '/products',
+            templateUrl: 'partials/products.html',
+            access: {restricted: false}
+        })
+        .state('admin.contacts', {
+            url: '/contacts',
+            templateUrl: 'partials/contact-info-admin.html',
+            access: {restricted: false}
+        })
+        .state('login', {
+            url: '/login',
+            templateUrl: 'partials/login.html',
+            controller: 'loginController',
+            access: {restricted: false}
+        })
+        .state('logout', {
+            url: '/logout',
+            controller: 'logoutController',
+            access: {restricted: false}
+        })
+        .state('register', {
+            url: '/register',
+            templateUrl: 'partials/register.html',
+            controller: 'registerController',
+            access: {restricted: false}
+        })
+        .state('one', {
+            url: '/one',
+            template: '<h1>This is page one!</h1>',
+            access: {restricted: false}
+        })
+        .state('two', {
+            url: '/two',
+            template: '<h1>This is page two!</h1>',
+            access: {restricted: false}
+        })
+        .state('admin.addproduct', {
+            url: '/addproduct',
+            templateUrl: 'partials/add-product.html',
+            controller: 'addProductCtrl',
+            access: {restricted: false}
+        })
+        .state('products', {
+            url: '/products',
+            templateUrl: 'partials/products.html',
+            access: {restricted: false}
+        })
+        .state('change', {
+            url: '/change',
+            templateUrl: 'partials/change-product.html',
+            controller: 'changeProductCtrl',
+            access: {restricted: false}
+        })
+        .state('changeContact', {
+            url: '/change/contact',
+            templateUrl: 'partials/change-contact-info.html',
+            controller: 'contactCtrl',
+            access: {restricted: false}
+        })
+        .state('createContact', {
+            url: '/create/contact',
+            templateUrl: 'partials/create-contact.html',
+            controller: 'addInfo',
+            access: {restricted: false}
+        })
     $urlRouterProvider.otherwise('/');
 });
 
 myApp.run(function ($rootScope, $location, $state, AuthService) {
-  $rootScope.sidemenu = false;
-  $rootScope.sidemenuOverlay = false;
-  $rootScope.items = [];
-  console.log($rootScope.sidemenu);
-  $rootScope.$on('$stateChangeStart',
-    function (event, next, current) {
-      AuthService.getUserStatus()
-      .then(function(){
-        if (next.access.restricted && !AuthService.isLoggedIn()){
-          $location.path('/login');
+    $rootScope.sidemenu = false;
+    $rootScope.sidemenuOverlay = false;
+    $rootScope.items = [];
+    $rootScope.$on('$stateChangeStart',
+        function (event, next, current) {
+            AuthService.getUserStatus()
+                .then(function () {
+                    if (next.access.restricted && !AuthService.isLoggedIn()) {
+                        $location.path('/login');
 
-        }
-      });
-  });
+                    }
+                });
+        });
 });
 
-function openNav() {
-    document.getElementsByClassName("sideMenu").style.width = "16vw";
-    document.getElementsByClassName("landing").style.marginLeft = "16vw";
-}
+myApp.run(['$anchorScroll', function ($anchorScroll) {
+    $anchorScroll.yOffset = 50;   // always scroll by 50 extra pixels
+}])
 
-function closeNav() {
-    document.getElementsByClassName("sideMenu").style.width = "0";
-    document.getElementsByClassName("landing").style.marginLeft = "0";
-}
