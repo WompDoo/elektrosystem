@@ -399,3 +399,32 @@ i {
 .map {
     padding:0px;
 }
+
+.contact-form {
+    width: 91%;
+    margin-left: 2%;
+    float: left;
+    padding-top: 65px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 330px;
+    padding: 3%;
+    margin: 2% 8%;
+    color: #242424;
+    border: 1px solid #B7B7B7;
+}
+.contact-form input::placeholder,
+.container .contact-form textarea::placeholder {
+    color: #434343;
+}
+.contact-form .btn-send {
+    background: #ffe400;
+    width: 180px;
+    height: 60px;
+    color: #FFFFFF;
+    font-weight: 700;
+    margin: 2% 8%;
+    border: none;
+}
