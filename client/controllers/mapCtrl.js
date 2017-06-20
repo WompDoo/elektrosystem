@@ -6,7 +6,7 @@ mapCtrl.controller('mapCtrl', function($scope){
        var map = new google.maps.Map(document.getElementById('map'), {
            zoom: 14,
            center: school,
-           draggable: false,
+           draggable: true,
            scrollwheel: false,
            styles: [
               {
@@ -69,7 +69,7 @@ mapCtrl.controller('mapCtrl', function($scope){
                 ]
               },
               {
-                "featureType": "poi.park",
+                    "featureType": "poi.park",
                 "elementType": "geometry",
                 "stylers": [
                   {

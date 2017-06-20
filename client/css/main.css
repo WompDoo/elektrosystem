@@ -377,7 +377,6 @@ i {
 }
 
 .stuff {
-    background-image: url('../img/powerlines.jpg');
     background-size: cover;
     height: 100vh;
 }
@@ -398,6 +397,14 @@ i {
 
 .map {
     padding:0px;
+}
+
+.map-name {
+    padding-top: 20px;
+}
+
+.contacts {
+    padding-top: 25px;
 }
 
 .contact-form {

@@ -1,6 +1,6 @@
 <div class="landing-all">
-    <div id="anchor{{1}}" class="landing anchor">
-        <div class="col-md-8 landing--banner">
+    <div scroll-bookmark="home" class="landing">
+        <div class="col-md-8  landing--banner" ng-controller="scrollController">
             <div class="hero-text">
                 <h1>Meie tehtud</h1>
                 <div class="yellow">
@@ -8,7 +8,7 @@
                 </div>
                 <h1> on kõrgusi ületavad</h1>
             </div>
-            <a ng-click="gotoAnchor(2)" class="col-md-12">Ettevõttest <i class="arrow right"></i></a>
+            <a scroll-to-bookmark="introduction" class="col-md-12">Ettevõttest <i class="arrow right"></i></a>
 
             <a>
                 <img class="mousescroll" src="img/mousescroll.png">
@@ -27,7 +27,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#"><img id="logo" src="img/logo.png"/></a>
+                    <a class="navbar-brand" scroll-to-bookmark="home"><img id="logo" src="img/logo.png"/></a>
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul ng-click="toggleSideMenu()" id="burger" class="nav navbar-nav navbar-right">
@@ -38,9 +38,9 @@
                 </div><!--/.nav-collapse -->
 
             </nav>
-
-            <button class="request">Saada päring <i class="arrow right"></i></button>
-
+            <div ng-controller="scrollController">
+                <button class="request" scroll-to-bookmark="contact" >Saada päring <i class="arrow right"></i></button>
+            </div>
         </div>
         <img class="skyscraper" src="img/skyscraper.png">
     </div>
@@ -58,22 +58,22 @@
                 <ul ng-controller="anchorCtrl" class="nav sidebar-nav">
                     <a class="close" ng-click="hide()">X</a>
                     <li>
-                        <a ng-click="gotoAnchor(1)">Home</a>
+                        <a scroll-to-bookmark="home">Home</a>
                     </li>
                     <li>
-                        <a ng-click="gotoAnchor(2)">Tutvustus</a>
+                        <a scroll-to-bookmark="introduction">Tutvustus</a>
                     </li>
                     <li>
-                        <a ng-click="gotoAnchor(3)">Meeskond</a>
+                        <a scroll-to-bookmark="team">Meeskond</a>
                     </li>
                     <li>
-                        <a ng-click="gotoAnchor(4)">Referentsid</a>
+                        <a scroll-to-bookmark="references">Referentsid</a>
                     </li>
                     <li>
-                        <a href="#">Partnerid</a>
+                        <a scroll-to-bookmark="partners">Partnerid</a>
                     </li>
                     <li>
-                        <a href="#">Kontakid</a>
+                        <a scroll-to-bookmark="contact">Kontaktid</a>
                     </li>
                 </ul>
             </nav>
@@ -84,8 +84,8 @@
 <div class="sideMenuOverlay" ng-show="sidemenuOverlay" ng-controller="sideMenuOverlayCtrl" ng-click="hideOverlay()">
 </div>
 
-<div id="anchor{{2}}" class="introduction anchor">
-    <div class="col-md-4">
+<div scroll-bookmark="introduction" class="introduction">
+    <div id="introduction" class="col-md-4">
         <h1 class="col-md-12">Tutvustus</h1>
         <p class="col-md-12">Oleme tugev Eesti ettevõte, kes võtnud oma missiooniks lahendada kõik elektritöödega seotud
             ülesanded.
@@ -100,7 +100,7 @@
 
 </div>
 
-<div id="anchor{{3}}" class="team anchor">
+<div scroll-bookmark="team" class="team">
     <div class="col-md-12">
         <div class="team-info col-md-8">
             <h1 class="col-md-12">Meeskond</h1>
@@ -130,14 +130,14 @@
     </div>
 </div>
 
-<div id="anchor{{4}}" class="contact anchor">
-    <div class="col-md-8 map">
+<div scroll-bookmark="contact" class="contact">
+    <div id="contact" class="col-md-8 map">
         <div class="col-md-8 col-md-offset-2">
             <div ng-controller="mapCtrl" ng-init="initMap()">
                 <div class="map-name">
-                    <h3>
+                    <h1>
                         Võtke meiega ühendust!
-                    </h3>
+                    </h1>
                 </div>
                 <div id="map" style="height: 400px; width:450px;">
                 </div>
@@ -145,7 +145,11 @@
             </div>
         </div>
         <div class="contact-information">
-            <div class="col-md-6">
+        </div>
+    </div>
+    <div class="col-md-4 stuff">
+        <div class="contact">
+            <div class="col-md-5 col-md-offset-1">
                 <h3>Telefon</h3>
                 <p>+372543947</p>
             </div>
@@ -153,17 +157,15 @@
                 <h3>Meiliaadress</h3>
                 <p>email@elektrosystem.ee</p>
             </div>
-        </div>
-    </div>
-    <div class="col-md-4 stuff">
-        <div class="col-md-4 contact-form">
-            <form>
-                <input type="text" name="name" placeholder="Nimi" />
-                <input type="email" name="e-mail" placeholder="E-Maili aadress" />
-                <input type="tel" name="phone" placeholder="Teema"/>
-                <textarea name="text" id="" rows="8" placeholder="Sõnum"></textarea>
-                <button class="btn-send">Saada päring</button>
-            </form>
+
+            <div class="col-md-4 contact-form">
+                <form>
+                    <input type="text" name="name" placeholder="Nimi"/>
+                    <input type="email" name="e-mail" placeholder="E-Maili aadress"/>
+                    <textarea name="text" id="" rows="3" placeholder="Sõnum"></textarea>
+                    <button class="btn-send">Saada päring</button>
+                </form>
+            </div>
         </div>
     </div>
 </div>

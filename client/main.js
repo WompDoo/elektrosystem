@@ -14,6 +14,9 @@ var myApp = angular.module('myApp', [
     'sideMenuCtrl',
     'navBarCtrl',
     'sideMenuOverlayCtrl',
+    'scrollController',
+    'scrollOnClick',
+    'scrollToBookmark',
     'xeditable',
     'TextBtnCtrl',
     'ngSanitize',
@@ -130,6 +133,8 @@ myApp.run(function ($rootScope, $location, $state, AuthService) {
 });
 
 myApp.run(['$anchorScroll', function ($anchorScroll) {
-    $anchorScroll.yOffset = 50;   // always scroll by 50 extra pixels
+    $anchorScroll.yOffset = 0;   // always scroll by 50 extra pixels
 }])
+
+
 
