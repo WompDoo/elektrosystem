@@ -39,7 +39,7 @@
 
             </nav>
             <div ng-controller="scrollController">
-                <button class="request" scroll-to-bookmark="contact" >Saada päring <i class="arrow right"></i></button>
+                <button class="request" scroll-to-bookmark="contact">Saada päring <i class="arrow right"></i></button>
             </div>
         </div>
         <img class="skyscraper" src="img/skyscraper.png">
@@ -85,17 +85,107 @@
 </div>
 
 <div scroll-bookmark="introduction" class="introduction">
-    <div id="introduction" class="col-md-4">
-        <h1 class="col-md-12">Tutvustus</h1>
-        <p class="col-md-12">Oleme tugev Eesti ettevõte, kes võtnud oma missiooniks lahendada kõik elektritöödega seotud
-            ülesanded.
-            Meie oskustepagas on
-            aastatepikkuse kogemuse
-            taustal arenenud ja
-            peensusteni lihvitud.</p>
+    <div id="introduction" class="col-md-5">
+        <div class="intro-text">
+            <h1 class="col-md-12">Tutvustus</h1>
+            <p class="col-md-12">Oleme tugev Eesti ettevõte, kes võtnud oma missiooniks lahendada kõik elektritöödega
+                seotud
+                ülesanded.
+                Meie oskustepagas on
+                aastatepikkuse kogemuse
+                taustal arenenud ja
+                peensusteni lihvitud.</p>
+        </div>
     </div>
-    <div class="col-md-8 bulbs">
 
+    <div class="col-md-7 bulbs">
+    </div>
+    <div class="col-md-6 col-md-offset-4 intro-back" ng-controller="introSelect">
+        <div ng-switch on="page">
+            <div ng-hide="selection">
+                <div class="row">
+                    <div class="col-md-6">
+                        <input type="image" ng-click="page='pirn'; toggle()" class="intro-pics" src="img/Pirn.png"/>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="image" ng-click="page='kilp'; toggle()" class="intro-pics kilp"
+                               src="img/Kilp.png"/>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <input type="image" ng-click="page='moodik'; toggle()" class="intro-pics moodik"
+                               src="img/moodik.png"/>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="image" ng-click="page='planeerija'; toggle()" class="intro-pics"
+                               src="img/Planeerija.png"/>
+                    </div>
+                </div>
+            </div>
+            <div ng-switch-default>
+            </div>
+            <div class="col-md-12 inspect" ng-switch-when="pirn">
+                <div class="inspect">
+                    <div class="col-md-12">
+                        <h1>
+                            Elektritööd
+                        </h1>
+                    </div>
+                    <div class="col-md-12">
+                        <p>Me teeme hästi elektritöid</p>
+                    </div>
+                    <div class="col-md-12">
+                        <button ng-click="toggle()">Tagasi</button>
+                    </div>
+                </div>
+            </div>
+            <div ng-switch-when="kilp">
+                <div class="inspect">
+                    <div class="col-md-12">
+                        <h1>
+                            Kilpide valmistamin
+                        </h1>
+                    </div>
+                    <div class="col-md-12">
+                        <p>Kõige paremad elektrikilbid</p>
+                    </div>
+                    <div class="col-md-12">
+                        <button ng-click="toggle()">Tagasi</button>
+                    </div>
+                </div>
+            </div>
+            <div ng-switch-when="moodik">
+                <div class="inspect">
+                    <div class="col-md-12">
+                        <h1>
+                            Elektripaigaldiste käitlemine
+                        </h1>
+                    </div>
+                    <div class="col-md-12">
+                        <p>Käitleme väga hästi</p>
+                    </div>
+                    <div class="col-md-12">
+                        <button ng-click="toggle()">Tagasi</button>
+                    </div>
+                </div>
+            </div>
+            <div ng-switch-when="planeerija">
+                <div class="inspect">
+                    <div class="col-md-12">
+                        <h1>
+                            Elekriprojektide planeerimine
+                        </h1>
+                    </div>
+                    <div class="col-md-12">
+                        <p>Planeerime alati kõige paremini</p>
+                    </div>
+                    <div class="col-md-12">
+                        <button ng-click="toggle()">Tagasi</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
 </div>

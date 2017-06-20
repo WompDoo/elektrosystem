@@ -17,6 +17,7 @@ var myApp = angular.module('myApp', [
     'scrollController',
     'scrollOnClick',
     'scrollToBookmark',
+    'introSelect',
     'xeditable',
     'TextBtnCtrl',
     'ngSanitize',
