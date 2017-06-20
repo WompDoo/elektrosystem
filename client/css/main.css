@@ -396,6 +396,11 @@ i {
 
 }
 
+.partner-help {
+    padding-top: 20vh;
+    padding-bottom: 23vh;
+}
+
 .carousel-inner.onebyone-carosel {
     margin: auto;
     width: 90%;
