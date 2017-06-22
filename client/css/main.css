@@ -393,7 +393,20 @@ i {
 
 .partners {
     height: 100vh;
+    background-color: beige;
 
+}
+
+.partners img{
+    margin:auto;
+    width: 400px;
+}
+
+
+
+
+.slickClass {
+    padding-top: 45vh;
 }
 
 .partner-help {
@@ -526,4 +539,8 @@ i {
 
 .inspect {
     margin-bottom: -160px;
+}
+
+#slides_control > div{
+    height: 50vh;
 }
