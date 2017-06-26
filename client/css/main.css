@@ -402,6 +402,44 @@ i {
     padding-top: 7%;
 }
 
+.references {
+    height: 100vh;
+    overflow: hidden;
+}
+
+.project-item {
+    height: 50%;
+    width: 25%;
+    padding:0;
+}
+
+.project-image {
+    max-width: 142%;
+    object-fit: contain;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    transition: all .25s ease-in-out;
+    -moz-transition: all .25s ease-in-out;
+    -webkit-transition: all .25s ease-in-out;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    -moz-transform: scale(1);
+    transform: scale(1);
+}
+
+
+.project-image:hover {
+    -webkit-filter: none;
+    filter: none;
+    -webkit-transform: scale(1.02);
+    -ms-transform: scale(1.02);
+    -moz-transform: scale(1.02);
+    transform: scale(1.02);
+
+}
+
+
+
 .partners {
     height: 100vh;
     background-color: #008cba;

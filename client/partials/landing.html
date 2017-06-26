@@ -219,6 +219,14 @@
         </div>
     </div>
 </div>
+<div scroll-bookmark="references" class="references">
+    <div ng-controller="projectController">
+        <div class="col-md-3 project-item" ng-repeat="project in projects">
+            <a href="{{project.link}}"><img src="{{project.image}}" class="project-image"></a>
+            <!--<h3>{{project.name}}</h3>-->
+        </div>
+    </div>
+</div>
 <div scroll-bookmark="partners" class="partners">
     <div class="slickClass" ng-controller="CarouselDemoCtrl">
         <slick

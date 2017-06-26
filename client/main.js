@@ -9,6 +9,7 @@ var myApp = angular.module('myApp', [
     'mingiAsiCtrl',
     'anchorCtrl',
     'testtest',
+    'projectController',
     'idService',
     'changeProductCtrl',
     'ngInitial',

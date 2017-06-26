@@ -1,0 +1,31 @@
+var projectController = angular.module('projectController', []);
+projectController.controller('projectController', function projectController($scope) {
+
+    $scope.projects = [
+        {
+            image: 'img/project1.jpeg', name: 'Project 1'
+        },
+        {
+            image: 'img/project6.jpeg', name: 'Project 2'
+        },
+        {
+            image: 'img/project5.jpeg', name: 'Project 3'
+        },
+        {
+            image: 'img/project7.jpeg', name: 'Project 4'
+        },
+        {
+            image: 'img/project5.jpeg', name: 'Project 5'
+        },
+        {
+            image: 'img/project6.jpeg', name: 'Project 6'
+        },
+        {
+            image: 'img/project7.jpeg', name: 'Project 7'
+        },
+        {
+            image: 'img/project1.jpeg', name: 'Project 8'
+        },
+    ];
+});
+
