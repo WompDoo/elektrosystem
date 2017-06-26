@@ -144,7 +144,7 @@
                 <div class="inspect">
                     <div class="col-md-12">
                         <h1>
-                            Kilpide valmistamin
+                            Kilpide valmistamine
                         </h1>
                     </div>
                     <div class="col-md-12">
@@ -222,50 +222,15 @@
 <div scroll-bookmark="partners" class="partners">
     <div class="slickClass" ng-controller="CarouselDemoCtrl">
         <slick
-               infinite="false"
-               slides-to-show="3"
-               slides-to-scroll="3"
-        >
-            <div class="slick-item" ng-repeat="slide in slides">
-                <a href="{{slide.link}}"><img src="{{ slide.image }}"/></a>
-            </div>
-        </slick>
-
-        <!--<slick
                 infinite="false"
-                arrows="true"
                 slides-to-show="3"
                 slides-to-scroll="3"
         >
-            <div class="slick-item" ng-repeat="slide in slides">
-                <a href="{{slide.link}}"><img src="{{ slide.image }}"/></a>
+            <div class="slick-item slick-overlay" ng-repeat="slide in slides">
+                <a href="{{slide.link}}"><img src="{{slide.image}}"/></a>
             </div>
-        </slick>-->
-
+        </slick>
     </div>
-
-    <!--<div class="col-md-12">
-        <div ng-controller="CarouselDemoCtrl" id="slides_control">
-            <div>
-                <carousel interval="myInterval">
-                        <slide ng-repeat="slide in slides" active="slide.active">
-                        <div class="row">
-                            <div class="col-md-3">
-                                <img ng-src="{{slides[($index)].image}}">
-                            </div>
-                            <div class="col-md-3">
-                                <img ng-src="{{slides[($index + 1)].image}}">
-                            </div>
-                            <div class="col-md-3">
-                                <img ng-src="{{slides($index + 2).image}}">
-                            </div>
-                        </div>
-                    </slide>
-                </carousel>
-
-            </div>
-        </div>
-    </div>-->
 </div>
 <div scroll-bookmark="contact" class="contact">
     <div id="contact" class="col-md-8 map">

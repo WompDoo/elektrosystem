@@ -303,6 +303,17 @@ i {
     text-align: center;
 }
 
+.slick-prev, .slick-next {
+    margin-top:30px;
+}
+
+.slick-prev {
+    right:-49vw;
+}
+.slick-next {
+    right:-51vw;
+}
+
 .intro-filler {
     height: 60vh;
     background-color: #fbe778;
@@ -393,13 +404,13 @@ i {
 
 .partners {
     height: 100vh;
-    background-color: beige;
+    background-color: #008cba;
 
 }
 
 .partners img{
     margin:auto;
-    width: 400px;
+    width: 320px;
 }
 
 
@@ -412,27 +423,6 @@ i {
 .partner-help {
     padding-top: 20vh;
     padding-bottom: 23vh;
-}
-
-.carousel-inner.onebyone-carosel {
-    margin: auto;
-    width: 90%;
-}
-
-.onebyone-carosel .active.left {
-    left: -33.33%;
-}
-
-.onebyone-carosel .active.right {
-    left: 33.33%;
-}
-
-.onebyone-carosel .next {
-    left: 33.33%;
-}
-
-.onebyone-carosel .prev {
-    left: -33.33%;
 }
 
 .map {
@@ -544,3 +534,21 @@ i {
 #slides_control > div{
     height: 50vh;
 }
+
+
+.slick-item img {
+    opacity: 0.6;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    transition: all .25s ease-in-out;
+    -moz-transition: all .25s ease-in-out;
+    -webkit-transition: all .25s ease-in-out;
+}
+
+.slick-item img:hover {
+    width: 80%;
+    -webkit-filter: none;
+    filter: none;
+    opacity: 1;
+}
+

@@ -29,7 +29,6 @@
 
     width: 20px;
     height: 20px;
-    margin-top: -10px;
     padding: 0;
 
     cursor: pointer;
@@ -75,10 +74,7 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
-.slick-prev
-{
-    left: -25px;
-}
+
 [dir='rtl'] .slick-prev
 {
     right: -25px;
@@ -93,10 +89,6 @@
     content: '→';
 }
 
-.slick-next
-{
-    right: -25px;
-}
 [dir='rtl'] .slick-next
 {
     right: auto;
