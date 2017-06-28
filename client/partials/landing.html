@@ -220,12 +220,44 @@
     </div>
 </div>
 <div scroll-bookmark="references" class="references">
-    <div ng-controller="projectController">
-        <div class="col-md-3 project-item" ng-repeat="project in projects">
-            <a href="{{project.link}}"><img src="{{project.image}}" class="project-image"></a>
-            <!--<h3>{{project.name}}</h3>-->
+    <div ng-controller="projectController"> <!--Sellest controllerist tuleb kogu data, ehk siis pilt ja nimi-->
+        <div ng-controller="projectViewController" class="col-md-3 project-item" ng-repeat="project in projects">
+            <img src="{{project.image}}" class="project-image">
+            <h1 class="project-heading col-md-8 col-md-offset-2">{{project.name}}</h1>
+            <button class="project-info col-md-6 col-md-offset-3" ng-click="toggleProjectView()">Vaata lähemalt</button>
+            <!--Kuidas ma saaks selle toggleProjectView() nii tööle, et ta kuvaks õiget projekti informatsiooni-->
+        </div>
+        <div ng-repeat="project in projects" class="projectView {{project.name}}" ng-controller="projectViewController"
+             ng-show="projectview">
+            <a class="closeProject" ng-click="hideProject()">X</a>
+
+            <div class="col-md-4 project-pictures">
+            </div>
+            <!--<div ng-controller="projectPicturesController" class="arab">
+                <div ng-repeat="projectImage in projectImages" class="col-md-2">
+                    <img src="{{projectImage.image}}" style="width:350%;">
+                </div>
+            </div>-->
+
+            <div class="col-md-8 project-information">
+                <h1 class="col-md-6 col-md-offset-4">Pealkiri</h1>
+                <h5 class="col-md-6 col-md-offset-4">Alapealkiri</h5>
+                <h3 class="col-md-6 col-md-offset-4">2017</h3>
+                <p class="col-md-6 col-md-offset-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                    suscipit ac mauris et mattis. Duis
+                    felis velit, commodo a orci ut, rhoncus accumsan odio. Integer congue nisi quis condimentum
+                    molestie. Etiam at ornare ligula, sit amet ullamcorper nunc. </p>
+                <hr class="col-md-6 col-md-offset-4">
+                <button class="col-md-6 col-md-offset-5 request project-request">Saada päring <i
+                        class="arrow right"></i></button>
+            </div>
+
+
+        </div>
+        <div class="projectOverlay" ng-show="projectViewOverlay">
         </div>
     </div>
+
 </div>
 <div scroll-bookmark="partners" class="partners">
     <div class="slickClass" ng-controller="CarouselDemoCtrl">

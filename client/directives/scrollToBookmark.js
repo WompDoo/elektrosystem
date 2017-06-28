@@ -5,7 +5,6 @@ scrollToBookmark.directive('scrollToBookmark', function(){
         link: function(scope, element, attrs){
             var value = attrs.scrollToBookmark;
             element.click(function(){
-                console.log(value);
                 scope.$apply(function(){
                     var selector = "[scroll-bookmark="+value+"]";
                     var element = $(selector);

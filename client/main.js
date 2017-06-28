@@ -10,6 +10,8 @@ var myApp = angular.module('myApp', [
     'anchorCtrl',
     'testtest',
     'projectController',
+    'projectViewController',
+    'projectPicturesController',
     'idService',
     'changeProductCtrl',
     'ngInitial',

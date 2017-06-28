@@ -3,13 +3,13 @@ projectController.controller('projectController', function projectController($sc
 
     $scope.projects = [
         {
-            image: 'img/project1.jpeg', name: 'Project 1'
+            image: 'img/project1.jpeg', name: 'Jaama Selver'
         },
         {
-            image: 'img/project6.jpeg', name: 'Project 2'
+            image: 'img/project6.jpeg', name: 'Tartu ärihoone'
         },
         {
-            image: 'img/project5.jpeg', name: 'Project 3'
+            image: 'img/project5.jpeg', name: 'Väga pikk projekti nimi'
         },
         {
             image: 'img/project7.jpeg', name: 'Project 4'
