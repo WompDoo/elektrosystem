@@ -220,33 +220,52 @@
     </div>
 </div>
 <div scroll-bookmark="references" class="references">
-    <div ng-controller="projectController"> <!--Sellest controllerist tuleb kogu data, ehk siis pilt ja nimi-->
-        <div ng-controller="projectViewController" class="col-md-3 project-item" ng-repeat="project in projects">
+    <div ng-controller="projectController">
+        <div class="col-md-3 project-item" ng-repeat="project in projects">
             <img src="{{project.image}}" class="project-image">
             <h1 class="project-heading col-md-8 col-md-offset-2">{{project.name}}</h1>
-            <button class="project-info col-md-6 col-md-offset-3" ng-click="toggleProjectView()">Vaata lähemalt</button>
-            <!--Kuidas ma saaks selle toggleProjectView() nii tööle, et ta kuvaks õiget projekti informatsiooni-->
+            <button class="project-info col-md-6 col-md-offset-3" ng-click="toggleProjectView($index)">Vaata lähemalt
+            </button>
         </div>
-        <div ng-repeat="project in projects" class="projectView {{project.name}}" ng-controller="projectViewController"
+        <div ng-repeat="project in projects" class="projectView {{project.name}}"
              ng-show="projectview">
             <a class="closeProject" ng-click="hideProject()">X</a>
 
-            <div class="col-md-4 project-pictures">
+            <div class="accordian" ng-controller="projectPicturesController">
+                <ul>
+                    <li ng-repeat="projectImage in projectImages">
+                        <img src="{{projectImage.image}}"/>
+                    </li>
+                </ul>
             </div>
-            <!--<div ng-controller="projectPicturesController" class="arab">
-                <div ng-repeat="projectImage in projectImages" class="col-md-2">
-                    <img src="{{projectImage.image}}" style="width:350%;">
-                </div>
-            </div>-->
+
+
+            <div class="col-md-4 project-pictures">
+                <!--<div id="projectCarousel" class="carousel slide" data-ride="carousel">
+                    &lt;!&ndash; Indicators &ndash;&gt;
+                    <ol class="carousel-indicators carousel-indicators-numbers">
+                        <li ng-repeat="projectImage in projectImages" data-target="#projectCarousel"
+                            data-slide-to="{{projectImage.number}}" class="{{projectImage.active}}">
+                            {{projectImage.number}}
+                        </li>
+                    </ol>
+
+                    &lt;!&ndash; Wrapper for slides &ndash;&gt;
+                    <div class="carousel-inner">
+                        <div ng-repeat="projectImage in projectImages" class="item {{projectImage.active}}">
+                            <img src="{{projectImage.image}}">
+                        </div>
+                    </div>
+                </div>-->
+            </div>
+
+            <!---->
 
             <div class="col-md-8 project-information">
-                <h1 class="col-md-6 col-md-offset-4">Pealkiri</h1>
-                <h5 class="col-md-6 col-md-offset-4">Alapealkiri</h5>
-                <h3 class="col-md-6 col-md-offset-4">2017</h3>
-                <p class="col-md-6 col-md-offset-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-                    suscipit ac mauris et mattis. Duis
-                    felis velit, commodo a orci ut, rhoncus accumsan odio. Integer congue nisi quis condimentum
-                    molestie. Etiam at ornare ligula, sit amet ullamcorper nunc. </p>
+                <h1 class="col-md-6 col-md-offset-4">{{globalName}}</h1>
+                <h5 class="col-md-6 col-md-offset-4">{{globalAlapealkiri}}</h5>
+                <h3 class="col-md-6 col-md-offset-4">{{globalAasta}}</h3>
+                <p class="col-md-6 col-md-offset-4">{{globalTekst}} </p>
                 <hr class="col-md-6 col-md-offset-4">
                 <button class="col-md-6 col-md-offset-5 request project-request">Saada päring <i
                         class="arrow right"></i></button>

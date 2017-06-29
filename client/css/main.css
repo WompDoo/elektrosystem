@@ -1,19 +1,19 @@
 @font-face {
-    font-family: 'Hel-Light';
-    src: url('../fonts/Helvetica-Neue-Light.otf');
+    font-family: 'Akr-Regular';
+    src: url('../fonts/Akrobat-Regular.otf');
 }
 
 @font-face {
-    font-family: 'Hel-Bold';
-    src: url('../fonts/Helvetica-Neue-Bold.otf');
+    font-family: 'Akr-Bold';
+    src: url('../fonts/Akrobat-Bold.otf');
 }
 
 body {
-    font-family: Hel-Light;
+    font-family: Akr-Regular;
 }
 
 h3 {
-    font-family: Hel-Bold;
+    font-family: Akr-Bold;
 }
 
 .landing {
@@ -216,7 +216,14 @@ h3 {
     text-align: center;
     padding-right: 30%;
     padding-bottom: 5%;
+    -webkit-transition: all 0.5s; /* For Safari 3.1 to 6.0 */
+    transition: all 0.5s;
+}
 
+.hover:hover {
+    -ms-transform: scale(1.1, 1.1); /* IE 9 */
+    -webkit-transform: scale(1.1, 1.1); /* Safari */
+    transform: scale(1.1, 1.1);
 }
 
 .landing--banner p {
@@ -304,14 +311,15 @@ i {
 }
 
 .slick-prev, .slick-next {
-    margin-top:30px;
+    margin-top: 30px;
 }
 
 .slick-prev {
-    right:-49vw;
+    right: -49vw;
 }
+
 .slick-next {
-    right:-51vw;
+    right: -51vw;
 }
 
 .intro-filler {
@@ -410,7 +418,7 @@ i {
 .project-item {
     height: 50%;
     width: 25%;
-    padding:0;
+    padding: 0;
 }
 
 .project-image {
@@ -436,7 +444,7 @@ i {
     color: #b9b9b9;
     border: 2px solid rgba(0, 140, 186, 0.8);
     background-color: rgba(0, 140, 186, 0.8);
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     text-decoration: none;
     padding: 11px 18px;
     transition: all .25s ease-in-out;
@@ -444,7 +452,7 @@ i {
     -webkit-transition: all .25s ease-in-out;
 }
 
-.project-heading{
+.project-heading {
     display: none;
     position: absolute;
     top: 15%;
@@ -454,19 +462,18 @@ i {
 
 .project-info:hover {
     color: #ffffff;
-    background-color: rgba(0, 140, 186, 1) ;
+    background-color: rgba(0, 140, 186, 1);
 }
 
-
-.project-item:hover .project-info{
+.project-item:hover .project-info {
     display: inline-block;
 }
 
-.project-item:hover .project-heading{
+.project-item:hover .project-heading {
     display: inline-block;
 }
 
-.project-item:hover .project-image{
+.project-item:hover .project-image {
     -webkit-filter: none;
     filter: none;
     -webkit-transform: scale(1.02);
@@ -505,13 +512,13 @@ i {
     text-align: center;
 }
 
-.project-information h1{
+.project-information h1 {
     text-transform: uppercase;
 }
 
 .project-request {
-    top:0;
-    left:0;
+    top: 0;
+    left: 0;
     background-color: #f9d616;
 }
 
@@ -526,11 +533,34 @@ i {
     top: 0;
 }
 
-.arab {
+.carousel {
     position: absolute;
-    z-index: 99;
+    padding-left: 15%;
+    margin-right: -60%;
+    z-index: 3;
+    padding-top: 22%;
 }
 
+.carousel-indicators {
+    top: 105%;
+    margin-left: -64%;
+}
+
+.carousel-indicators .active {
+    border: none;
+    background-color: rgba(153, 153, 153, 0);
+    height: 0;
+    margin: 0;
+}
+
+.carousel-indicators-numbers li {
+    text-indent: 0;
+    width: 12px;
+    border: none;
+    color: #fff;
+    background-color: rgba(153, 153, 153, 0);
+    transition: all 0.25s ease;
+}
 
 .partners {
     height: 100vh;
@@ -538,13 +568,10 @@ i {
 
 }
 
-.partners img{
-    margin:auto;
+.partners img {
+    margin: auto;
     width: 320px;
 }
-
-
-
 
 .slickClass {
     padding-top: 45vh;
@@ -599,7 +626,7 @@ i {
 }
 
 .intro-back {
-    opacity:0.9;
+    opacity: 0.9;
     position: absolute;
     margin-top: 125px;
     background: #fbe778;
@@ -614,6 +641,15 @@ i {
 .intro-pics {
     padding-top: 40px;
     padding-bottom: 20px;
+    -webkit-transition: all 0.5s; /* For Safari 3.1 to 6.0 */
+    transition: all 0.5s;
+}
+
+.intro-pics:hover {
+    -ms-transform: scale(1.1, 1.1); /* IE 9 */
+    -webkit-transform: scale(1.1, 1.1); /* Safari */
+    transform: scale(1.1, 1.1);
+
 }
 
 .moodik {
@@ -661,10 +697,9 @@ i {
     margin-bottom: -160px;
 }
 
-#slides_control > div{
+#slides_control > div {
     height: 50vh;
 }
-
 
 .slick-item img {
     opacity: 0.6;
@@ -681,4 +716,60 @@ i {
     filter: none;
     opacity: 1;
 }
+
+.accordian {
+    position: absolute;
+    z-index: 4;
+    width: 560px;
+    height: 358px;
+    overflow: hidden;
+
+    /*Time for some styling*/
+    margin: 70px auto 81px 20px;
+}
+
+/*A small hack to prevent flickering on some browsers*/
+.accordian ul {
+    width: 2000px;
+    /*This will give ample space to the last item to move
+    instead of falling down/flickering during hovers.*/
+}
+
+.accordian li {
+    position: relative;
+    display: block;
+    width: 30px;
+    float: left;
+
+    box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.5);
+
+    /*Transitions to give animation effect*/
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    /*If you hover on the images now you should be able to
+    see the basic accordion*/
+}
+
+/*Reduce with of un-hovered elements*/
+.accordian ul:hover li {
+    width: 40px;
+}
+
+/*Lets apply hover effects now*/
+/*The LI hover style should override the UL hover style*/
+.accordian ul li:hover {
+    width: 640px;
+}
+
+.accordian li img {
+    display: block;
+    width: 540px;
+
+}
+
+/*Responsive view*/
+
 
