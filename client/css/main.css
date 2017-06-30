@@ -533,33 +533,27 @@ i {
     top: 0;
 }
 
-.carousel {
-    position: absolute;
-    padding-left: 15%;
-    margin-right: -60%;
-    z-index: 3;
-    padding-top: 22%;
+.project-pictures button {
+    font-size: 40px;
+    margin-bottom: 115%;
+    background-color: rgba(231, 231, 231, 0);
+    border-color: rgba(204, 204, 204, 0);
 }
 
-.carousel-indicators {
-    top: 105%;
-    margin-left: -64%;
+.project-pictures button:hover {
+    background-color: rgba(231, 231, 231, 0);
+    border-color: rgba(204, 204, 204, 0);
 }
 
-.carousel-indicators .active {
-    border: none;
-    background-color: rgba(153, 153, 153, 0);
-    height: 0;
-    margin: 0;
+.project-pictures button:focus {
+    background-color: rgba(231, 231, 231, 0);
+    border-color: rgba(204, 204, 204, 0);
+    outline: none;
 }
 
-.carousel-indicators-numbers li {
-    text-indent: 0;
-    width: 12px;
-    border: none;
-    color: #fff;
-    background-color: rgba(153, 153, 153, 0);
-    transition: all 0.25s ease;
+.project-pictures button:active {
+    background-color: rgba(231, 231, 231, 0);
+    border-color: rgba(204, 204, 204, 0);
 }
 
 .partners {
@@ -573,6 +567,11 @@ i {
     width: 320px;
 }
 
+.partners h1 {
+    text-align: center;
+    background-color: #ffe400;
+}
+
 .slickClass {
     padding-top: 45vh;
 }
@@ -584,6 +583,10 @@ i {
 
 .map {
     padding: 0px;
+}
+
+.gMap {
+    padding-top: 95px;
 }
 
 .map-name {
@@ -770,6 +773,65 @@ i {
 
 }
 
+.pos-fix {
+    margin-top: -135px;
+}
+
+.dude {
+    position: absolute;
+    right: 66vh;
+    margin-top: 100px;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+
+}
+
+.stuff:hover ~ .dude {
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+}
+
+
+.dude-text {
+    position: absolute;
+    right: 84vh;
+    margin-top: 20px;
+    width: 200px;
+    height: 100px;
+    text-align: center;
+    padding-top: 15px;
+    background-color: #fff;
+    -webkit-box-shadow: 2px 2px 4px #888;
+    -moz-box-shadow: 2px 2px 4px #888;
+    box-shadow: 2px 2px 4px #888;
+}
+
+.first {
+    display: none;
+}
+
+.second {
+    display: none;
+}
+
+
+.stuff:hover ~ .second {
+    display: inline-block;
+}
+
+
+#contact:hover ~ .first {
+    display: inline-block;
+}
+
+.dude:hover ~ .first {
+    display: inline-block;
+}
 /*Responsive view*/
 
 
