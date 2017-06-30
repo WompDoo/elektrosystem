@@ -810,28 +810,40 @@ i {
     -webkit-box-shadow: 2px 2px 4px #888;
     -moz-box-shadow: 2px 2px 4px #888;
     box-shadow: 2px 2px 4px #888;
+    opacity: 0;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s
 }
 
 .first {
-    display: none;
+    opacity: 0;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s
 }
 
 .second {
-    display: none;
+    opacity: 0;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s
 }
 
 
 .stuff:hover ~ .second {
-    display: inline-block;
+    opacity: 1;
 }
 
 
 #contact:hover ~ .first {
-    display: inline-block;
+    opacity: 1;
+
 }
 
 .dude:hover ~ .first {
-    display: inline-block;
+    opacity: 1;
+
 }
 /*Responsive view*/
 

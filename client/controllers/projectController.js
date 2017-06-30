@@ -3,6 +3,7 @@ projectController.controller('projectController', function projectController($sc
 
     $scope.projects = [
         {
+            active: 'active',
             image: 'img/project1.jpeg',
             name: 'Jaama Selver',
             alapealkiri: 'Kaubandushoone',
