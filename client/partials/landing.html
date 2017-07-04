@@ -75,6 +75,13 @@
                     <li>
                         <a scroll-to-bookmark="contact">Kontaktid</a>
                     </li>
+                    <div class="lang-nav">
+                        <ul>
+                            <li>ET</li>
+                            <li>RU</li>
+                            <li>EN</li>
+                        </ul>
+                    </div>
                 </ul>
             </nav>
         </div>
@@ -227,25 +234,26 @@
             <button class="project-info col-md-6 col-md-offset-3" ng-click="toggleProjectView($index)">Vaata lähemalt
             </button>
         </div>
+
         <div ng-repeat="project in projects" class="projectView {{project.name}}"
              ng-show="projectview">
             <a class="closeProject" ng-click="hideProject()">X</a>
 
-            <div class="accordian" ng-controller="projectPicturesController">
+            <div class="accordion">
                 <ul>
-                    <li ng-repeat="projectImage in projectImages">
-                        <img src="{{projectImage.image}}"/>
+                    <li ng-repeat="item in globalPictures track by $index">
+                        <img src="{{item}}"/>
                     </li>
                 </ul>
             </div>
 
 
             <div class="col-md-4 project-pictures">
-                <button type="button" class="col-md-12 " aria-label="Left Align">
-                    <span class="glyphicon glyphicon glyphicon-menu-up" aria-hidden="true"></span>
+                <button ng-click="menuDown($index)" type="button" class="col-md-12" aria-label="Left Align">
+                    <span  class="glyphicon glyphicon-menu-up" aria-hidden="true"></span>
                 </button>
-                <button type="button" class="col-md-12 " aria-label="Left Align">
-                    <span class="glyphicon glyphicon glyphicon-menu-down" aria-hidden="true"></span>
+                <button ng-click="menuUp($index)" type="button" class="col-md-12" aria-label="Left Align">
+                    <span  class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
                 </button>
             </div>
 
@@ -263,6 +271,7 @@
 
 
         </div>
+
         <div class="projectOverlay" ng-show="projectViewOverlay">
         </div>
     </div>
@@ -315,8 +324,8 @@
             </div>
         </div>
     </div>
-    <img class="dude" src="img/dude.png">
-    <h3 class="dude-text first">Külastage meid aadressil: ettevõte 23!</h3>
+    <img class="dude" src="img/dude1.png">
+    <h3 class="dude-text first">Külastage meid Tartus, Tähe 127c!</h3>
     <h3 class="dude-text second">Või võtke meiega ühendust</h3>
 
 </div>
