@@ -1,6 +1,6 @@
 <div class="landing-all">
     <div scroll-bookmark="home" class="landing">
-        <div class="col-md-8 landing--banner" ng-controller="scrollController">
+        <div class="col-md-5 landing--banner" ng-controller="scrollController">
             <div class="hero-text">
                 <h1>Meie tehtud</h1>
                 <div class="yellow">
@@ -16,7 +16,7 @@
 
 
         </div>
-        <div class="col-md-4">
+        <div class="col-md-7">
             <nav class="navbar" ng-controller="navBarCtrl">
 
                 <div class="navbar-header">
@@ -95,7 +95,7 @@
     <div id="introduction" class="col-md-5">
         <div class="intro-text">
             <h1 class="col-md-12">Tutvustus</h1>
-            <p class="col-md-12">Oleme tugev Eesti ettevõte, kes võtnud oma missiooniks lahendada kõik elektritöödega
+            <p class="col-md-12 intro-paragraph">Oleme tugev Eesti ettevõte, kes võtnud oma missiooniks lahendada kõik elektritöödega
                 seotud
                 ülesanded.
                 Meie oskustepagas on
@@ -107,88 +107,70 @@
 
     <div class="col-md-7 bulbs">
     </div>
-    <div class="col-md-6 col-md-offset-4 intro-back" ng-app="ngAnimate" ng-controller="introSelect">
-        <div ng-switch on="page">
-            <div ng-hide="selection">
+    <div class="col-md-6 col-md-offset-4 intro-back"  ng-controller="introSelect">
+        <div>
+            <div>
                 <div class="row">
-                    <div class="col-md-6">
-                        <input type="image" ng-click="page='pirn'; toggle()" class="intro-pics" src="img/Pirn.png"/>
+                    <div class="col-md-6 left-intro">
+                        <input ng-show="introleft" ng-mouseover="introright = false" ng-mouseleave="introright = true" type="image" class="intro-pics pirn" src="img/Pirn.png"/>
+                        <div class="col-md-8 col-md-offset-3 inspect-pirn">
+                            <div class="col-md-12">
+                                <h1>
+                                    Elektritööd
+                                </h1>
+                            </div>
+                            <div class="col-md-12 col-md-offset-2">
+                                <p>Me teeme hästi elektritöid. Me teeme hästi elektritöid. Me teeme hästi elektritöid.
+                                    Me teeme hästi elektritöid</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-md-6">
-                        <input type="image" ng-click="page='kilp'; toggle()" class="intro-pics kilp"
+                    <div class="col-md-6 right-intro">
+                        <input ng-show="introright" ng-mouseover="introleft = false" ng-mouseleave="introleft = true" type="image" class="intro-pics kilp"
                                src="img/Kilp.png"/>
+                        <div class="col-md-8 col-md-offset-3 inspect-kilp">
+                            <div class="col-md-12">
+                                <h1>
+                                    Elektrikipide ehitus
+                                </h1>
+                            </div>
+                            <div class="col-md-12 col-md-offset-2">
+                                <p>Me teeme hästi elektritöid. Me teeme hästi elektritöid. Me teeme hästi elektritöid.
+                                    Me teeme hästi elektritöid</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-6">
-                        <input type="image" ng-click="page='moodik'; toggle()" class="intro-pics moodik"
+                    <div  class="col-md-6 left-intro">
+                        <input ng-show="introleft" ng-mouseover="introright = false" ng-mouseleave="introright = true" type="image" class="intro-pics moodik"
                                src="img/Moodik.png"/>
+                        <div class="col-md-8 col-md-offset-3 inspect-moodik">
+                            <div class="col-md-12">
+                                <h1>
+                                    Seadmete paigaldus
+                                </h1>
+                            </div>
+                            <div class="col-md-12 col-md-offset-2">
+                                <p>Me teeme hästi elektritöid. Me teeme hästi elektritöid. Me teeme hästi elektritöid.
+                                    Me teeme hästi elektritöid</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-md-6">
-                        <input type="image" ng-click="page='planeerija'; toggle()" class="intro-pics"
+                    <div class="col-md-6 right-intro">
+                        <input ng-show="introright" ng-mouseover="introleft = false" ng-mouseleave="introleft = true" type="image" class="intro-pics planeerija"
                                src="img/Planeerija.png"/>
-                    </div>
-                </div>
-            </div>
-            <div ng-switch-default>
-            </div>
-            <div class="col-md-12 inspect" ng-switch-when="pirn">
-                <div class="inspect pos-fix">
-                    <div class="col-md-12">
-                        <h1>
-                            Elektritööd
-                        </h1>
-                    </div>
-                    <div class="col-md-12">
-                        <p>Me teeme hästi elektritöid</p>
-                    </div>
-                    <div class="col-md-12">
-                        <button ng-click="toggle()">Tagasi</button>
-                    </div>
-                </div>
-            </div>
-            <div ng-switch-when="kilp">
-                <div class="inspect">
-                    <div class="col-md-12">
-                        <h1>
-                            Kilpide valmistamine
-                        </h1>
-                    </div>
-                    <div class="col-md-12">
-                        <p>Kõige paremad elektrikilbid</p>
-                    </div>
-                    <div class="col-md-12">
-                        <button ng-click="toggle()">Tagasi</button>
-                    </div>
-                </div>
-            </div>
-            <div ng-switch-when="moodik">
-                <div class="inspect">
-                    <div class="col-md-12">
-                        <h1>
-                            Elektripaigaldiste käitlemine
-                        </h1>
-                    </div>
-                    <div class="col-md-12">
-                        <p>Käitleme väga hästi</p>
-                    </div>
-                    <div class="col-md-12">
-                        <button ng-click="toggle()">Tagasi</button>
-                    </div>
-                </div>
-            </div>
-            <div ng-switch-when="planeerija">
-                <div class="inspect">
-                    <div class="col-md-12">
-                        <h1>
-                            Elekriprojektide planeerimine
-                        </h1>
-                    </div>
-                    <div class="col-md-12">
-                        <p>Planeerime alati kõige paremini</p>
-                    </div>
-                    <div class="col-md-12">
-                        <button ng-click="toggle()">Tagasi</button>
+                        <div class="col-md-8 col-md-offset-3 inspect-planeerija">
+                            <div class="col-md-12">
+                                <h1>
+                                    Elektrisüsteemide projekteerimine
+                                </h1>
+                            </div>
+                            <div class="col-md-12 col-md-offset-2">
+                                <p>Me teeme hästi elektritöid. Me teeme hästi elektritöid. Me teeme hästi elektritöid.
+                                    Me teeme hästi elektritöid</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -249,11 +231,11 @@
 
 
             <div class="col-md-4 project-pictures">
-                <button ng-click="menuDown($index)" type="button" class="col-md-12" aria-label="Left Align">
-                    <span  class="glyphicon glyphicon-menu-up" aria-hidden="true"></span>
+                <button ng-click="menuUp()" type="button" class="col-md-12" aria-label="Left Align">
+                    <span class="glyphicon glyphicon-menu-up" aria-hidden="true"></span>
                 </button>
-                <button ng-click="menuUp($index)" type="button" class="col-md-12" aria-label="Left Align">
-                    <span  class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
+                <button ng-click="menuDown()" type="button" class="col-md-12" aria-label="Left Align">
+                    <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
                 </button>
             </div>
 
@@ -329,63 +311,3 @@
     <h3 class="dude-text second">Või võtke meiega ühendust</h3>
 
 </div>
-<!--
-<div class="container" ng-controller="mapCtrl" ng-init="initMap()">
-    <div class="map-name">
-        <h3>
-            CONTACTS BLA BLA
-        </h3>
-    </div>
-    <div id="map" style="height: 400px;">
-    </div>
-    <ui-gmap-google-map center='map.center' zoom='map.zoom'></ui-gmap-google-map>
-</div>
-<div class="container" ng-controller="landingContactCtrl" style="margin-top:50px;">
-    <div class="col-md-6">
-        <form>
-            <div class="form-group">
-                <label class="add-product-label landing-margin">Name</label>
-                <input type="text" class="form-control-add landing-margin" name="name" ng-model="sendEmailForm.name"/>
-            </div>
-            <div class="form-group">
-                <label class="add-product-label landing-margin">E-mail</label>
-                <textarea class="form-control-add landing-margin" name="information" ng-model="sendEmailForm.email"/>
-            </div>
-            <div class="form-group">
-                <label class="add-product-label landing-margin">Subject</label>
-                <textarea class="form-control-add landing-margin" name="information" ng-model="sendEmailForm.subject"/>
-            </div>
-            <div class="form-group">
-                <label class="add-product-label landing-margin">Message</label>
-                <textarea class="form-control-add-long-landing landing-margin" name="information"
-                          ng-model="sendEmailForm.message"/>
-            </div>
-            <div class="row">
-                <div class="col-md-6">
-
-                </div>
-                <div class="col-md-6" style="text-align: right;margin-left: -15px;">
-                    <button class="send-button">SEND</button>
-                </div>
-            </div>
-        </form>
-    </div>
-    <div class="col-md-6">
-        <div ng-bind-html="info">
-
-        </div>
-    </div>
-</div>
-<footer>
-    <div class="container">
-        <div class="col-md-6">
-            <img id="logo-footer" src="img/logo.png"/>
-        </div>
-        <div class="col-md-6" style="text-align: right;">
-            <p class="footer-company">
-                &#169; Elektronet OU 2016
-            </p>
-        </div>
-    </div>
-</footer>
--->

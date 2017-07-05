@@ -1,6 +1,7 @@
 var projectController = angular.module('projectController', ['ui.bootstrap']);
 projectController.controller('projectController', function projectController($scope, $rootScope) {
 
+
     $scope.projects = [
         {
             image: 'img/project1.jpeg',
@@ -75,41 +76,39 @@ projectController.controller('projectController', function projectController($sc
         $scope.globalAlapealkiri = $scope.projects[index].alapealkiri;
         $scope.globalAasta = $scope.projects[index].aasta;
         $scope.globalTekst = $scope.projects[index].tekst;
-        $scope.globalPictures =$scope.projects[index].pictures;
+        $scope.globalPictures = $scope.projects[index].pictures;
     }
+
+    var index = 0;
     $scope.hideProject = function () {
         $rootScope.projectview = false;
         $rootScope.projectViewOverlay = false;
+        index = 0;
     }
 
-    $scope.menuUp = function (index) {
-        var len = $scope.projects.length;
 
-        if(index + 1 < len){
-            $rootScope.projectview = true;
-            $scope.globalName = $scope.projects[index + 1].name;
-            $scope.globalAlapealkiri = $scope.projects[index + 1].alapealkiri;
-            $scope.globalAasta = $scope.projects[index + 1].aasta;
-            $scope.globalTekst = $scope.projects[index + 1].tekst;
-            $scope.globalPictures =$scope.projects[index + 1].pictures;
-        }
-        else {
+    $scope.menuUp = function () {
 
-        }
+        $scope.holder = $scope.projects[index >= $scope.projects.length + 1 ? index = 0 : --index];
+        $rootScope.projectview = true;
+        $scope.globalName = $scope.holder.name;
+        $scope.globalAlapealkiri = $scope.holder.alapealkiri;
+        $scope.globalAasta = $scope.holder.aasta;
+        $scope.globalTekst = $scope.holder.tekst;
+        $scope.globalPictures = $scope.holder.pictures;
+
+
     }
 
-    $scope.menuDown = function (index) {
-        if(index - 1 > 0){
-            $rootScope.projectview = true;
-            $scope.globalName = $scope.projects[index - 1].name;
-            $scope.globalAlapealkiri = $scope.projects[index - 1].alapealkiri;
-            $scope.globalAasta = $scope.projects[index - 1].aasta;
-            $scope.globalTekst = $scope.projects[index - 1].tekst;
-            $scope.globalPictures =$scope.projects[index - 1].pictures;
-        }
-        else {
+    $scope.menuDown = function () {
+        $scope.holder = $scope.projects[index >= $scope.projects.length - 1 ? index = 0 : ++index];
+        $rootScope.projectview = true;
+        $scope.globalName = $scope.holder.name;
+        $scope.globalAlapealkiri = $scope.holder.alapealkiri;
+        $scope.globalAasta = $scope.holder.aasta;
+        $scope.globalTekst = $scope.holder.tekst;
+        $scope.globalPictures = $scope.holder.pictures;
 
-        }
     }
 
 });

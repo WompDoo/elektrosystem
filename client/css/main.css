@@ -178,7 +178,6 @@ h3 {
 
 .landing--banner {
     height: 100vh;
-    width: 60vw;
     background-color: #2166af;
     background-size: cover;
     z-index: 0;
@@ -197,6 +196,7 @@ h3 {
 .hero-text {
     padding-top: 23%;
     padding-bottom: 5%;
+    padding-left: 20px;
 }
 
 .landing--banner h1 {
@@ -205,7 +205,7 @@ h3 {
     color: white;
     text-align: center;
     padding-left: 15%;
-    padding-right: 45%;
+    padding-right: 37%;
 
 }
 
@@ -214,7 +214,7 @@ h3 {
     text-transform: uppercase;
     font-size: 140%;
     text-align: center;
-    padding-right: 30%;
+    padding-right: 18%;
     padding-bottom: 5%;
     -webkit-transition: all 0.5s; /* For Safari 3.1 to 6.0 */
     transition: all 0.5s;
@@ -230,14 +230,14 @@ h3 {
     font-size: 320%;
     color: white;
     text-align: center;
-    width: 35vw;
+    width: 25vw;
     padding-left: 10%;
 
 }
 
 .yellow {
     background-color: #ffe400;
-    width: 67%;
+    width: 75%;
 
 }
 
@@ -265,15 +265,15 @@ i {
 .skyscraper {
     width: 23%;
     position: relative;
-    right: 11%;
-    bottom: 50px;
+    right: 5%;
+    bottom: 30px;
     clip: rect(0px, 60px, 200px, 0px);
 }
 
 .request {
     position: relative;
-    top: 400px;
-    left: 113px;
+    top: 380px;
+    left: 28vw;
     background-color: #2166af;
     border: none;
     color: white;
@@ -310,6 +310,11 @@ i {
     text-align: center;
 }
 
+.intro-paragraph {
+    padding-left: 90px;
+    padding-right: 90px;
+}
+
 .slick-prev, .slick-next {
     margin-top: 30px;
 }
@@ -343,8 +348,6 @@ i {
 
 .introduction p {
     font-size: 20px;
-    padding-left: 90px;
-    padding-right: 90px;
 }
 
 .team {
@@ -659,43 +662,87 @@ i {
 .moodik {
     padding-top: 59px;
     width: 76px;
+    -webkit-transition: all 0.5s; /* For Safari 3.1 to 6.0 */
+    transition: all 0.5s;
 }
 
 .kilp {
     padding-top: 52px;
+    -webkit-transition: all 0.5s; /* For Safari 3.1 to 6.0 */
+    transition: all 0.5s;
 }
 
-.animate-switch-container {
-    position: relative;
-    background: white;
-    border: 1px solid black;
-    height: 40px;
-    overflow: hidden;
+.planeerija {
+    -webkit-transition: all 0.5s; /* For Safari 3.1 to 6.0 */
+    transition: all 0.5s;
+
 }
 
-.animate-switch {
-    padding: 10px;
+.pirn {
+    -webkit-transition: all 0.5s; /* For Safari 3.1 to 6.0 */
+    transition: all 0.5s;
 }
 
-.animate-switch.ng-animate {
-    transition: all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
-
+.inspect-pirn {
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    opacity: 0;
+    display: none;
+    -webkit-transition: all 0.5s; /* For Safari 3.1 to 6.0 */
+    transition: all 0.5s;
 }
 
-.animate-switch.ng-leave.ng-leave-active,
-.animate-switch.ng-enter {
-    top: -50px;
+.inspect-moodik {
+    position: absolute;
+    opacity: 0;
+    display: none;
+    margin-top: -222px;
+    padding-right: 19px;
+    -webkit-transition: all 0.5s; /* For Safari 3.1 to 6.0 */
+    transition: all 0.5s;
 }
 
-.animate-switch.ng-leave,
-.animate-switch.ng-enter.ng-enter-active {
-    top: 0;
+.inspect-kilp {
+    position: absolute;
+    right: 385px;
+    top: -29px;
+    opacity: 0;
+    display: none;
+    -webkit-transition: all 0.5s; /* For Safari 3.1 to 6.0 */
+    transition: all 0.5s;
 }
+
+
+.inspect-planeerija {
+    position: absolute;
+    right: 385px;
+    bottom:0;
+    opacity: 0;
+    display: none;
+    -webkit-transition: all 0.5s; /* For Safari 3.1 to 6.0 */
+    transition: all 0.5s;
+}
+
+.pirn:hover ~ .inspect-pirn {
+    opacity: 1;
+    display: inline-block;
+}
+
+.moodik:hover ~ .inspect-moodik {
+    display: inline-block;
+    opacity: 1;
+}
+
+.kilp:hover ~ .inspect-kilp {
+    display: inline-block;
+    opacity: 1;
+}
+
+.planeerija:hover ~ .inspect-planeerija {
+    display: inline-block;
+    opacity: 1;
+}
+
+
 
 .inspect {
     margin-bottom: -160px;
@@ -798,7 +845,6 @@ i {
     -ms-filter: "FlipH";
 }
 
-
 .dude-text {
     position: absolute;
     right: 84vh;
@@ -831,11 +877,9 @@ i {
     -moz-transition: all 0.5s
 }
 
-
 .stuff:hover ~ .second {
     opacity: 1;
 }
-
 
 #contact:hover ~ .first {
     opacity: 1;
@@ -849,10 +893,11 @@ i {
 
 .lang-nav li {
     width: 30%;
-    padding-top:30px;
+    padding-top: 30px;
     padding-left: 0px;
     padding-right: 40px;
 }
+
 /*Responsive view*/
 
 
