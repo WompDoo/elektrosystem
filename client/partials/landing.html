@@ -196,7 +196,7 @@
         <div class="col-md-3 project-item" ng-repeat="project in projects">
             <img src="{{project.image}}" class="project-image">
             <h1 class="project-heading col-md-8 col-md-offset-2">{{project.name}}</h1>
-            <button class="project-info col-md-6 col-md-offset-3" ng-click="toggleProjectView($index)">Vaata lähemalt
+            <button class="project-info col-md-6 col-md-offset-3" ng-click="toggleProjectView($index)">{{ 'PROJECTSINSPECT' | translate }}
             </button>
         </div>
 
@@ -215,7 +215,7 @@
 
             <div class="col-md-4 project-pictures">
                 <button ng-click="menuDown()" type="button" class="col-md-12 request project-request" aria-label="Left Align">
-                    Veel projekte
+                    {{ 'PROJECTSMORE' | translate }}
                 </button>
             </div>
 
@@ -227,7 +227,7 @@
                 <h3 class="col-md-6 col-md-offset-4">{{globalAasta}}</h3>
                 <p class="col-md-6 col-md-offset-4">{{globalTekst}} </p>
                 <hr class="col-md-6 col-md-offset-4">
-                <button class="col-md-6 col-md-offset-5 request project-request">Saada päring <i
+                <button class="col-md-6 col-md-offset-5 request project-request">{{ 'LANDINGBUTTON1' | translate }} <i
                         class="arrow right"></i></button>
             </div>
 
@@ -240,7 +240,7 @@
 
 </div>
 <div scroll-bookmark="partners" class="partners">
-    <h1 class="col-md-2 col-md-offset-5 center">Partnerid</h1>
+    <h1 class="col-md-2 col-md-offset-5 center">{{ 'SIDEMENUPARTNERS' | translate }}</h1>
     <div class="slickClass" ng-controller="CarouselDemoCtrl">
         <slick
                 infinite="false"
@@ -263,9 +263,9 @@
             </div>
         </div>
         <div class="info-box">
-            <h4>Telefon: +372 7366019</h4>
-            <h4>Email: info@elektrosystem.ee</h4>
-            <h4>Aadress: Tähe 127c, Tartu</h4>
+            <h4>{{ 'CONTACTPHONE' | translate }}: +372 7366019</h4>
+            <h4>{{ 'CONTACTEMAIL' | translate }}: info@elektrosystem.ee</h4>
+            <h4>{{ 'CONTACTADDRESS' | translate }}: Tähe 127c, Tartu</h4>
 
         </div>
         <div class="contact-information">
@@ -274,18 +274,18 @@
     <div class="col-md-6 stuff">
         <div class="contact">
             <div class="col-xs-12 col-md-8 col-md-offset-1 small-heading">
-                <h4>Soovite infot?</h4>
+                <h4>{{ 'CONTACTHEAD1' | translate }}</h4>
             </div>
             <div class="col-md-8 col-md-offset-1">
-                <h2>Võtke meiega ühendust</h2>
+                <h2>{{ 'CONTACTHEAD2' | translate }}</h2>
             </div>
 
             <div class="col-xs- 12 col-md-4 contact-form">
                 <form>
-                    <input type="text" name="name" placeholder="Nimi"/>
-                    <input type="email" name="e-mail" placeholder="E-Maili aadress"/>
-                    <textarea name="text" id="" rows="3" placeholder="Sõnum"></textarea>
-                    <button class="btn-send">Saada päring</button>
+                    <input type="text" name="name" placeholder="{{ 'FORMNAME' | translate }}"/>
+                    <input type="email" name="e-mail" placeholder="{{ 'FORMEMAIL' | translate }}"/>
+                    <textarea name="text" id="" rows="3" placeholder="{{ 'FORMMESSAGE' | translate }}"></textarea>
+                    <button class="btn-send">{{ 'LANDINGBUTTON1' | translate }}</button>
                 </form>
             </div>
         </div>

@@ -30,6 +30,19 @@ mingiAsiCtrl.config(function ($translateProvider) {
         CREWPOS2: 'Projektijuhataja',
         CREWPOS3: 'Projektijuhataja',
 
+        PROJECTSINSPECT:'Vaata lähemalt',
+        PROJECTSMORET:'Veel projekte',
+
+        CONTACTHEAD1: 'Soovite infot?',
+        CONTACTHEAD2: 'Võtke meiega ühendust',
+        CONTACTPHONE: 'Telefon',
+        CONTACTEMAIL: 'E-mail',
+        CONTACTADDRESS: 'Aadress',
+
+        FORMNAME: 'Nimi',
+        FORMEMAIL: 'E-mail aadress',
+        FORMMESSAGE: 'Sõnum',
+
         et: 'Eesti',
         en: 'English'
     })
@@ -60,6 +73,19 @@ mingiAsiCtrl.config(function ($translateProvider) {
             CREWPOS1: 'Manager',
             CREWPOS2: 'Project Manager',
             CREWPOS3: 'Project Manager',
+
+            PROJECTSINSPECT:'More info',
+            PROJECTSMORE:'More projects',
+
+            CONTACTHEAD1: 'Want more information?',
+            CONTACTHEAD2: 'Contact us',
+            CONTACTPHONE: 'Phone',
+            CONTACTEMAIL: 'E-mail',
+            CONTACTADDRESS: 'Address',
+
+            FORMNAME: 'Name',
+            FORMEMAIL: 'E-mail address',
+            FORMMESSAGE: 'Message',
 
             et: 'Eesti',
             en: 'English'
