@@ -8,6 +8,7 @@ mapCtrl.controller('mapCtrl', function($scope){
            center: school,
            draggable: true,
            scrollwheel: false,
+           disableDefaultUI: true,
            styles: [
               {
                 "elementType": "geometry",

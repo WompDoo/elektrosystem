@@ -2,13 +2,13 @@
     <div scroll-bookmark="home" class="landing">
         <div class="col-md-5 landing--banner" ng-controller="scrollController">
             <div class="hero-text">
-                <h1>Meie tehtud</h1>
+                <h1>{{ 'LANDINGTITLE1' | translate }}</h1>
                 <div class="yellow">
-                    <p>elektrilahendused</p>
+                    <p>{{ 'LANDINGMESSAGE' | translate }}</p>
                 </div>
-                <h1> on kõrgusi ületavad</h1>
+                <h1>{{ 'LANDINGTITLE2' | translate }}</h1>
             </div>
-            <a scroll-to-bookmark="introduction" class="col-md-12">Ettevõttest <i class="arrow right"></i></a>
+            <a scroll-to-bookmark="introduction" class="col-md-12">{{ 'LANDINGBUTTON2' | translate }} <i class="arrow right"></i></a>
 
             <a>
                 <img class="mousescroll" src="img/mousescroll.png">
@@ -39,14 +39,11 @@
 
             </nav>
             <div ng-controller="scrollController">
-                <button class="request" scroll-to-bookmark="contact">Saada päring <i class="arrow right"></i></button>
+                <button class="request" scroll-to-bookmark="contact">{{ 'LANDINGBUTTON1' | translate }} <i class="arrow right"></i></button>
             </div>
         </div>
         <img class="skyscraper" src="img/skyscraper.png">
     </div>
-    <!-- <div class="mingiAsi" ng-controller="mingiAsiCtrl" ng-show="mingiasi">
-
-     </div>-->
 </div>
 <div class="gradient--banner">
 </div>
@@ -75,12 +72,9 @@
                     <li>
                         <a scroll-to-bookmark="contact">Kontaktid</a>
                     </li>
-                    <div class="lang-nav">
-                        <ul>
-                            <li>ET</li>
-                            <li>RU</li>
-                            <li>EN</li>
-                        </ul>
+                    <div class="lang-nav" ng-controller="mingiAsiCtrl as ctrl">
+                        <select ng-options="language | translate for language in ctrl.languages" ng-model="ctrl.language" ng-change="ctrl.updateLanguage()">
+                        </select>
                     </div>
                 </ul>
             </nav>
@@ -274,26 +268,30 @@
     </div>
 </div>
 <div scroll-bookmark="contact" class="contact">
-    <div id="contact" class="col-md-8 map">
-        <div class="col-md-8 gMap">
+    <div id="contact" class="col-md-6 map">
+        <div class="col-md-6 col-md-offset-2 gMap">
             <div ng-controller="mapCtrl" ng-init="initMap()">
-                <div id="map" style="height: 450px; width:500px;">
+                <div id="map">
                 </div>
                 <ui-gmap-google-map center='map.center' zoom='map.zoom'></ui-gmap-google-map>
             </div>
         </div>
+        <div class="info-box">
+            <h4>Telefon: +372 7366019</h4>
+            <h4>Email: info@elektrosystem.ee</h4>
+            <h4>Aadress: Tähe 127c, Tartu</h4>
+
+        </div>
         <div class="contact-information">
         </div>
     </div>
-    <div class="col-md-4 stuff">
+    <div class="col-md-6 stuff">
         <div class="contact">
-            <div class="col-xs-12 col-md-5 col-md-offset-1">
-                <h3>Telefon</h3>
-                <p>+372543947</p>
+            <div class="col-xs-12 col-md-8 col-md-offset-1 small-heading">
+                <h4>Soovite infot?</h4>
             </div>
-            <div class="col-md-6">
-                <h3>Meiliaadress</h3>
-                <p>email@elektrosystem.ee</p>
+            <div class="col-md-8 col-md-offset-1">
+                <h2>Võtke meiega ühendust</h2>
             </div>
 
             <div class="col-xs- 12 col-md-4 contact-form">
@@ -306,8 +304,8 @@
             </div>
         </div>
     </div>
-    <img class="dude" src="img/dude1.png">
-    <h3 class="dude-text first">Külastage meid Tartus, Tähe 127c!</h3>
+    <!--<img class="dude" src="img/dude1.png">-->
+    <!--<h3 class="dude-text first">Külastage meid Tartus, Tähe 127c!</h3>
     <h3 class="dude-text second">Või võtke meiega ühendust</h3>
-
+-->
 </div>

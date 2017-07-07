@@ -254,7 +254,7 @@ i {
 }
 
 #burger {
-    padding-top: 4%;
+    padding-top: 2%;
 }
 
 .mousescroll {
@@ -292,7 +292,7 @@ i {
 }
 
 #logo {
-    height: 200%;
+    height: 280%;
     background: white;
 }
 
@@ -353,7 +353,7 @@ i {
 .team {
     height: 100vh;
     background-image: url('../img/taner.png');
-    background-size: cover;
+    background-bo-size: cover;
 }
 
 .team-info {
@@ -383,11 +383,26 @@ i {
 
 .contact-information {
     height: 100vh;
-    background-color: #eeeeff;
+    background-color: white;
     background-size: cover;
     text-align: center;
     padding-right: 22%;
 
+}
+
+.info-box {
+    position: absolute;
+    left: 68vh;
+    height: 23vh;
+    width: 20vw;
+    background-color: yellow;
+    padding-top: 25px;
+    padding-left: 13px;
+}
+
+#map {
+    height: 525px;
+    width: 440px;
 }
 
 .send {
@@ -605,16 +620,20 @@ i {
     width: 91%;
     margin-left: 2%;
     float: left;
-    padding-top: 65px;
+    padding-top: 20px;
 }
 
 .contact-form input,
 .contact-form textarea {
-    width: 330px;
+    width: 375px;
     padding: 3%;
     margin: 2% 8%;
     color: #242424;
     border: 1px solid #B7B7B7;
+}
+
+.small-heading {
+    padding-top: 50px;
 }
 
 .contact-form input::placeholder,
@@ -630,6 +649,8 @@ i {
     font-weight: 700;
     margin: 2% 8%;
     border: none;
+    font-size: 22px;
+    text-transform: uppercase;
 }
 
 .intro-back {
@@ -711,11 +732,10 @@ i {
     transition: all 0.5s;
 }
 
-
 .inspect-planeerija {
     position: absolute;
     right: 385px;
-    bottom:0;
+    bottom: 0;
     opacity: 0;
     display: none;
     -webkit-transition: all 0.5s; /* For Safari 3.1 to 6.0 */
@@ -741,8 +761,6 @@ i {
     display: inline-block;
     opacity: 1;
 }
-
-
 
 .inspect {
     margin-bottom: -160px;
