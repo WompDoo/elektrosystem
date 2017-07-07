@@ -23,8 +23,8 @@
                 <div class="navbar-header">
                     <a class="navbar-brand" scroll-to-bookmark="home"><img id="logo" src="img/logo.png"/></a>
                 </div>
-                <div ng-click="toggleSideMenu()" ng-mouseover="alpha = true" class="three col" id="burger">
-                    <div class="hamburger" id="hamburger-8" ng-class="{alpha: 'is-active'}">
+                <div ng-click="toggleSideMenu()" class="three col" id="burger">
+                    <div class="hamburger" id="hamburger-8">
                         <span class="line"></span>
                         <span class="line"></span>
                         <span class="line"></span>
@@ -202,7 +202,7 @@
 
         <div ng-repeat="project in projects" class="projectView {{project.name}}"
              ng-show="projectview">
-            <a class="close closeProject" ng-click="hideProject()"></a>
+            <a class="closeProject" ng-click="hideProject()"></a>
 
             <div class="accordion">
                 <ul>
@@ -214,11 +214,8 @@
 
 
             <div class="col-md-4 project-pictures">
-                <button ng-click="menuUp()" type="button" class="col-md-12" aria-label="Left Align">
-                    <span class="glyphicon glyphicon-menu-up" aria-hidden="true"></span>
-                </button>
-                <button ng-click="menuDown()" type="button" class="col-md-12" aria-label="Left Align">
-                    <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
+                <button ng-click="menuDown()" type="button" class="col-md-12 request project-request" aria-label="Left Align">
+                    Veel projekte
                 </button>
             </div>
 
