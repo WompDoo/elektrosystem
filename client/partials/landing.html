@@ -8,7 +8,8 @@
                 </div>
                 <h1>{{ 'LANDINGTITLE2' | translate }}</h1>
             </div>
-            <a scroll-to-bookmark="introduction" class="col-md-12">{{ 'LANDINGBUTTON2' | translate }} <i class="arrow right"></i></a>
+            <a scroll-to-bookmark="introduction" class="col-md-12">{{ 'LANDINGBUTTON2' | translate }} <i
+                    class="arrow right"></i></a>
 
             <a>
                 <img class="mousescroll" src="img/mousescroll.png">
@@ -20,26 +21,20 @@
             <nav class="navbar" ng-controller="navBarCtrl">
 
                 <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
-                            aria-expanded="false" aria-controls="navbar">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
                     <a class="navbar-brand" scroll-to-bookmark="home"><img id="logo" src="img/logo.png"/></a>
                 </div>
-                <div id="navbar" class="navbar-collapse collapse">
-                    <ul ng-click="toggleSideMenu()" id="burger" class="nav navbar-nav navbar-right">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </ul>
-                </div><!--/.nav-collapse -->
+                <div ng-click="toggleSideMenu()" ng-mouseover="alpha = true" class="three col" id="burger">
+                    <div class="hamburger" id="hamburger-8" ng-class="{alpha: 'is-active'}">
+                        <span class="line"></span>
+                        <span class="line"></span>
+                        <span class="line"></span>
+                    </div>
+                </div>
 
             </nav>
             <div ng-controller="scrollController">
-                <button class="request" scroll-to-bookmark="contact">{{ 'LANDINGBUTTON1' | translate }} <i class="arrow right"></i></button>
+                <button class="request" scroll-to-bookmark="contact">{{ 'LANDINGBUTTON1' | translate }} <i
+                        class="arrow right"></i></button>
             </div>
         </div>
         <img class="skyscraper" src="img/skyscraper.png">
@@ -53,27 +48,28 @@
             <nav class="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper" role="navigation">
 
                 <ul ng-controller="anchorCtrl" class="nav sidebar-nav">
-                    <a class="close" ng-click="hide()">X</a>
+                    <a class="close" ng-click="hide()"></a>
                     <li>
-                        <a scroll-to-bookmark="home">Home</a>
+                        <a scroll-to-bookmark="home">{{ 'SIDEMENUHOME' | translate }}</a>
                     </li>
                     <li>
-                        <a scroll-to-bookmark="introduction">Tutvustus</a>
+                        <a scroll-to-bookmark="introduction">{{ 'SIDEMENUINTRO' | translate }}</a>
                     </li>
                     <li>
-                        <a scroll-to-bookmark="team">Meeskond</a>
+                        <a scroll-to-bookmark="team">{{ 'SIDEMENUCREW' | translate }}</a>
                     </li>
                     <li>
-                        <a scroll-to-bookmark="references">Referentsid</a>
+                        <a scroll-to-bookmark="references">{{ 'SIDEMENUPROJECTS' | translate }}</a>
                     </li>
                     <li>
-                        <a scroll-to-bookmark="partners">Partnerid</a>
+                        <a scroll-to-bookmark="partners">{{ 'SIDEMENUPARTNERS' | translate }}</a>
                     </li>
                     <li>
-                        <a scroll-to-bookmark="contact">Kontaktid</a>
+                        <a scroll-to-bookmark="contact">{{ 'SIDEMENUCONTACT' | translate }}</a>
                     </li>
                     <div class="lang-nav" ng-controller="mingiAsiCtrl as ctrl">
-                        <select ng-options="language | translate for language in ctrl.languages" ng-model="ctrl.language" ng-change="ctrl.updateLanguage()">
+                        <select ng-options="language | translate for language in ctrl.languages"
+                                ng-model="ctrl.language" ng-change="ctrl.updateLanguage()">
                         </select>
                     </div>
                 </ul>
@@ -88,81 +84,75 @@
 <div scroll-bookmark="introduction" class="introduction">
     <div id="introduction" class="col-md-5">
         <div class="intro-text">
-            <h1 class="col-md-12">Tutvustus</h1>
-            <p class="col-md-12 intro-paragraph">Oleme tugev Eesti ettevõte, kes võtnud oma missiooniks lahendada kõik elektritöödega
-                seotud
-                ülesanded.
-                Meie oskustepagas on
-                aastatepikkuse kogemuse
-                taustal arenenud ja
-                peensusteni lihvitud.</p>
+            <h1 class="col-md-12">{{ 'SIDEMENUINTRO' | translate }}</h1>
+            <p class="col-md-12 intro-paragraph">{{ 'INTROTEXT' | translate }}</p>
         </div>
     </div>
 
     <div class="col-md-7 bulbs">
     </div>
-    <div class="col-md-6 col-md-offset-4 intro-back"  ng-controller="introSelect">
+    <div class="col-md-6 col-md-offset-4 intro-back" ng-controller="introSelect">
         <div>
             <div>
                 <div class="row">
                     <div class="col-md-6 left-intro">
-                        <input ng-show="introleft" ng-mouseover="introright = false" ng-mouseleave="introright = true" type="image" class="intro-pics pirn" src="img/Pirn.png"/>
+                        <input ng-show="introleft" ng-mouseover="introright = false" ng-mouseleave="introright = true"
+                               type="image" class="intro-pics pirn" src="img/Pirn.png"/>
                         <div class="col-md-8 col-md-offset-3 inspect-pirn">
                             <div class="col-md-12">
                                 <h1>
-                                    Elektritööd
+                                    {{ 'INTROSUBHEADING1' | translate }}
                                 </h1>
                             </div>
                             <div class="col-md-12 col-md-offset-2">
-                                <p>Me teeme hästi elektritöid. Me teeme hästi elektritöid. Me teeme hästi elektritöid.
-                                    Me teeme hästi elektritöid</p>
+                                <p>{{ 'INTROSUBTEXT1' | translate }}</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 right-intro">
-                        <input ng-show="introright" ng-mouseover="introleft = false" ng-mouseleave="introleft = true" type="image" class="intro-pics kilp"
+                        <input ng-show="introright" ng-mouseover="introleft = false" ng-mouseleave="introleft = true"
+                               type="image" class="intro-pics kilp"
                                src="img/Kilp.png"/>
                         <div class="col-md-8 col-md-offset-3 inspect-kilp">
                             <div class="col-md-12">
                                 <h1>
-                                    Elektrikipide ehitus
+                                    {{ 'INTROSUBHEADING2' | translate }}
                                 </h1>
                             </div>
                             <div class="col-md-12 col-md-offset-2">
-                                <p>Me teeme hästi elektritöid. Me teeme hästi elektritöid. Me teeme hästi elektritöid.
-                                    Me teeme hästi elektritöid</p>
+                                <p>{{ 'INTROSUBTEXT2' | translate }}</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="row">
-                    <div  class="col-md-6 left-intro">
-                        <input ng-show="introleft" ng-mouseover="introright = false" ng-mouseleave="introright = true" type="image" class="intro-pics moodik"
+                    <div class="col-md-6 left-intro">
+                        <input ng-show="introleft" ng-mouseover="introright = false" ng-mouseleave="introright = true"
+                               type="image" class="intro-pics moodik"
                                src="img/Moodik.png"/>
                         <div class="col-md-8 col-md-offset-3 inspect-moodik">
                             <div class="col-md-12">
                                 <h1>
-                                    Seadmete paigaldus
+                                    {{ 'INTROSUBHEADING3' | translate }}
                                 </h1>
                             </div>
                             <div class="col-md-12 col-md-offset-2">
-                                <p>Me teeme hästi elektritöid. Me teeme hästi elektritöid. Me teeme hästi elektritöid.
-                                    Me teeme hästi elektritöid</p>
+                                <p>{{ 'INTROSUBTEXT3' | translate }}</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 right-intro">
-                        <input ng-show="introright" ng-mouseover="introleft = false" ng-mouseleave="introleft = true" type="image" class="intro-pics planeerija"
+                        <input ng-show="introright" ng-mouseover="introleft = false" ng-mouseleave="introleft = true"
+                               type="image" class="intro-pics planeerija"
                                src="img/Planeerija.png"/>
                         <div class="col-md-8 col-md-offset-3 inspect-planeerija">
                             <div class="col-md-12">
                                 <h1>
-                                    Elektrisüsteemide projekteerimine
+                                    {{ 'INTROSUBHEADING4' | translate }}
                                 </h1>
                             </div>
                             <div class="col-md-12 col-md-offset-2">
-                                <p>Me teeme hästi elektritöid. Me teeme hästi elektritöid. Me teeme hästi elektritöid.
-                                    Me teeme hästi elektritöid</p>
+                                <p>{{ 'INTROSUBTEXT4' | translate }}</p>
                             </div>
                         </div>
                     </div>
@@ -176,27 +166,26 @@
 <div scroll-bookmark="team" class="team">
     <div class="col-md-12">
         <div class="team-info col-md-8">
-            <h1 class="col-md-12">Meeskond</h1>
-            <p class="col-md-12">Ettevõtte võtmetegijad annavad asjalikku ja profesionaalset nõu ning meie tehtud tööd
-                räägivad enda eest. </p>
+            <h1 class="col-md-12">{{ 'SIDEMENUCREW' | translate }}</h1>
+            <p class="col-md-12">{{ 'CREWTEXT' | translate }}</p>
         </div>
         <div class="people col-md-4">
             <div class="col-md-12 person">
                 <h3 class="col-md-12">Priit Laur</h3>
                 <img class="name-pics" src="img/Planeerija.png">
-                <p class="col-md-12">Juhataja</p>
+                <p class="col-md-12">{{ 'CREWPOS1' | translate }}</p>
                 <p class="col-md-12">email@elektrosystem.ee</p>
             </div>
             <div class="col-md-12 person">
                 <h3 class="col-md-12">Priit Laur</h3>
                 <img class="name-pics" src="img/Planeerija.png">
-                <p class="col-md-12">Projektijuhataja</p>
+                <p class="col-md-12">{{ 'CREWPOS2' | translate }}</p>
                 <p class="col-md-12">email@elektrosystem.ee</p>
             </div>
             <div class="col-md-12 person">
                 <h3 class="col-md-12">Priit Laur</h3>
                 <img class="name-pics" src="img/Planeerija.png">
-                <p class="col-md-12">Projektijuhataja</p>
+                <p class="col-md-12">{{ 'CREWPOS3' | translate }}</p>
                 <p class="col-md-12">email@elektrosystem.ee</p>
             </div>
         </div>
@@ -213,7 +202,7 @@
 
         <div ng-repeat="project in projects" class="projectView {{project.name}}"
              ng-show="projectview">
-            <a class="closeProject" ng-click="hideProject()">X</a>
+            <a class="close closeProject" ng-click="hideProject()"></a>
 
             <div class="accordion">
                 <ul>

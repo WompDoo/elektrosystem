@@ -8,4 +8,5 @@ navBarCtrl.controller('navBarCtrl', function($rootScope, $scope, dataService){
 
 
     }
+    $scope.alpha = false;
 });
