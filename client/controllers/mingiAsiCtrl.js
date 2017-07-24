@@ -31,7 +31,7 @@ mingiAsiCtrl.config(function ($translateProvider) {
         CREWPOS3: 'Projektijuhataja',
 
         PROJECTSINSPECT:'Vaata lähemalt',
-        PROJECTSMORET:'Veel projekte',
+        PROJECTSMORE:'Veel projekte',
 
         CONTACTHEAD1: 'Soovite infot?',
         CONTACTHEAD2: 'Võtke meiega ühendust',

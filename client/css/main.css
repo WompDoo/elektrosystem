@@ -1017,4 +1017,134 @@ i {
 
 /*Responsive view*/
 
+.landingM {
+    height: 110vh;
+    width: 100vw;
+}
+
+.banner-blue {
+    background-color: #2a6496;
+    height: 80vh;
+    margin-top: 4vh;
+}
+
+.banner-blue h1 {
+    font-size: 100px;
+}
+
+.col-xs-12 {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.brand {
+    background: url(../img/logo.png) no-repeat;
+    background-size: 100%;
+    margin-top: 6vh;
+    height: 10vh;
+}
+
+.center-block {
+    float: none;
+}
+
+.banner-right {
+
+}
+
+.container-heading {
+    padding-top: 5vh;
+    padding-bottom: 4vh;
+    font-size: 120px;
+    font-weight: bold;
+}
+
+.para {
+    font-size: 50px;
+
+}
+
+.para h1{
+    word-wrap: break-word;
+    font-size:92px;
+}
+
+
+.hero-textM {
+    color: white;
+    margin-top: 20vh;
+}
+
+.hero-textM a {
+    font-size: 80px;
+}
+
+.heading2 {
+    padding-bottom: 80px;
+}
+
+.yellowM {
+    background-color: yellow;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.peopleM {
+    font-size: 50px;
+}
+
+.name-picsM {
+    width: 155px;
+}
+
+.name-heading {
+    font-size: 75px;
+}
+
+.project-informationM {
+    font-size: 75px;
+}
+
+.contact-formM {
+    font-size: 70px;
+    padding-top: 20px;
+}
+
+.contact-formM input,
+.contact-formM textarea {
+    width: 650px;
+    padding: 3%;
+    margin: 2% 8%;
+    color: #242424;
+    border: 1px solid #B7B7B7;
+}
+
+.contact-formM .btn-send {
+    background: #ffe400;
+    width: 400px;
+    height: 110px;
+    color: #FFFFFF;
+    font-weight: 700;
+    margin: 2% 8%;
+    border: none;
+    font-size: 60px;
+    text-transform: uppercase;
+}
+
+
+.project-font {
+    font-size: 60px;
+}
+
+.slick-img {
+    width:95% ;
+}
+
+.partner-bg {
+    background-color: #008cba;
+}
+
+.partner-item {
+    padding-top: 25vh;
+}
 
