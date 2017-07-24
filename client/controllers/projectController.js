@@ -9,6 +9,7 @@ projectController.controller('projectController', function projectController($sc
             alapealkiri: 'toidupoed',
             aasta: '2013-2015',
             tekst: "Oleme olnud tähtsaks osaks Eesti prestiižseima toidupoodide keti - Selveri arengus. Projekteeritud ja elekter on paigaldatud Aardla, Jaama, Jõgeva ja Vitamiini Selveritesse. Projektide toimumisaeg on jäänud vahemikku 2013-2016 aasta.",
+            shortinfo:'Oleme olnud tähtsaks osaks Eesti prestiižseima toidupoodide keti - Selveri arengus.',
             pictures: ["img/project1.jpeg", "img/project5.jpeg", "img/project6.jpeg", "img/project7.jpeg", "img/project1.jpeg"]
         },
         {
@@ -17,6 +18,7 @@ projectController.controller('projectController', function projectController($sc
             alapealkiri: 'spordikompleks Tartus',
             aasta: 2009,
             tekst: "Lõime koostöös YIT ehitusega valgus -ja elektrilahendused Lõuna-Eesti võimsaima spordikompleksi jaoks. Koguprojekti pikkus 2 aastat ja kasulikku pinda 1500m2; töö tellijaks oli Eesti Maaülikool; kompleks asub Kreutzwaldi tänav 3, Tartu linna ääres, otse Tallinnast sissesõidul.",
+            shortinfo:'Lõime koostöös YIT ehitusega valgus -ja elektrilahendused Lõuna-Eesti võimsaima spordikompleksi jaoks.',
             pictures: ["img/project5.jpeg", "img/project6.jpeg", "img/project1.jpeg", "img/project1.jpeg", "img/project7.jpeg"]
         },
         {
@@ -25,6 +27,7 @@ projectController.controller('projectController', function projectController($sc
             alapealkiri: 'lavatehnika elektripaigaldis',
             aasta: '2016-2017',
             tekst: "Koostöös Hollandi ettevõttega Trekwerk valmistasime 1,5 aasta jooksul eriilmelise lavatenika elektripaigaldise Vanemuise teatrile. Veelgi mahukam lahendus on 2008. aastal tehtud Ugala teatri jaoks. Oleme eriliselt uhked tugeva koostöö üle Euroopa partneriga ja oma panuse eest Eesti kultuuri arendamisse.",
+            shortinfo:'Koostöös Hollandi ettevõttega Trekwerk valmistasime 1,5 aasta jooksul eriilmelise lavatenika elektripaigaldise Vanemuise.',
             pictures: ["img/vanemuine1.jpg", "img/vanemuine2.jpg", "img/vanemuine3.jpg", "img/vanemuine4.jpg"]
         },
         {
@@ -33,15 +36,8 @@ projectController.controller('projectController', function projectController($sc
             alapealkiri: 'alapealkiri',
             aasta: 2014,
             tekst: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras gravida augue sem, nec aliquet mauris fringilla at. Aliquam erat volutpat. Morbi posuere eros tortor, vel feugiat velit egestas eget. Etiam hendrerit purus neque, a viverra ante venenatis eget.",
+            shortinfo:'Lõime koostöös YIT ehitusega valgus -ja elektrilahendused Lõuna-Eesti võimsaima spordikompleksi jaoks.',
             pictures: ["img/project1.jpeg", "img/Ramm.png", "img/project6.jpeg", "img/project7.jpeg", "img/project1.jpeg"]
-        },
-        {
-            image: 'img/project5.jpeg',
-            name: 'Intrac',
-            alapealkiri: 'alapealkiri',
-            aasta: 2013,
-            tekst: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras gravida augue sem, nec aliquet mauris fringilla at. Aliquam erat volutpat. Morbi posuere eros tortor, vel feugiat velit egestas eget. Etiam hendrerit purus neque, a viverra ante venenatis eget.",
-            pictures: ["img/project1.jpeg", "img/project5.jpeg", "img/project6.jpeg", "img/project7.jpeg", "img/project1.jpeg"]
         },
         {
             image: 'img/project6.jpeg',
@@ -49,6 +45,16 @@ projectController.controller('projectController', function projectController($sc
             alapealkiri: 'alapealkiri',
             aasta: 2012,
             tekst: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras gravida augue sem, nec aliquet mauris fringilla at. Aliquam erat volutpat. Morbi posuere eros tortor, vel feugiat velit egestas eget. Etiam hendrerit purus neque, a viverra ante venenatis eget.",
+            shortinfo:'Lõime koostöös YIT ehitusega valgus -ja elektrilahendused Lõuna-Eesti võimsaima spordikompleksi jaoks.',
+            pictures: ["img/project1.jpeg", "img/project5.jpeg", "img/project6.jpeg", "img/project7.jpeg", "img/project1.jpeg"]
+        },
+        {
+            image: 'img/project5.jpeg',
+            name: 'Intrac',
+            alapealkiri: 'alapealkiri',
+            aasta: 2013,
+            tekst: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras gravida augue sem, nec aliquet mauris fringilla at. Aliquam erat volutpat. Morbi posuere eros tortor, vel feugiat velit egestas eget. Etiam hendrerit purus neque, a viverra ante venenatis eget.",
+            shortinfo:'Lõime koostöös YIT ehitusega valgus -ja elektrilahendused Lõuna-Eesti võimsaima spordikompleksi jaoks.',
             pictures: ["img/project1.jpeg", "img/project5.jpeg", "img/project6.jpeg", "img/project7.jpeg", "img/project1.jpeg"]
         },
         {
@@ -57,6 +63,7 @@ projectController.controller('projectController', function projectController($sc
             alapealkiri: 'alapealkiri',
             aasta: 2011,
             tekst: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras gravida augue sem, nec aliquet mauris fringilla at. Aliquam erat volutpat. Morbi posuere eros tortor, vel feugiat velit egestas eget. Etiam hendrerit purus neque, a viverra ante venenatis eget.",
+            shortinfo:'Lõime koostöös YIT ehitusega valgus -ja elektrilahendused Lõuna-Eesti võimsaima spordikompleksi jaoks.',
             pictures: ["img/project1.jpeg", "img/project5.jpeg", "img/project6.jpeg", "img/project7.jpeg", "img/project1.jpeg"]
         },
         {
@@ -65,6 +72,7 @@ projectController.controller('projectController', function projectController($sc
             alapealkiri: 'alapealkiri',
             aasta: 2010,
             tekst: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras gravida augue sem, nec aliquet mauris fringilla at. Aliquam erat volutpat. Morbi posuere eros tortor, vel feugiat velit egestas eget. Etiam hendrerit purus neque, a viverra ante venenatis eget.",
+            shortinfo:'Lõime koostöös YIT ehitusega valgus -ja elektrilahendused Lõuna-Eesti võimsaima spordikompleksi jaoks.',
             pictures: ["img/project1.jpeg", "img/project5.jpeg", "img/project6.jpeg", "img/project7.jpeg", "img/project1.jpeg"]
         },
     ];

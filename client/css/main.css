@@ -1105,6 +1105,7 @@ i {
     font-size: 75px;
 }
 
+
 .contact-formM {
     font-size: 70px;
     padding-top: 20px;
@@ -1149,7 +1150,8 @@ i {
 }
 
 .project-picM {
-    padding-top: 10vh;
+    padding-top: 4vh;
     width: 80vw;
+    padding-bottom: 5vh;
 
 }
