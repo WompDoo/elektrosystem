@@ -467,8 +467,8 @@ i {
 .info-box {
     position: absolute;
     left: 68vh;
-    height: 23vh;
-    width: 20vw;
+    height: 21vh;
+    width: 21vw;
     background-color: yellow;
     padding-top: 25px;
     padding-left: 13px;
@@ -1105,6 +1105,11 @@ i {
     font-size: 60px;
 }
 
+.border-box {
+    height: 80vh;!important;
+    border: 1px solid;
+
+}
 .contact-formM {
     font-size: 70px;
     padding-top: 20px;

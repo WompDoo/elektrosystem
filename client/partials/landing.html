@@ -398,16 +398,15 @@
                             slides-to-show="1"
                             slides-to-scroll="1"
                     >
-                        <div class="project-informationM" ng-repeat="project in projects">
-                            <h1 class="project-font bold">{{project.name}}</h1>
-                            <h5 class="project-font">{{project.alapealkiri}}</h5>
-                            <h3 class="project-font">{{project.aasta}}</h3>
-                            <img class="col-xs-12 center-block project-picM" src="{{project.image}}"/>
-                            <p class="col-xs-10 center-block">{{project.shortinfo}}</p>
-                            <hr class="col-md-6 col-md-offset-4">
-
+                        <div class="border-box" ng-repeat="project in projects">
+                            <div class="project-informationM" >
+                                <h1 class="project-font bold">{{project.name}}</h1>
+                                <h5 class="project-font">{{project.alapealkiri}}</h5>
+                                <h3 class="project-font">{{project.aasta}}</h3>
+                                <img class="col-xs-12 center-block project-picM" src="{{project.image}}"/>
+                                <p class="col-xs-10 center-block">{{project.shortinfo}}</p>
+                            </div>
                         </div>
-
 
                     </slick>
                 </div>
