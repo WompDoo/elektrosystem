@@ -1019,7 +1019,7 @@ i {
 
 .landingM {
     height: 110vh;
-    width: 100vw;
+    width: 102%;
 }
 
 .banner-blue {
@@ -1066,7 +1066,7 @@ i {
 
 .para h1{
     word-wrap: break-word;
-    font-size:92px;
+    font-size:83px;
 }
 
 
@@ -1148,3 +1148,8 @@ i {
     padding-top: 25vh;
 }
 
+.project-picM {
+    padding-top: 10vh;
+    width: 80vw;
+
+}

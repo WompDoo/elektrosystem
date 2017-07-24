@@ -313,10 +313,10 @@
                 <div class="col-xs-10 center-block brand"></div>
                 <div class="col-xs-12 landingM banner-blue text-center">
                     <div class="hero-textM">
-                        <h1>Meie tehtud</h1>
-                        <h1 class="yellowM">elektrilahendused</h1>
-                        <h1 class="heading2"> on kõrgusi ületavad</h1>
-                        <a scroll-to-bookmark="introduction"><!--{{ 'LANDINGBUTTON2' | translate }}-->Ettevõttest <i
+                        <h1>{{ 'LANDINGTITLE1' | translate }}</h1>
+                        <h1 class="yellowM">{{ 'LANDINGMESSAGE' | translate }}</h1>
+                        <h1 class="heading2">{{ 'LANDINGTITLE2' | translate }}</h1>
+                        <a scroll-to-bookmark="introduction">{{ 'LANDINGBUTTON2' | translate }} <i
                                 class="arrow right"></i></a>
                     </div>
                 </div>
@@ -338,32 +338,24 @@
         <div class="row">
             <div class="col-xs-12 landingM banner-right text-center">
                 <div class="row">
-                    <h1 class="container-heading">Tutvustus</h1>
+                    <h1 class="container-heading">{{ 'SIDEMENUINTRO' | translate }}</h1>
                     <div class="col-xs-6 para">
-                        <h1>Elektritööd</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in sollicitudin felis. Mauris
-                            diam
-                            erat.</p>
+                        <h1>{{ 'INTROSUBHEADING1' | translate }}</h1>
+                        <p>{{ 'INTROSUBTEXT1' | translate }}</p>
                     </div>
                     <div class="col-xs-6 para">
-                        <h1>Elektrikilbi ehitus</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in sollicitudin felis. Mauris
-                            diam
-                            erat.</p>
+                        <h1>{{ 'INTROSUBHEADING2' | translate }}</h1>
+                        <p>{{ 'INTROSUBTEXT2' | translate }}</p>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-xs-6 para">
-                        <h1>Seadmete paigaldus</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in sollicitudin felis. Mauris
-                            diam
-                            erat.</p>
+                        <h1>{{ 'INTROSUBHEADING3' | translate }}</h1>
+                        <p>{{ 'INTROSUBTEXT3' | translate }}</p>
                     </div>
                     <div class="col-xs-6 para">
-                        <h1>Projekteerimine</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in sollicitudin felis. Mauris
-                            diam
-                            erat.</p>
+                        <h1>{{ 'INTROSUBHEADING4' | translate }}</h1>
+                        <p>{{ 'INTROSUBTEXT4' | translate }}</p>
                     </div>
                 </div>
             </div>
@@ -372,7 +364,7 @@
     <div class="container-fluid ">
         <div class="row">
             <div class="col-xs-12 landingM banner-right text-center">
-                <h1 class="container-heading">Meeskond</h1>
+                <h1 class="container-heading">{{ 'SIDEMENUCREW' | translate }}</h1>
                 <div class="peopleM col-xs-12">
                     <div class="col-xs-12 person">
                         <h1 class="col-xs-12 name-heading">Priit Laur</h1>
@@ -399,7 +391,7 @@
     <div class="container-fluid ">
         <div class="row">
             <div ng-controller="projectController" class="col-xs-12 landingM banner-right text-center">
-                <h1 class="container-heading">Projektid</h1>
+                <h1 class="container-heading">{{ 'SIDEMENUPROJECTS' | translate }}</h1>
                 <div class="slickClassM">
                     <slick
                             infinite="false"
@@ -410,7 +402,7 @@
                             <h1 class="project-font">{{project.name}}</h1>
                             <h5 class="project-font">{{project.alapealkiri}}</h5>
                             <h3 class="project-font">{{project.aasta}}</h3>
-                            <p>{{project.tekst}} </p>
+                            <img class="col-xs-12 center-block project-picM" src="{{project.image}}"/>
                             <hr class="col-md-6 col-md-offset-4">
 
                         </div>
@@ -426,7 +418,7 @@
         <div class="row">
             <div class="col-xs-12 landingM partner-bg text-center">
                 <div class="row">
-                    <h1 class="container-heading">Partnerid</h1>
+                    <h1 class="container-heading">{{ 'SIDEMENUPARTNERS' | translate }}</h1>
                     <div class="slickClassM" ng-controller="CarouselDemoCtrl">
                         <slick
                                 infinite="false"
@@ -447,7 +439,7 @@
         <div class="row">
             <div class="col-xs-12 landingM banner-right text-center">
                 <div class="row">
-                    <h1 class="container-heading">Kontakt</h1>
+                    <h1 class="container-heading">{{ 'SIDEMENUCONTACT' | translate }}</h1>
                     <div class="col-xs-12 contact-formM">
                         <form>
                             <input type="text" name="name" placeholder="{{ 'FORMNAME' | translate }}"/>

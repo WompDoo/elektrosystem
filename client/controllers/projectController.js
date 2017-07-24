@@ -33,7 +33,7 @@ projectController.controller('projectController', function projectController($sc
             alapealkiri: 'alapealkiri',
             aasta: 2014,
             tekst: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras gravida augue sem, nec aliquet mauris fringilla at. Aliquam erat volutpat. Morbi posuere eros tortor, vel feugiat velit egestas eget. Etiam hendrerit purus neque, a viverra ante venenatis eget.",
-            pictures: ["img/project1.jpeg", "img/project5.jpeg", "img/project6.jpeg", "img/project7.jpeg", "img/project1.jpeg"]
+            pictures: ["img/project1.jpeg", "img/Ramm.png", "img/project6.jpeg", "img/project7.jpeg", "img/project1.jpeg"]
         },
         {
             image: 'img/project5.jpeg',

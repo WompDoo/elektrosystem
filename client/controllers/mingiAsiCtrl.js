@@ -17,7 +17,7 @@ mingiAsiCtrl.config(function ($translateProvider) {
 
         INTROTEXT: 'Oleme tugev Eesti ettevõte, kes võtnud oma missiooniks lahendada kõik elektritöödega seotud ülesanded.Meie oskustepagas onaastatepikkuse kogemusetaustal arenenud japeensusteni lihvitud.',
         INTROSUBHEADING1: 'Elektritööd',
-        INTROSUBHEADING2: 'Elektriklipid ehitus',
+        INTROSUBHEADING2: 'Elektriklipide ehitus',
         INTROSUBHEADING3: 'Seadmete paigaldus',
         INTROSUBHEADING4: 'Projekteerimine',
         INTROSUBTEXT1: 'Me teeme hästi elektritöid. Me teeme hästi elektritöid. Me teeme hästi elektritöid. Me teeme hästi elektritöid.',
@@ -32,6 +32,8 @@ mingiAsiCtrl.config(function ($translateProvider) {
 
         PROJECTSINSPECT:'Vaata lähemalt',
         PROJECTSMORE:'Veel projekte',
+
+        PROJECTTEXT:'{{project.text}}',
 
         CONTACTHEAD1: 'Soovite infot?',
         CONTACTHEAD2: 'Võtke meiega ühendust',
