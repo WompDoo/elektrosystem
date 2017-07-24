@@ -1102,9 +1102,8 @@ i {
 }
 
 .project-informationM {
-    font-size: 75px;
+    font-size: 60px;
 }
-
 
 .contact-formM {
     font-size: 70px;
@@ -1132,6 +1131,9 @@ i {
     text-transform: uppercase;
 }
 
+.bold {
+    font-weight: bold;
+}
 
 .project-font {
     font-size: 60px;
