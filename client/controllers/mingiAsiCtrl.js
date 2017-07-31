@@ -20,20 +20,20 @@ mingiAsiCtrl.config(function ($translateProvider) {
         INTROSUBHEADING2: 'Elektriklipide ehitus',
         INTROSUBHEADING3: 'Seadmete paigaldus',
         INTROSUBHEADING4: 'Projekteerimine',
-        INTROSUBTEXT1: 'Me teeme hästi elektritöid. Me teeme hästi elektritöid. Me teeme hästi elektritöid. Me teeme hästi elektritöid.',
-        INTROSUBTEXT2: 'Me teeme hästi elektritöid. Me teeme hästi elektritöid. Me teeme hästi elektritöid. Me teeme hästi elektritöid.',
-        INTROSUBTEXT3: 'Me teeme hästi elektritöid. Me teeme hästi elektritöid. Me teeme hästi elektritöid. Me teeme hästi elektritöid.',
-        INTROSUBTEXT4: 'Me teeme hästi elektritöid. Me teeme hästi elektritöid. Me teeme hästi elektritöid. Me teeme hästi elektritöid.',
+        INTROSUBTEXT1: 'See on meie peamine tööpõld. Erinevad elektritööd on meie igapäevaseks töö osaks.',
+        INTROSUBTEXT2: 'Omame pikaajalist kogemust elektrikilpide ehitusel ja remontimisel.',
+        INTROSUBTEXT3: 'Meil on oskuslik tööjõud erinevate elektriseadmete installeerimiseks.',
+        INTROSUBTEXT4: 'Oleme koostanud elektriprojekte juba ligi 25 aastat.',
 
         CREWTEXT: 'Ettevõtte võtmetegijad annavad asjalikku ja profesionaalset nõu ning meie tehtud tööd räägivad enda eest.',
         CREWPOS1: 'Juhataja',
         CREWPOS2: 'Projektijuhataja',
         CREWPOS3: 'Projektijuhataja',
 
-        PROJECTSINSPECT:'Vaata lähemalt',
-        PROJECTSMORE:'Veel projekte',
+        PROJECTSINSPECT: 'Vaata lähemalt',
+        PROJECTSMORE: 'Veel projekte',
 
-        PROJECTTEXT:'{{project.text}}',
+        /*PROJECTTEXT: project.text,*/
 
         CONTACTHEAD1: 'Soovite infot?',
         CONTACTHEAD2: 'Võtke meiega ühendust',
@@ -46,7 +46,8 @@ mingiAsiCtrl.config(function ($translateProvider) {
         FORMMESSAGE: 'Sõnum',
 
         et: 'Eesti',
-        en: 'English'
+        en: 'English',
+        ru: 'Россия'
     })
         .translations('en', {
             LANDINGTITLE1: 'We take',
@@ -64,20 +65,20 @@ mingiAsiCtrl.config(function ($translateProvider) {
             INTROTEXT: 'We are a strong Estonian company, which has taken on the task of solving all electrical work related tasks. Our fine knowledge of electrical work has been honed by years of experience.',
             INTROSUBHEADING1: 'Electrical work',
             INTROSUBHEADING2: 'Electric shield manufacturing',
-            INTROSUBHEADING3: 'Installation of facilities',
+            INTROSUBHEADING3: 'Installation',
             INTROSUBHEADING4: 'Planning',
-            INTROSUBTEXT1: 'We do great electrical work. We do great electrical work. We do great electrical work. We do great electrical work',
-            INTROSUBTEXT2: 'We do great electrical work. We do great electrical work. We do great electrical work. We do great electrical work',
-            INTROSUBTEXT3: 'We do great electrical work. We do great electrical work. We do great electrical work. We do great electrical work',
-            INTROSUBTEXT4: 'We do great electrical work. We do great electrical work. We do great electrical work. We do great electrical work',
+            INTROSUBTEXT1: 'This is our main field. We are providing electrical works on a daily basis.',
+            INTROSUBTEXT2: 'We have a long experience in building and fixing electrical shields.',
+            INTROSUBTEXT3: 'The skilled workers are able to assist in installing different kinds of electrical appliances.',
+            INTROSUBTEXT4: 'We have been composing electrical projects for almost 25 years.',
 
             CREWTEXT: 'The key players in the company provide efficient and professional advice, and the work we do talks for itself.',
             CREWPOS1: 'Manager',
             CREWPOS2: 'Project Manager',
             CREWPOS3: 'Project Manager',
 
-            PROJECTSINSPECT:'More info',
-            PROJECTSMORE:'More projects',
+            PROJECTSINSPECT: 'More info',
+            PROJECTSMORE: 'More projects',
 
             CONTACTHEAD1: 'Want more information?',
             CONTACTHEAD2: 'Contact us',
@@ -90,7 +91,54 @@ mingiAsiCtrl.config(function ($translateProvider) {
             FORMMESSAGE: 'Message',
 
             et: 'Eesti',
-            en: 'English'
+            en: 'English',
+            ru: 'Россия'
+        })
+
+        .translations('ru', {
+            LANDINGTITLE1: 'Осуществленные нами проекты',
+            LANDINGTITLE2: 'превышают высоты',
+            LANDINGMESSAGE: 'в сфере електричества',
+            SIDEMENUHOME: 'Домашняя страница',
+            SIDEMENUINTRO: 'Ознакомление',
+            SIDEMENUCREW: 'Персонал',
+            SIDEMENUPROJECTS: 'Проекты',
+            SIDEMENUPARTNERS: 'Партнеры',
+            SIDEMENUCONTACT: 'Контакт',
+            LANDINGBUTTON1: 'Пришли запрос',
+            LANDINGBUTTON2: 'О компании',
+
+            INTROTEXT: 'Наш богаж умения и знаний  на фоне долголетнего опыта, развит и отшлифован до мелочей',
+            INTROSUBHEADING1: 'Электрические работы',
+            INTROSUBHEADING2: 'Собирание электпических щитов.',
+            INTROSUBHEADING3: 'Установка приборов',
+            INTROSUBHEADING4: 'Проектирование',
+            INTROSUBTEXT1: 'Эта наша главная сфера деятельности, различные электрические работы-это наша повседневная работа.',
+            INTROSUBTEXT2: 'Имеем долгосрочный опыт по собиранию и ремонту электрических щитов.',
+            INTROSUBTEXT3: 'У нас опытный персонал по инсталяции различных электрических приборов',
+            INTROSUBTEXT4: 'Составляем электрические проекты на пртяжении 25 лет',
+
+            CREWTEXT: 'Ключевые деятели компании дают проффесиональные и дельные советы. Выполненые работы говорят сами за себя.',
+            CREWPOS1: 'Руководитель',
+            CREWPOS2: 'Руководитель проектов',
+            CREWPOS3: 'Руководитель проектов',
+
+            PROJECTSINSPECT: 'Смотри больше',
+            PROJECTSMORE: 'Осуществленные проекты',
+
+            CONTACTHEAD1: 'Желаете получить дополнительную информацию',
+            CONTACTHEAD2: 'Связывайтесь с нами',
+            CONTACTPHONE: 'Телефон',
+            CONTACTEMAIL: 'Э-майл',
+            CONTACTADDRESS: 'Адрес',
+
+            FORMNAME: 'Имя',
+            FORMEMAIL: 'Э-майл',
+            FORMMESSAGE: 'Сообщение',
+
+            et: 'Eesti',
+            en: 'English',
+            ru: 'Россия'
         });
 
     $translateProvider.preferredLanguage('et');
@@ -101,9 +149,10 @@ mingiAsiCtrl.controller('mingiAsiCtrl', function ($translate) {
 
     ctrl.language = 'et';
 
-    ctrl.languages = ['et', 'en'];
+    ctrl.languages = ['et', 'en', 'ru'];
 
     ctrl.updateLanguage = function () {
         $translate.use(ctrl.language);
     };
+
 });

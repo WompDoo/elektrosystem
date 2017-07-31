@@ -209,6 +209,27 @@ h3 {
 
 }
 
+.landing--banner p {
+    font-size: 320%;
+    color: white;
+    text-align: center;
+    width: 28vw;
+    padding-left: 10%;
+
+}
+
+.russianTextFix h1 {
+    font-size: 267%;
+    padding-left: 6%;
+    padding-right: 27%;
+
+}
+
+.russianTextFix p {
+    font-size: 256%;
+
+}
+
 .landing--banner a {
     color: white;
     text-transform: uppercase;
@@ -224,15 +245,6 @@ h3 {
     -ms-transform: scale(1.1, 1.1); /* IE 9 */
     -webkit-transform: scale(1.1, 1.1); /* Safari */
     transform: scale(1.1, 1.1);
-}
-
-.landing--banner p {
-    font-size: 320%;
-    color: white;
-    text-align: center;
-    width: 28vw;
-    padding-left: 10%;
-
 }
 
 .yellow {
@@ -422,6 +434,11 @@ i {
 
 .introduction p {
     font-size: 20px;
+}
+
+.left-intro {
+    margin-top: 6vh;
+    margin-bottom: 6vh;
 }
 
 .team {
@@ -666,12 +683,11 @@ i {
 }
 
 .project-pictures button {
-    font-size: 32px;
+    font-size: 29px;
     margin-bottom: 115%;
     padding: 5px 3px;
     opacity: 1;
 }
-
 
 .partners {
     height: 100vh;
@@ -766,8 +782,8 @@ i {
 }
 
 .intro-pics {
-    padding-top: 40px;
-    padding-bottom: 20px;
+    /* padding-top: 40px;
+     padding-bottom: 20px;*/
     -webkit-transition: all 0.5s; /* For Safari 3.1 to 6.0 */
     transition: all 0.5s;
 }
@@ -780,19 +796,17 @@ i {
 }
 
 .moodik {
-    padding-top: 59px;
-    width: 76px;
     -webkit-transition: all 0.5s; /* For Safari 3.1 to 6.0 */
     transition: all 0.5s;
 }
 
 .kilp {
-    padding-top: 52px;
     -webkit-transition: all 0.5s; /* For Safari 3.1 to 6.0 */
     transition: all 0.5s;
 }
 
 .planeerija {
+    width: 39%;
     -webkit-transition: all 0.5s; /* For Safari 3.1 to 6.0 */
     transition: all 0.5s;
 
@@ -803,66 +817,51 @@ i {
     transition: all 0.5s;
 }
 
-.inspect-pirn {
-    position: absolute;
-    opacity: 0;
-    display: none;
-    -webkit-transition: all 0.5s; /* For Safari 3.1 to 6.0 */
-    transition: all 0.5s;
-}
-
-.inspect-moodik {
-    position: absolute;
-    opacity: 0;
-    display: none;
-    margin-top: -222px;
-    padding-right: 19px;
-    -webkit-transition: all 0.5s; /* For Safari 3.1 to 6.0 */
-    transition: all 0.5s;
-}
-
-.inspect-kilp {
-    position: absolute;
-    right: 385px;
-    top: -29px;
-    opacity: 0;
-    display: none;
-    -webkit-transition: all 0.5s; /* For Safari 3.1 to 6.0 */
-    transition: all 0.5s;
-}
-
-.inspect-planeerija {
-    position: absolute;
-    right: 385px;
-    bottom: 0;
-    opacity: 0;
-    display: none;
-    -webkit-transition: all 0.5s; /* For Safari 3.1 to 6.0 */
-    transition: all 0.5s;
-}
-
-.pirn:hover ~ .inspect-pirn {
-    opacity: 1;
-    display: inline-block;
-}
-
-.moodik:hover ~ .inspect-moodik {
-    display: inline-block;
-    opacity: 1;
-}
-
-.kilp:hover ~ .inspect-kilp {
-    display: inline-block;
-    opacity: 1;
-}
-
-.planeerija:hover ~ .inspect-planeerija {
-    display: inline-block;
-    opacity: 1;
-}
-
 .inspect {
-    margin-bottom: -160px;
+    position: absolute;
+    opacity: 0;
+    display: none;
+    -webkit-transition: all 0.5s; /* For Safari 3.1 to 6.0 */
+    transition: all 0.5s;
+}
+
+.i-pirn {
+    top: -43px;
+}
+
+.i-moodik {
+    top: -263px;
+}
+
+.i-kilp {
+    right: 295px;
+    top: -65px;
+}
+
+.i-planeerija {
+    right: 295px;
+    top: -222px;
+
+}
+
+.pirn:hover ~ .i-pirn {
+    opacity: 1;
+    display: inline-block;
+}
+
+.moodik:hover ~ .i-moodik {
+    display: inline-block;
+    opacity: 1;
+}
+
+.kilp:hover ~ .i-kilp {
+    display: inline-block;
+    opacity: 1;
+}
+
+.planeerija:hover ~ .i-planeerija {
+    display: inline-block;
+    opacity: 1;
 }
 
 #slides_control > div {
@@ -1008,6 +1007,18 @@ i {
 
 }
 
+.lang-nav {
+    padding-top: 20px;
+}
+
+.lang-nav select{
+    border: none;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+
 .lang-nav li {
     width: 30%;
     padding-top: 30px;
@@ -1026,6 +1037,13 @@ i {
     background-color: #2a6496;
     height: 80vh;
     margin-top: 4vh;
+}
+
+.row {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
 }
 
 .banner-blue h1 {
@@ -1064,11 +1082,10 @@ i {
 
 }
 
-.para h1{
+.para h1 {
     word-wrap: break-word;
-    font-size:83px;
+    font-size: 83px;
 }
-
 
 .hero-textM {
     color: white;
@@ -1105,14 +1122,9 @@ i {
     font-size: 60px;
 }
 
-.border-box {
-    height: 80vh;!important;
-    border: 1px solid;
-
-}
 .contact-formM {
     font-size: 70px;
-    padding-top: 20px;
+    padding-top: 30px;
 }
 
 .contact-formM input,
@@ -1145,7 +1157,7 @@ i {
 }
 
 .slick-img {
-    width:80% ;
+    width: 80%;
 }
 
 .partner-bg {
@@ -1161,4 +1173,20 @@ i {
     width: 80vw;
     padding-bottom: 5vh;
 
+}
+
+.info-boxM {
+    height: 16vh;
+    width: 80vw;
+    background-color: yellow;
+    padding-top: 25px;
+    padding-left: 13px;
+}
+
+.info-boxM h4 {
+    font-size: 55px;
+}
+
+.image-row {
+    height: 180px;
 }

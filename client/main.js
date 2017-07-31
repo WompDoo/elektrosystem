@@ -54,8 +54,8 @@ myApp.config(function ($stateProvider, $urlRouterProvider) {
             access: {restricted: false}
         })
         .state('admin.products', {
-            url: '/products',
-            templateUrl: 'partials/products.html',
+            url: '/dashboard',
+            templateUrl: 'partials/dashboard.html',
             access: {restricted: false}
         })
         .state('admin.contacts', {
