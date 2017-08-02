@@ -173,19 +173,19 @@
             <div class="people col-md-4">
                 <div class="col-md-12 person">
                     <h3 class="col-md-12">Priit Laur</h3>
-                    <img class="name-pics" src="img/Planeerija.png">
+                    <img class="name-pics" src="img/dude.png">
                     <p class="col-md-12">{{ 'CREWPOS1' | translate }}</p>
                     <p class="col-md-12">email@elektrosystem.ee</p>
                 </div>
                 <div class="col-md-12 person">
                     <h3 class="col-md-12">Priit Laur</h3>
-                    <img class="name-pics" src="img/Planeerija.png">
+                    <img class="name-pics" src="img/dude.png">
                     <p class="col-md-12">{{ 'CREWPOS2' | translate }}</p>
                     <p class="col-md-12">email@elektrosystem.ee</p>
                 </div>
                 <div class="col-md-12 person">
                     <h3 class="col-md-12">Priit Laur</h3>
-                    <img class="name-pics" src="img/Planeerija.png">
+                    <img class="name-pics" src="img/dude.png">
                     <p class="col-md-12">{{ 'CREWPOS3' | translate }}</p>
                     <p class="col-md-12">email@elektrosystem.ee</p>
                 </div>
@@ -196,7 +196,7 @@
         <div ng-controller="projectController">
             <div class="col-md-3 project-item" ng-repeat="project in projects">
                 <img src="{{project.image}}" class="project-image">
-                <h1 class="project-heading col-md-8 col-md-offset-2" ng-repeat="stuff in project">{{projectName}}</h1>
+                <h1 class="project-heading col-md-8 col-md-offset-2">{{projectNameList[$index]}}</h1>
                 <button class="project-info col-md-6 col-md-offset-3" ng-click="toggleProjectView($index)">{{
                     'PROJECTSINSPECT' | translate }}
                 </button>
