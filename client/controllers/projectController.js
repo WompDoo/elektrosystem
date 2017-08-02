@@ -256,7 +256,7 @@ projectController.controller('projectController', function projectController($sc
 
     $scope.$watch('$rootScope.language', function () {
         if ($rootScope.language == "et") {
-            $scope.projectName = $scope.project.ee.name;
+            $scope.projectName = $scope.project[index].ee.name;
         }
         else if ($rootScope.language == "en") {
             $scope.projectName = $scope.project.en.name;
