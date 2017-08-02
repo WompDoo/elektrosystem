@@ -796,11 +796,15 @@ i {
 }
 
 .moodik {
+    width: 37%;
     -webkit-transition: all 0.5s; /* For Safari 3.1 to 6.0 */
     transition: all 0.5s;
 }
 
 .kilp {
+    margin-top: 10px;
+    width: 35%;
+    margin-left: 106px;
     -webkit-transition: all 0.5s; /* For Safari 3.1 to 6.0 */
     transition: all 0.5s;
 }
@@ -813,6 +817,7 @@ i {
 }
 
 .pirn {
+    width: 31%;
     -webkit-transition: all 0.5s; /* For Safari 3.1 to 6.0 */
     transition: all 0.5s;
 }
@@ -1189,4 +1194,85 @@ i {
 
 .image-row {
     height: 180px;
+}
+
+/*Admin dashboard*/
+
+.bluebg {
+    height: 50vh;
+    background-color: #2166af;
+    background-size: cover;
+    padding-top: 140px;
+}
+
+.navbar-admin {
+    padding-bottom: 90px;
+
+}
+
+.skyscraperAdmin {
+    width: 186px;
+    height: 257px;
+    position: relative;
+    right: 4%;
+    bottom: -62px;
+    clip: rect(0px, 60px, 200px, 0px);
+}
+
+.yellowBarPlace {
+    background-color: #ffe400;
+    height: 6vh;
+    width: 15vw;
+    margin-top: -257px;
+}
+
+.blueBarPlace {
+    background-color: #2d51ff;
+    height: 6vh;
+    width: 10vw;
+    margin-left: 207px;
+    margin-top: 210px;
+}
+
+.whiteBarPlace {
+    position: absolute;
+    background-color: #ffffff;
+    height: 2vh;
+    width: 7vw;
+    right: 124px;
+    bottom: 13px;
+}
+
+.greybg {
+    background-color: #eeeeff;
+    height: 50vh;
+    background-size: cover;
+    padding-top: 140px;
+}
+
+.bulbsAdmin {
+    height: 50vh;
+    background-image: url('../img/Pirnid.png');
+    background-size: cover;
+}
+
+.blackBarPlace {
+    position: absolute;
+    background-color: #434343;
+    height: 2vh;
+    width: 10vw;
+    left: 71px;
+    top: 105px;
+}
+
+.introAdmin {
+    opacity: 0.9;
+    position: absolute;
+    margin-top: 65px;
+    background: #fbe778;
+    width: 29vw;
+    height: 31vh;
+    overflow: hidden;
+    left: 431px;
+    z-index: 3;
 }

@@ -31,9 +31,9 @@ mingiAsiCtrl.config(function ($translateProvider) {
         CREWPOS3: 'Projektijuhataja',
 
         PROJECTSINSPECT: 'Vaata lähemalt',
-        PROJECTSMORE: 'Veel projekte',
+        PROJECTSMORE: 'Järgmine',
 
-        /*PROJECTTEXT: project.text,*/
+        PROJECTSUBHEADING: '{{subheading}}',
 
         CONTACTHEAD1: 'Soovite infot?',
         CONTACTHEAD2: 'Võtke meiega ühendust',
@@ -78,7 +78,7 @@ mingiAsiCtrl.config(function ($translateProvider) {
             CREWPOS3: 'Project Manager',
 
             PROJECTSINSPECT: 'More info',
-            PROJECTSMORE: 'More projects',
+            PROJECTSMORE: 'Next',
 
             CONTACTHEAD1: 'Want more information?',
             CONTACTHEAD2: 'Contact us',
@@ -124,7 +124,7 @@ mingiAsiCtrl.config(function ($translateProvider) {
             CREWPOS3: 'Руководитель проектов',
 
             PROJECTSINSPECT: 'Смотри больше',
-            PROJECTSMORE: 'Осуществленные проекты',
+            PROJECTSMORE: 'Дальше',
 
             CONTACTHEAD1: 'Желаете получить дополнительную информацию',
             CONTACTHEAD2: 'Связывайтесь с нами',

@@ -225,13 +225,12 @@
 
                 <div class="col-md-8 project-information">
                     <h1 class="col-md-6 col-md-offset-4">{{globalName}}</h1>
-                    <h5 class="col-md-6 col-md-offset-4"> {{ 'globalAlapealkiri' | translate }}</h5>
+                    <h5 class="col-md-6 col-md-offset-4" translate="PROJECTSUBHEADING" translate-value-subheading="{{globalAlapealkiri}}"></h5>
                     <h3 class="col-md-6 col-md-offset-4">{{globalAasta}}</h3>
                     <p class="col-md-6 col-md-offset-4">{{globalTekst}} </p>
                     <hr class="col-md-6 col-md-offset-4">
-                    <button class="col-md-6 col-md-offset-5 request project-request">{{ 'LANDINGBUTTON1' | translate }}
-                        <i
-                                class="arrow right"></i></button>
+                    <button scroll-to-bookmark="contact" ng-click="hideProject()" class="col-md-6 col-md-offset-5 request project-request">{{ 'LANDINGBUTTON1' | translate }}
+                        <i class="arrow right"></i></button>
                 </div>
 
 
