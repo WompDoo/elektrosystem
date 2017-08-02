@@ -22,7 +22,7 @@ projectController.controller('projectController', function projectController($sc
             image: 'img/projectPics/Intrac/intrac3.jpg',
         },
         {
-            image: 'img/projectPics/Jakobi/jakobi5.jpg',
+            image: 'img/projectPics/Jakobi/Jakobi5.jpg',
         },
         {
             image: 'img/projectPics/Hotel/hotel5.jpg',
