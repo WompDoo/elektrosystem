@@ -74,12 +74,9 @@ projectController.controller('projectController', function projectController($sc
             tekst: "Pikaaegsele Tartus asuvale hotellile tehtud juurdeehituse elektritööde eest vastutas meie meeskond. Tööde toimumise aeg 2016 - 2017 aasta.",
             shortinfo: 'Pikaaegsele Tartus asuvale hotellile tehtud juurdeehituse elektritööde eest vastutas meie meeskond.',
             pictures: ["img/project1.jpeg", "img/project5.jpeg", "img/project6.jpeg", "img/project7.jpeg", "img/project1.jpeg"]
-        },
+        }
     ];
 
-
-    var ctrl = mingiAsiCtrl;
-    ctrl.language = "en";
 
     $scope.toggleProjectView = function (index) {
 
@@ -91,14 +88,14 @@ projectController.controller('projectController', function projectController($sc
         $scope.globalTekst = $scope.projects[index].tekst;
         $scope.globalPictures = $scope.projects[index].pictures;
 
-    }
+    };
 
     var index = 0;
     $scope.hideProject = function () {
         $rootScope.projectview = false;
         $rootScope.projectViewOverlay = false;
         index = 0;
-    }
+    };
 
     $scope.menuDown = function () {
         $scope.holder = $scope.projects[index >= $scope.projects.length - 1 ? index = 0 : ++index];
