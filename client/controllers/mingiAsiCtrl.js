@@ -144,15 +144,14 @@ mingiAsiCtrl.config(function ($translateProvider) {
     $translateProvider.preferredLanguage('et');
 });
 
-mingiAsiCtrl.controller('mingiAsiCtrl', function ($translate) {
-    var ctrl = this;
+mingiAsiCtrl.controller('mingiAsiCtrl', function ($scope, $rootScope, $translate) {
 
-    ctrl.language = 'et';
+    $rootScope.language = "et";
 
-    ctrl.languages = ['et', 'en', 'ru'];
-
-    ctrl.updateLanguage = function () {
-        $translate.use(ctrl.language);
+    $rootScope.lang = function (key) {
+        $rootScope.language = (key);
+        $translate.use(key);
     };
+
 
 });

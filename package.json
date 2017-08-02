@@ -4,6 +4,7 @@
     "start": "node server/server.js"
   },
   "dependencies": {
+    "angular-animate": "^1.6.5",
     "angular-slick": "0.0.0",
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.15.0",

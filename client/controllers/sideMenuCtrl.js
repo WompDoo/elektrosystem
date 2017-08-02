@@ -1,4 +1,4 @@
-var sideMenuCtrl = angular.module('sideMenuCtrl', []);
+var sideMenuCtrl = angular.module('sideMenuCtrl', ['ngAnimate']);
 
 
 sideMenuCtrl.controller('sideMenuCtrl', function($rootScope, $scope){

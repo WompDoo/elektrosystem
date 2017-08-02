@@ -49,8 +49,8 @@ passport.deserializeUser(User.deserializeUser());
 app.use('/user/', routes);
 app.use('/products/', routes);
 
-app.get('/', function(req, res) {
-  res.sendFile(path.join(__dirname, '../client', 'index.html'));
+app.get('/*', function(req, res) {
+    res.sendFile(path.join(__dirname, '../client', 'index.html'));
 });
 
 // error hndlers
@@ -69,3 +69,5 @@ app.use(function(err, req, res) {
 });
 
 module.exports = app;
+
+app.use('/node_modules', express.static(__dirname + '../node_modules'));

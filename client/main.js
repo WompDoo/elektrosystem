@@ -1,5 +1,6 @@
 var myApp = angular.module('myApp', [
     'ui.router',
+    'ngAnimate',
     'addProductCtrl',
     'pictureService',
     'slick',
@@ -38,6 +39,8 @@ var myApp = angular.module('myApp', [
     'dataService'
 
 ]);
+
+
 
 myApp.config(function ($stateProvider, $urlRouterProvider) {
     $stateProvider
