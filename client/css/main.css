@@ -1233,7 +1233,7 @@ i {
     height: 257px;
     position: relative;
     right: 4%;
-    bottom: -98px;
+    bottom: -62px;
     clip: rect(0px, 60px, 200px, 0px);
 }
 
@@ -1325,7 +1325,7 @@ i {
 
 .adminPerson {
 
-    font-size: 15px;
+    font-size: 15px; !important;
     height: 33%;
 }
 
