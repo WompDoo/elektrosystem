@@ -1325,13 +1325,14 @@ i {
 
 .adminPerson {
 
-    font-size: 15px; !important;
+    font-size: 12px;
+    padding-bottom: 6px;
     height: 33%;
 }
 
 @-moz-document url-prefix() {
     .adminPerson{
-        font-size: 12px;
+        padding-bottom: 0;
     }
 }
 
