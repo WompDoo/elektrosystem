@@ -194,21 +194,22 @@
     </div>
     <div scroll-bookmark="references" class="references">
         <div ng-controller="projectController">
-            <div class="col-md-3 project-item" ng-repeat="project in projects">
-                <img src="{{project.image}}" class="project-image">
-                <h1 class="project-heading col-md-8 col-md-offset-2">{{projectNameList[$index]}}</h1>
-                <button class="project-info col-md-6 col-md-offset-3" ng-click="toggleProjectView($index)">{{
-                    'PROJECTSINSPECT' | translate }}
-                </button>
+            <div class="gallery cf">
+                <div class="image-holder" ng-repeat="project in projects" >
+                    <img src="{{project.image}}" />
+                    <h1 class="project-heading col-md-8 col-md-offset-2">{{projectNameList[$index]}}</h1>
+                    <button class="project-info col-md-6 col-md-offset-3" ng-click="toggleProjectView($index)">{{
+                        'PROJECTSINSPECT' | translate }}
+                    </button>
+                </div>
             </div>
-
             <div ng-repeat="project in projects" class="projectView {{project.name}}"
                  ng-show="projectview">
                 <a class="closeProject" ng-click="hideProject()"></a>
 
                 <div class="accordion">
                     <ul>
-                        <li ng-repeat="item in globalPictures track by $index">
+                        <li class="project-holder" ng-repeat="item in globalPictures track by $index">
                             <img src="{{item}}"/>
                         </li>
                     </ul>
