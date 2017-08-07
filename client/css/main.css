@@ -49,8 +49,6 @@ h3 {
 
 }
 
-
-
 .sidebar-nav li {
     position: relative;
     line-height: 20px;
@@ -161,11 +159,9 @@ h3 {
     z-index: 9999;
     display: inline-block;
     top: 0;
-    -webkit-transition:all linear 0.5s;
-    transition:all linear 0.5s;
+    -webkit-transition: all linear 0.5s;
+    transition: all linear 0.5s;
 }
-
-
 
 .sideMenuOverlay {
     position: fixed;
@@ -588,7 +584,6 @@ i {
 .image-holder:hover .project-heading {
     display: inline-block;
 }
-
 
 .projectView {
     position: fixed;
@@ -1018,13 +1013,12 @@ i {
     padding-top: 20px;
 }
 
-.lang-nav select{
+.lang-nav select {
     border: none;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
 }
-
 
 .lang-nav li {
     width: 30%;
@@ -1047,11 +1041,11 @@ i {
 }
 
 .lang-nav button {
-     background-color: rgba(255, 255, 255, 0);
-     color: #f5f5f5;
-     border: 2px solid #ffe400;
-     width: 40px;
- }
+    background-color: rgba(255, 255, 255, 0);
+    color: #f5f5f5;
+    border: 2px solid #ffe400;
+    width: 40px;
+}
 
 .lang-nav button:hover {
     background-color: rgb(255, 228, 0);
@@ -1218,8 +1212,16 @@ i {
     height: 50vh;
     background-color: #2166af;
     background-size: cover;
-    padding-top: 140px;
+    padding-top: 105px;
 }
+
+@-moz-document url-prefix() {
+    .bluebg{
+        padding-top: 70px;
+    }
+}
+
+
 
 .navbar-admin {
     padding-bottom: 90px;
@@ -1231,9 +1233,17 @@ i {
     height: 257px;
     position: relative;
     right: 4%;
-    bottom: -62px;
+    bottom: -98px;
     clip: rect(0px, 60px, 200px, 0px);
 }
+
+@-moz-document url-prefix() {
+    .skyscraperAdmin{
+        bottom: -73px;
+    }
+}
+
+
 
 .yellowBarPlace {
     background-color: #ffe400;
@@ -1277,11 +1287,12 @@ i {
     background-color: #434343;
     height: 2vh;
     width: 10vw;
-    left: 71px;
+    left: 63px;
     top: 105px;
 }
 
 .introAdmin {
+    padding-top: 45px;
     opacity: 0.9;
     position: absolute;
     margin-top: 65px;
@@ -1293,15 +1304,114 @@ i {
     z-index: 3;
 }
 
-
-
-
-
-
-.ng-hide.ng-hide-animate{
-    display: none !important;
+.fullbg {
+    background-image: url('../img/taner.png');
+    background-size: cover;
+    height: 60vh;
+    padding-top: 140px;
 }
 
+.people-fix {
+    left: 40%;
+}
+
+.adminPeople {
+    padding-top: 20px;
+    height: 100%;
+    position: absolute;
+    right: 200px;
+    z-index: 2;
+}
+
+.adminPerson {
+
+    font-size: 15px;
+    height: 33%;
+}
+
+@-moz-document url-prefix() {
+    .adminPerson{
+        font-size: 12px;
+    }
+}
+
+.adminDude {
+    width: 30%;
+}
+
+.contactbg {
+    background-color: #ffffff;
+    height: 50vh;
+    padding-top: 40px;
+}
+
+.admin-map {
+    background-image: url('../img/streetlines.jpg');
+    background-size: cover;
+    height: 110%;
+}
+
+.admin-info {
+    position: absolute;
+    top: 0;
+    left: 37%;
+    height: 35%;
+    width: 30%;
+    background-color: yellow;
+    padding-top: 4px;
+    padding-left: 10px;
+    text-align: left;
+}
+
+.admin-info h4 {
+    font-size: 16px;
+}
+
+.admin-info-input {
+    width: 50%;
+}
+
+.admin-contact {
+    padding-bottom: 20px;
+    padding-bottom: 50px;
+}
+
+.smallblackbar {
+    margin-bottom: 58px;
+    margin-left: 76px;
+    width: 50%;
+    background-color: black;
+    margin-top: -6px;
+    padding-top: 1%;
+}
+
+.largeblackbar {
+    width: 75%;
+    margin-left: 76px;
+    height: 10px;
+    background-color: black;
+    margin-bottom: 32px;
+}
+
+.contact-box {
+    height: 45px;
+    margin-bottom: 10px;
+    border: 1px solid black;
+    width: 80%;
+    margin-left: 76px;
+    background-color: lightgray;
+}
+
+.yellowButton {
+    width: 40%;
+    margin-left: 76px;
+    height: 55px;
+    background-color: yellow;
+}
+
+.ng-hide.ng-hide-animate {
+    display: none !important;
+}
 
 .gallery {
     width: 100vw;
@@ -1339,6 +1449,6 @@ i {
 .gallery > .image-holder:hover > img {
     -webkit-filter: none;
     filter: none;
-    transform: scale(1.02,1.02);
+    transform: scale(1.02, 1.02);
     transition: .3s transform;
 }
