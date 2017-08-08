@@ -150,6 +150,13 @@ h3 {
     box-shadow: none;
 }
 
+.frontPageChar {
+    position: absolute;
+    width: 25%;
+    bottom: -15px;
+    right: 10vh;
+}
+
 .sideMenu {
     position: fixed;
     height: 100vh;
