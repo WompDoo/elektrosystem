@@ -1245,6 +1245,9 @@ i {
 
 
 
+
+
+
 .yellowBarPlace {
     background-color: #ffe400;
     height: 6vh;
@@ -1286,7 +1289,7 @@ i {
     position: absolute;
     background-color: #434343;
     height: 2vh;
-    width: 10vw;
+    width: 150px;
     left: 63px;
     top: 105px;
 }
@@ -1297,7 +1300,7 @@ i {
     position: absolute;
     margin-top: 65px;
     background: #fbe778;
-    width: 29vw;
+    width: 445px;
     height: 31vh;
     overflow: hidden;
     left: 431px;
@@ -1410,6 +1413,26 @@ i {
     background-color: yellow;
 }
 
+.project-table {
+    font-size: 18px;
+}
+
+.image-upload {
+    height: 50vh;
+    background-image: url('../img/placehold.png');
+    background-size: cover;
+    background-position: center;
+}
+
+
+.admin-lang-nav button {
+    background-color: rgba(255, 255, 255, 0);
+    color: #434343;
+    border: 2px solid #ffe400;
+    width: 40px;
+}
+
+
 .ng-hide.ng-hide-animate {
     display: none !important;
 }
@@ -1452,4 +1475,35 @@ i {
     filter: none;
     transform: scale(1.02, 1.02);
     transition: .3s transform;
+}
+
+@media (min-width : 1440px) {
+    .bluebg {
+        height: 40vh;
+    }
+
+    .greybg {
+        height: 40vh;
+    }
+
+    .bulbsAdmin {
+        height: 40vh;
+    }
+
+    .introAdmin {
+        height: 20vh;
+    }
+
+    .contactbg {
+        height: 40vh;
+    }
+
+    .fullbg {
+        height: 44vh;
+    }
+
+    .skyscraperAdmin {
+        bottom: -103px;
+    }
+
 }

@@ -56,14 +56,19 @@ myApp.config(function ($stateProvider, $urlRouterProvider) {
             templateUrl: 'partials/admin.html',
             access: {restricted: false}
         })
-        .state('admin.products', {
+        .state('admin.dashboard', {
             url: '/dashboard',
             templateUrl: 'partials/dashboard.html',
             access: {restricted: false}
         })
-        .state('admin.contacts', {
-            url: '/contacts',
-            templateUrl: 'partials/contact-info-admin.html',
+        .state('admin.projects', {
+            url: '/projects',
+            templateUrl: 'partials/projects.html',
+            access: {restricted: false}
+        })
+        .state('admin.project', {
+            url: '/project',
+            templateUrl: 'partials/project.html',
             access: {restricted: false}
         })
         .state('login', {
@@ -81,11 +86,6 @@ myApp.config(function ($stateProvider, $urlRouterProvider) {
             url: '/register',
             templateUrl: 'partials/register.html',
             controller: 'registerController',
-            access: {restricted: false}
-        })
-        .state('one', {
-            url: '/one',
-            template: '<h1>This is page one!</h1>',
             access: {restricted: false}
         })
         .state('two', {
