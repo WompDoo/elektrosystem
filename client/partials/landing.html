@@ -13,9 +13,9 @@
                 <a scroll-to-bookmark="introduction" class="col-md-12">{{ 'LANDINGBUTTON2' | translate }} <i
                         class="arrow right"></i></a>
 
-                <a>
-                    <img class="mousescroll" src="img/mousescroll.png">
-                </a>
+                <!--  <a>
+                      <img class="mousescroll" src="img/mousescroll.png">
+                  </a>-->
 
 
             </div>
@@ -196,8 +196,8 @@
     <div scroll-bookmark="references" class="references">
         <div ng-controller="projectController">
             <div class="gallery cf">
-                <div class="image-holder" ng-repeat="project in projects" >
-                    <img src="{{project.image}}" />
+                <div class="image-holder" ng-repeat="project in projects">
+                    <img src="{{project.image}}"/>
                     <h1 class="project-heading col-md-8 col-md-offset-2">{{projectNameList[$index]}}</h1>
                     <button class="project-info col-md-6 col-md-offset-3" ng-click="toggleProjectView($index)">{{
                         'PROJECTSINSPECT' | translate }}
@@ -254,14 +254,20 @@
                     slides-to-scroll="3"
             >
                 <div class="slick-item slick-overlay" ng-repeat="slide in slides">
-                    <a href="{{slide.link}}"><img src="{{slide.image}}"/></a>
+                    <a target="_tab" href="{{slide.link}}"><img src="{{slide.image}}"/></a>
                 </div>
             </slick>
         </div>
     </div>
     <div scroll-bookmark="contact" class="contact">
         <div id="contact" class="col-md-6 map">
+
             <div class="col-md-6 col-md-offset-2 gMap">
+                <a target="_tab" href="https://goo.gl/maps/fKEFDsCqwfK2">
+                    <div class="mapLink text-center">
+                        <h4>Avage Google Mapsis</h4>
+                    </div>
+                </a>
                 <div ng-controller="mapCtrl" ng-init="initMap()">
                     <div id="map">
                     </div>

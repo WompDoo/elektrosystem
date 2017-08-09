@@ -366,9 +366,9 @@ i {
 }
 
 .skyscraper {
-    width: 23%;
+    width: 33%;
     position: relative;
-    right: 5%;
+    right: 10%;
     bottom: 30px;
     clip: rect(0px, 60px, 200px, 0px);
 }
@@ -723,6 +723,15 @@ i {
     padding-top: 63px;
 }
 
+.mapLink {
+    background-color: yellow;
+    width: 25vh;
+    height: 11vh;
+    position: absolute;
+    z-index: 3;
+
+}
+
 .map-name {
     padding-top: 20px;
 }
@@ -874,7 +883,7 @@ i {
 }
 
 .slick-item img {
-    opacity: 0.6;
+    opacity: 0.8;
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
     transition: all .25s ease-in-out;
