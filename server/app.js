@@ -46,12 +46,8 @@ passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
 // routes
-app.use('/user/', routes);
-app.use('/products/', routes);
+app.use('/bannertext/', routes);
 
-app.get('/*', function(req, res) {
-    res.sendFile(path.join(__dirname, '../client', 'index.html'));
-});
 
 // error hndlers
 app.use(function(req, res, next) {

@@ -2,7 +2,7 @@
     <div class="landing-all">
         <div scroll-bookmark="home" class="landing" ng-controller="mingiAsiCtrl">
             <div class="col-md-5 landing--banner" ng-controller="scrollController">
-                <div ng-class="ctrl.language == 'et' || ctrl.language == 'en' ? '' : 'russianTextFix'"
+                <div ng-class="{'test': ctrl.language == 'et' || ctrl.language == 'en' ? '' : 'russianTextFix'}"
                      class="hero-text">
                     <h1>{{ 'LANDINGTITLE1' | translate }}</h1>
                     <div class="yellow">
@@ -39,7 +39,7 @@
                             class="arrow right"></i></button>
                 </div>
             </div>
-            <img class="frontPageChar" src="img/Esilehele1.png">
+            <img class="frontPageChar" src="img/Esilehele.png">
             <img class="skyscraper" src="img/skyscraper.png">
         </div>
     </div>
@@ -70,6 +70,11 @@
                         <li>
                             <a scroll-to-bookmark="contact">{{ 'SIDEMENUCONTACT' | translate }}</a>
                         </li>
+                        <div class="nav-info">
+                            <a>{{ 'CONTACTPHONE' | translate }}: +372 7366019</a>
+                            <br>
+                            <a>{{ 'CONTACTEMAIL' | translate }}: info@elektrosystem.ee</a>
+                        </div>
                         <div class="lang-nav" ng-controller="mingiAsiCtrl">
                             <button ng-click="lang('et')">Et</button>
                             <button ng-click="lang('en')">En</button>
@@ -206,7 +211,7 @@
             </div>
             <div ng-repeat="project in projects" class="projectView {{project.name}}"
                  ng-show="projectview">
-                <a class="closeProject" ng-click="hideProject()"></a>
+                <a class="close closeProject" ng-click="hideProject()"></a>
 
                 <div class="accordion">
                     <ul>
@@ -265,7 +270,7 @@
             <div class="col-md-6 col-md-offset-2 gMap">
                 <a target="_tab" href="https://goo.gl/maps/fKEFDsCqwfK2">
                     <div class="mapLink text-center">
-                        <h4>Avage Google Mapsis</h4>
+                        <h4>{{ 'MAPEXTRA' | translate }}</h4>
                     </div>
                 </a>
                 <div ng-controller="mapCtrl" ng-init="initMap()">

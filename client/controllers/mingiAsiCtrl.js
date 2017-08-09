@@ -35,6 +35,7 @@ mingiAsiCtrl.config(function ($translateProvider) {
 
         PROJECTSUBHEADING: '{{subheading}}',
 
+        MAPEXTRA:'Avage google mapsis',
         CONTACTHEAD1: 'Soovite infot?',
         CONTACTHEAD2: 'Võtke meiega ühendust',
         CONTACTPHONE: 'Telefon',
@@ -80,6 +81,7 @@ mingiAsiCtrl.config(function ($translateProvider) {
             PROJECTSINSPECT: 'More info',
             PROJECTSMORE: 'Next',
 
+            MAPEXTRA:'Open in google maps',
             CONTACTHEAD1: 'Want more information?',
             CONTACTHEAD2: 'Contact us',
             CONTACTPHONE: 'Phone',
@@ -126,6 +128,7 @@ mingiAsiCtrl.config(function ($translateProvider) {
             PROJECTSINSPECT: 'Смотри больше',
             PROJECTSMORE: 'Дальше',
 
+            MAPEXTRA:'Открыть в google maps',
             CONTACTHEAD1: 'Желаете получить дополнительную информацию',
             CONTACTHEAD2: 'Связывайтесь с нами',
             CONTACTPHONE: 'Телефон',

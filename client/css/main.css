@@ -153,7 +153,7 @@ h3 {
 .frontPageChar {
     position: absolute;
     width: 25%;
-    bottom: -15px;
+    bottom: -20px;
     right: 10vh;
 }
 
@@ -395,8 +395,8 @@ i {
 }
 
 #logo {
-    height: 280%;
-    background: white;
+    width: 130%;
+    margin-top: -18px;
 }
 
 .introduction {
@@ -412,7 +412,7 @@ i {
 }
 
 .slick-prev, .slick-next {
-    margin-top: 30px;
+    margin-top: 130px;
 }
 
 .slick-prev {
@@ -603,19 +603,6 @@ i {
     right: 20vh;
 }
 
-.closeProject {
-    position: absolute;
-    width: 32px;
-    height: 32px;
-    opacity: 0.3;
-    top: 20px;
-    right: 25px;
-    z-index: 2;
-    font-size: 30px;
-    -moz-transition: all .25s ease-in-out;
-    -webkit-transition: all .25s ease-in-out;
-}
-
 .close {
     position: absolute;
     width: 32px;
@@ -626,6 +613,12 @@ i {
     font-size: 30px;
     -moz-transition: all .25s ease-in-out;
     -webkit-transition: all .25s ease-in-out;
+}
+
+.closeProject {
+    top: 20px;
+    right: 25px;
+    z-index: 2;
 }
 
 .closeProject:hover {
@@ -659,6 +652,7 @@ i {
     height: 80vh;
     background-color: #eef;
     text-align: center;
+    padding-top: 20px;
 }
 
 .project-information h1 {
@@ -666,9 +660,10 @@ i {
 }
 
 .project-request {
-    top: 0;
+    top: -7px;
     left: 0;
     background-color: #f9d616;
+    margin-left: 236px;
 }
 
 .projectOverlay {
@@ -687,6 +682,7 @@ i {
     margin-bottom: 115%;
     padding: 5px 3px;
     opacity: 1;
+    margin-left: 70px;
 }
 
 .partners {
@@ -724,6 +720,7 @@ i {
 }
 
 .mapLink {
+    color: black;
     background-color: yellow;
     width: 25vh;
     height: 11vh;
@@ -1026,8 +1023,19 @@ i {
 }
 
 .lang-nav {
-    padding-top: 20px;
+    padding-top: 25px;
 }
+
+.nav-info {
+    padding-top: 20px;
+
+}
+
+.nav-info a {
+    color: white;
+    text-transform: uppercase;
+}
+
 
 .lang-nav select {
     border: none;
@@ -1232,12 +1240,10 @@ i {
 }
 
 @-moz-document url-prefix() {
-    .bluebg{
+    .bluebg {
         padding-top: 70px;
     }
 }
-
-
 
 .navbar-admin {
     padding-bottom: 90px;
@@ -1254,15 +1260,10 @@ i {
 }
 
 @-moz-document url-prefix() {
-    .skyscraperAdmin{
+    .skyscraperAdmin {
         bottom: -73px;
     }
 }
-
-
-
-
-
 
 .yellowBarPlace {
     background-color: #ffe400;
@@ -1350,7 +1351,7 @@ i {
 }
 
 @-moz-document url-prefix() {
-    .adminPerson{
+    .adminPerson {
         padding-bottom: 0;
     }
 }
@@ -1440,14 +1441,12 @@ i {
     background-position: center;
 }
 
-
 .admin-lang-nav button {
     background-color: rgba(255, 255, 255, 0);
     color: #434343;
     border: 2px solid #ffe400;
     width: 40px;
 }
-
 
 .ng-hide.ng-hide-animate {
     display: none !important;
@@ -1493,7 +1492,7 @@ i {
     transition: .3s transform;
 }
 
-@media (min-width : 1440px) {
+@media (min-width: 1440px) {
     .bluebg {
         height: 40vh;
     }
