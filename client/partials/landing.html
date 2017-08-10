@@ -3,7 +3,7 @@
         <div scroll-bookmark="home" class="landing" ng-controller="mingiAsiCtrl">
             <div class="col-md-5 landing--banner" ng-controller="scrollController">
                 <div ng-class="{'test': ctrl.language == 'et' || ctrl.language == 'en' ? '' : 'russianTextFix'}"
-                     class="hero-text">
+                     class="hero-text russianTextFix">
                     <h1>{{ 'LANDINGTITLE1' | translate }}</h1>
                     <div class="yellow">
                         <p>{{ 'LANDINGMESSAGE' | translate }}</p>
@@ -71,9 +71,9 @@
                             <a scroll-to-bookmark="contact">{{ 'SIDEMENUCONTACT' | translate }}</a>
                         </li>
                         <div class="nav-info">
-                            <a>{{ 'CONTACTPHONE' | translate }}: +372 7366019</a>
+                            <a>+372 7366019</a>
                             <br>
-                            <a>{{ 'CONTACTEMAIL' | translate }}: info@elektrosystem.ee</a>
+                            <a>info@elektrosystem.ee</a>
                         </div>
                         <div class="lang-nav" ng-controller="mingiAsiCtrl">
                             <button ng-click="lang('et')">Et</button>
@@ -179,19 +179,19 @@
             <div class="people col-md-4">
                 <div class="col-md-12 person">
                     <h3 class="col-md-12">Priit Laur</h3>
-                    <img class="name-pics" src="img/dude.png">
+                    <img class="name-pics1" src="img/Char_grey.png">
                     <p class="col-md-12">{{ 'CREWPOS1' | translate }}</p>
                     <p class="col-md-12">email@elektrosystem.ee</p>
                 </div>
                 <div class="col-md-12 person">
                     <h3 class="col-md-12">Priit Laur</h3>
-                    <img class="name-pics" src="img/dude.png">
+                    <img class="name-pics" src="img/Char_fists.png">
                     <p class="col-md-12">{{ 'CREWPOS2' | translate }}</p>
                     <p class="col-md-12">email@elektrosystem.ee</p>
                 </div>
                 <div class="col-md-12 person">
                     <h3 class="col-md-12">Priit Laur</h3>
-                    <img class="name-pics" src="img/dude.png">
+                    <img class="name-pics2" src="img/dude.png">
                     <p class="col-md-12">{{ 'CREWPOS3' | translate }}</p>
                     <p class="col-md-12">email@elektrosystem.ee</p>
                 </div>
@@ -223,7 +223,7 @@
 
 
                 <div class="col-md-4 project-pictures">
-                    <button ng-click="menuDown()" type="button" class="col-md-12 request project-request"
+                    <button ng-click="menuDown()" type="button" class="col-md-12 request-project"
                             aria-label="Left Align">
                         {{ 'PROJECTSMORE' | translate }}
                     </button>
@@ -232,14 +232,17 @@
                 <!---->
 
                 <div class="col-md-8 project-information">
-                    <h1 class="col-md-6 col-md-offset-4">{{globalName}}</h1>
-                    <h5 class="col-md-6 col-md-offset-4">{{globalAlapealkiri}}</h5>
-                    <h3 class="col-md-6 col-md-offset-4">{{globalAasta}}</h3>
-                    <p class="col-md-6 col-md-offset-4">{{globalTekst}} </p>
-                    <hr class="col-md-6 col-md-offset-4">
-                    <button scroll-to-bookmark="contact" ng-click="hideProject()"
-                            class="col-md-6 col-md-offset-5 request project-request">{{ 'LANDINGBUTTON1' | translate }}
-                        <i class="arrow right"></i></button>
+                    <div class="project-text">
+                        <h1 class="col-md-6 col-md-offset-4">{{globalName}}</h1>
+                        <h5 class="col-md-6 col-md-offset-4">{{globalAlapealkiri}}</h5>
+                        <h3 class="col-md-6 col-md-offset-4">{{globalAasta}}</h3>
+                        <p class="col-md-6 col-md-offset-4">{{globalTekst}} </p>
+                        <hr class="col-md-6 col-md-offset-4">
+                        <button scroll-to-bookmark="contact" ng-click="hideProject()"
+                                class="col-md-6 col-md-offset-5 request project-request">{{ 'LANDINGBUTTON1' | translate
+                            }}
+                            <i class="arrow right"></i></button>
+                    </div>
                 </div>
 
 
@@ -252,6 +255,7 @@
     </div>
     <div scroll-bookmark="partners" class="partners">
         <h1 class="col-md-2 col-md-offset-5 center">{{ 'SIDEMENUPARTNERS' | translate }}</h1>
+        <div class="partner-item-bg"></div>
         <div class="slickClass" ng-controller="CarouselDemoCtrl">
             <slick
                     infinite="false"
@@ -263,6 +267,7 @@
                 </div>
             </slick>
         </div>
+
     </div>
     <div scroll-bookmark="contact" class="contact">
         <div id="contact" class="col-md-6 map">
