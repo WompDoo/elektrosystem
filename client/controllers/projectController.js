@@ -256,21 +256,33 @@ projectController.controller('projectController', function projectController($sc
 
     $rootScope.$watch('language', function () {
         $scope.projectNameList = [];
+        $scope.projectSubList = [];
+        $scope.projectYearList = [];
+        $scope.projectShortList = [];
         if ($rootScope.language == "et") {
             for (i = 0; i < $scope.project.length; i++) {
                 $scope.projectNameList.push($scope.project[i].ee.name);
+                $scope.projectSubList.push($scope.project[i].ee.alapealkiri);
+                $scope.projectYearList.push($scope.project[i].ee.aasta);
+                $scope.projectShortList.push($scope.project[i].ee.shortinfo);
             }
             //$scope.projectName = $scope.project[index].ee.name;
         }
         else if ($rootScope.language == "en") {
             for (i = 0; i < $scope.project.length; i++) {
                 $scope.projectNameList.push($scope.project[i].en.name);
+                $scope.projectSubList.push($scope.project[i].en.alapealkiri);
+                $scope.projectYearList.push($scope.project[i].en.aasta);
+                $scope.projectShortList.push($scope.project[i].en.shortinfo);
             }
             //$scope.projectName = $scope.project.en.name;
         }
         else {
             for (i = 0; i < $scope.project.length; i++) {
                 $scope.projectNameList.push($scope.project[i].ru.name);
+                $scope.projectSubList.push($scope.project[i].ru.alapealkiri);
+                $scope.projectYearList.push($scope.project[i].ru.aasta);
+                $scope.projectShortList.push($scope.project[i].ru.shortinfo);
             }
             //$scope.projectName = $scope.project.ru.name;
         }
