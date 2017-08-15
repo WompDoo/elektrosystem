@@ -29,7 +29,6 @@ projectController.controller('projectController', function projectController($sc
         }
     ];
 
-
     $scope.project = [
         {
             'ee': {
@@ -351,5 +350,9 @@ projectController.controller('projectController', function projectController($sc
 
     }
 
+
+
+        $scope.myHTML =
+            'checked '
 });
 

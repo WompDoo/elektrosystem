@@ -17,39 +17,28 @@ var upload = multer({storage: storage});
 var estText = require('../models/esttext.js');
 var engText = require('../models/engtext.js');
 var rusText = require('../models/rustext.js');
+var project = require('../models/project.js');
 
-router.post('/test/rusText', function (req, res) {
-    rusText.create({
-        LANDINGTITLE1: req.body.LANDINGTITLE1,
-        LANDINGMESSAGE: req.body.LANDINGMESSAGE,
-        LANDINGTITLE2: req.body.LANDINGTITLE2,
-        INTROTEXT: req.body.INTROTEXT,
-        INTROSUBHEADING1: req.body.INTROSUBHEADING1,
-        INTROSUBHEADING2: req.body.INTROSUBHEADING2,
-        INTROSUBHEADING3: req.body.INTROSUBHEADING3,
-        INTROSUBHEADING4: req.body.INTROSUBHEADING4,
-        INTROSUBTEXT1: req.body.INTROSUBHEADING1,
-        INTROSUBTEXT2: req.body.INTROSUBHEADING2,
-        INTROSUBTEXT3: req.body.INTROSUBHEADING3,
-        INTROSUBTEXT4: req.body.INTROSUBHEADING4,
-        CREWTEXT: req.body.CREWTEXT,
-        CREWPOS1: req.body.CREWPOS1,
-        CREWNAME1: req.body.CREWNAME1,
-        CREWMAIL1: req.body.CREWMAIL1,
-        CREWPOS2: req.body.CREWPOS1,
-        CREWNAME2: req.body.CREWNAME1,
-        CREWMAIL2: req.body.CREWMAIL1,
-        CREWPOS3: req.body.CREWPOS1,
-        CREWNAME3: req.body.CREWNAME1,
-        CREWMAIL3: req.body.CREWMAIL1,
-        MAIL: req.body.MAIL,
-        ADDRESS: req.body.ADDRESS,
-        PHONE: req.body.PHONE
-    }, function (err, rusText) {
+router.post('/test/project', function (req, res) {
+    project.create({
+        name: req.body.name,
+        category: req.body.category,
+        years: req.body.years,
+        picture: req.body.picture,
+        description: req.body.description
+    }, function (err, project) {
         if (err) res.send(err);
-        res.json(rusText);
+        res.json(project);
     })
 })
+
+router.get('/test/getallProjects', function (req, res) {
+    project.find(function (err, project) {
+        if (err) res.send(err);
+        res.json(project);
+    })
+})
+
 
 
 var TestMudel = require('../models/test.js');
@@ -94,6 +83,26 @@ router.post('/test/update', function (req, res) {
 
     })
 })
+
+router.post('/test/randomField', function(req, res){
+
+    var key = req.body.fieldToBeUpdated;
+    var dynSet = {$set: {}};
+    dynSet.$set[key] = req.body.fieldToBeUpdatedValue;
+
+    estText.update({
+        _id: req.body.id
+    }, dynSet, function(err, cb){
+        console.log(cb);
+        if(err)res.send(err);
+        res.json({
+            msg: "The field {" + key + "} was successfully updated with text -> {"+ req.body.fieldToBeUpdatedValue +"}."
+        });
+    })
+})
+
+
+
 
 
 router.get('/test/getalltests', function (req, res) {

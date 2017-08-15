@@ -29,5 +29,12 @@ demoCtrl.controller('demoCtrl', function ($scope, demoService, $rootScope) {
         }
     }, true);
 
+    $scope.updateField = function(){
+        demoService.update(ANDMEBAASINIMI, ng-modelNimi).then(function(data){...})
+    }
+
+
+
+
 });
 

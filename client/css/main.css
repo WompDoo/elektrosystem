@@ -915,7 +915,7 @@ i {
     height: 50vh;
 }
 
-.slick-item img {
+.slickClass.slick-item img {
     opacity: 0.8;
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
@@ -924,7 +924,7 @@ i {
     -webkit-transition: all .25s ease-in-out;
 }
 
-.slick-item img:hover {
+.slickClass.slick-item img:hover {
     width: 80%;
     -webkit-filter: none;
     filter: none;
