@@ -35,6 +35,8 @@ var myApp = angular.module('myApp', [
     'landingProducts',
     'productElement',
     'premierController',
+    'demoCtrl',
+    'demoService',
     'tweetbutton',
     'dataService'
 
@@ -69,6 +71,12 @@ myApp.config(function ($stateProvider, $urlRouterProvider) {
         .state('admin.project', {
             url: '/project',
             templateUrl: 'partials/project.html',
+            access: {restricted: false}
+        })
+        .state('admin.demo', {
+            url: '/demo',
+            controller: 'demoCtrl',
+            templateUrl: 'partials/demo.html',
             access: {restricted: false}
         })
         .state('login', {

@@ -1,10 +1,10 @@
-<div class="hidden-xs hidden-sm">
+<div class="hidden-xs hidden-sm" ng-controller="demoCtrl">
     <div class="landing-all">
         <div scroll-bookmark="home" class="landing" ng-controller="mingiAsiCtrl">
             <div class="col-md-5 landing--banner" ng-controller="scrollController">
                 <div ng-class="{'test': ctrl.language == 'et' || ctrl.language == 'en' ? '' : 'russianTextFix'}"
                      class="hero-text russianTextFix">
-                    <h1>{{ 'LANDINGTITLE1' | translate }}</h1>
+                    <h1>{{oneArray.LANDINGTITLE1}}</h1>
                     <div class="yellow">
                         <p>{{ 'LANDINGMESSAGE' | translate }}</p>
                     </div>

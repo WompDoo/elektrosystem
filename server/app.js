@@ -23,6 +23,7 @@ var app = express();
 // require routes
 var routes = require('./routes/api.js');
 
+
 // define middleware
 app.use(express.static(path.join(__dirname, '../client')));
 app.use(logger('dev'));
@@ -46,7 +47,8 @@ passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
 // routes
-app.use('/bannertext/', routes);
+app.use('/dashboard/', routes);
+app.use('/testroot/', routes);
 
 
 // error hndlers

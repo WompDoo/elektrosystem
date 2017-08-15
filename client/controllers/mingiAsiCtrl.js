@@ -33,8 +33,6 @@ mingiAsiCtrl.config(function ($translateProvider) {
         PROJECTSINSPECT: 'Vaata lähemalt',
         PROJECTSMORE: 'Järgmine',
 
-        PROJECTSUBHEADING: '{{subheading}}',
-
         MAPEXTRA:'Avage google mapsis',
         CONTACTHEAD1: 'Soovite infot?',
         CONTACTHEAD2: 'Võtke meiega ühendust',

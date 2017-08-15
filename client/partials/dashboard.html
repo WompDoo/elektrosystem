@@ -1,5 +1,5 @@
-<div class="container">
-    <div class="lang-nav admin-lang-nav text-center">
+<div class="container" ng-controller="demoCtrl">
+    <div class="lang-nav admin-lang-nav text-center" ng-controller="mingiAsiCtrl">
         <button ng-click="lang('et')">Et</button>
         <button ng-click="lang('en')">En</button>
         <button ng-click="lang('ru')">Ru</button>
@@ -7,9 +7,12 @@
     <br>
     <div class="col-md-12" style="text-align:left; margin-left: -15px;">
         <div class="col-md-3 col-md-offset-2 bluebg text-center">
-            <textarea ng-model="bannertext.bannerText1"></textarea>
-            <textarea></textarea>
-            <textarea></textarea>
+            <div ng-click='toggleShowLanding()' ng-hide='showLanding'>{{oneArray.LANDINGTITLE1}}</div>
+            <textarea ng-show='showLanding'>{{oneArray.LANDINGTITLE1}}</textarea>
+            <div ng-click='toggleShowLanding()' ng-hide='showLanding'>{{oneArray.LANDINGMESSAGE}}</div>
+            <textarea ng-show='showLanding'>{{oneArray.LANDINGMESSAGE}}</textarea>
+            <div ng-click='toggleShowLanding()' ng-hide='showLanding'>{{oneArray.LANDINGTITLE2}}</div>
+            <textarea ng-show='showLanding'>{{oneArray.LANDINGTITLE2}}</textarea>
 
         </div>
         <img class="skyscraperAdmin" src="img/skyscraper2.png">
@@ -22,17 +25,21 @@
     <div class="col-md-12" style="text-align:left; margin-left: -15px;">
         <div class="col-md-3 col-md-offset-2 greybg text-center">
             <div class="blackBarPlace text-center"></div>
-            <textarea></textarea>
+            <textarea>{{oneArray.INTROTEXT}}</textarea>
 
         </div>
         <div class="introAdmin text-center">
             <div class="col-md-6">
-                <textarea></textarea>
-                <textarea></textarea>
+                <input value="{{oneArray.INTROSUBHEADING1}}">
+                <textarea>{{oneArray.INTROSUBTEXT1}}</textarea>
+                <input value="{{oneArray.INTROSUBHEADING3}}">
+                <textarea>{{oneArray.INTROSUBTEXT3}}</textarea>
             </div>
             <div class="col-md-6">
-                <textarea></textarea>
-                <textarea></textarea>
+                <input value="{{oneArray.INTROSUBHEADING2}}">
+                <textarea>{{oneArray.INTROSUBTEXT2}}</textarea>
+                <input value="{{oneArray.INTROSUBHEADING4}}">
+                <textarea>{{oneArray.INTROSUBTEXT4}}</textarea>
             </div>
         </div>
         <div class="col-md-5 bulbsAdmin">
@@ -41,28 +48,28 @@
     <div class="col-md-12" style="text-align:left; margin-left: -15px;">
         <div class="col-md-2 adminPeople text-center">
             <div class="adminPerson">
-                <input>
+                <input value="{{oneArray.CREWNAME1}}">
                 <img class="adminDude" src="./../img/dude.png">
-                <input>
-                <input>
+                <input value="{{oneArray.CREWPOS1}}">
+                <input value="{{oneArray.CREWMAIL1}}">
             </div>
             <div class="adminPerson">
-                <input>
+                <input value="{{oneArray.CREWNAME2}}">
                 <img class="adminDude" src="./../img/dude.png">
-                <input>
-                <input>
+                <input value="{{oneArray.CREWPOS2}}">
+                <input value="{{oneArray.CREWMAIL2}}">
             </div>
             <div class="adminPerson">
-                <input>
+                <input value="{{oneArray.CREWNAME3}}">
                 <img class="adminDude" src="./../img/dude.png">
-                <input>
-                <input>
+                <input value="{{oneArray.CREWPOS2}}">
+                <input value="{{oneArray.CREWMAIL3}}">
             </div>
         </div>
         <div class="col-md-8 col-md-offset-2 fullbg text-center">
 
             <div class="blackBarPlace people-fix"></div>
-            <textarea></textarea>
+            <textarea>{{oneArray.CREWTEXT}}"</textarea>
 
         </div>
     </div>
@@ -71,9 +78,9 @@
             <div class="col-md-6 col-md-offset-1 admin-map">
             </div>
             <div class="admin-info">
-                <h4>Telefon: <input class="admin-info-input" type="text" name="phone"></h4>
-                <h4>Email: <input class="admin-info-input" type="text" name="mail"></h4>
-                <h4>Aadress: <input class="admin-info-input" type="text" name="address"></h4>
+                <h4>Telefon: <input class="admin-info-input" type="text" name="phone" value="{{oneArray.PHONE}}"></h4>
+                <h4>Email: <input class="admin-info-input" type="text" name="mail" value="{{oneArray.MAIL}}"></h4>
+                <h4>Aadress: <input class="admin-info-input" type="text" name="address" value="{{oneArray.ADDRESS}}"></h4>
 
             </div>
             <div class="col-md-5 admin-contact">
@@ -87,5 +94,6 @@
         </div>
     </div>
 
+    <button class="dashboardSubmit">Save Changes</button>
 
 </div>

@@ -289,6 +289,8 @@ projectController.controller('projectController', function projectController($sc
     }, true);
 
 
+
+
     $scope.toggleProjectView = function (index) {
 
         $rootScope.projectview = true;
