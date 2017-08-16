@@ -1,9 +1,9 @@
 var demoService = angular.module('demoService', []);
 
-demoService.factory('demoService', function ($q, $timeout, $http) {
-    /*function getAll() {
+demoService.factory('demoService', function ($q, $timeout, $http, $rootScope) {
+    function getAll() {
      var d = $q.defer();
-     $http.get('/testroot/test/getalltests')
+     $http.get('/testroot/test/getallProjects')
      .success(function (data) {
      d.resolve(data);
      })
@@ -11,7 +11,7 @@ demoService.factory('demoService', function ($q, $timeout, $http) {
      d.reject(err);
      })
      return d.promise;
-     }*/
+     }
 
     function getOneEst() {
         var d = $q.defer();
@@ -50,25 +50,33 @@ demoService.factory('demoService', function ($q, $timeout, $http) {
     }
 
 
-    function update() {
+
+    function updateBlur(dbName, value, lang){
         var d = $q.defer();
         $http.post('testroot/test/randomField', {
-
+            fieldToBeUpdated: dbName,
+            fieldToBeUpdatedValue: value,
+            lang: lang
         })
-            .success(function (data) {
+            .success(function(data){
                 d.resolve(data);
             })
-            .error(function (err) {
+            .error(function(err){
                 d.reject(err);
             })
+
         return d.promise;
     }
+
+
+
 
     return ({
         getOneEst: getOneEst,
         getOneRus: getOneRus,
-        update: update,
-        getOneEng: getOneEng
+        updateBlur: updateBlur,
+        getOneEng: getOneEng,
+        getAll: getAll
     })
 
 

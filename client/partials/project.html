@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" ng-controller="demoCtrl">
     <h1>Modify project</h1>
     <hr>
 
@@ -14,7 +14,8 @@
         <form>
             Project name:
             <br>
-            <input type="text" name="project_name" placeholder="ex. Selver"/>
+            <!--<input type="text" name="project_name" />-->
+            <input type="text" value="projectArray[$index].name" ng-model="projectArray[$index].name" ng-blur="updateFieldContent('name', projectArray.name)">
             <br>
             Project category:
             <br>

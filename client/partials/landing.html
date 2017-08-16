@@ -6,9 +6,9 @@
                      class="hero-text russianTextFix">
                     <h1>{{oneArray.LANDINGTITLE1}}</h1>
                     <div class="yellow">
-                        <p>{{ 'LANDINGMESSAGE' | translate }}</p>
+                        <p>{{oneArray.LANDINGMESSAGE}}</p>
                     </div>
-                    <h1>{{ 'LANDINGTITLE2' | translate }}</h1>
+                    <h1>{{oneArray.LANDINGTITLE2}}</h1>
                 </div>
                 <a scroll-to-bookmark="introduction" class="col-md-12">{{ 'LANDINGBUTTON2' | translate }} <i
                         class="arrow right"></i></a>
@@ -93,7 +93,7 @@
         <div id="introduction" class="col-md-5">
             <div class="intro-text">
                 <h1 class="col-md-12">{{ 'SIDEMENUINTRO' | translate }}</h1>
-                <p class="col-md-12 intro-paragraph">{{ 'INTROTEXT' | translate }}</p>
+                <p class="col-md-12 intro-paragraph">{{oneArray.INTROTEXT}}</p>
             </div>
         </div>
 
@@ -108,11 +108,11 @@
                     <div class="col-md-12 inspect i-pirn text-center">
                         <div class="col-md-12">
                             <h1>
-                                {{ 'INTROSUBHEADING1' | translate }}
+                                {{oneArray.INTROSUBHEADING1}}
                             </h1>
                         </div>
                         <div class="col-md-12">
-                            <p>{{ 'INTROSUBTEXT1' | translate }}</p>
+                            <p>{{oneArray.INTROSUBTEXT1}}</p>
                         </div>
                     </div>
                 </div>
@@ -124,11 +124,11 @@
                     <div class="col-md-12 inspect i-kilp">
                         <div class="col-md-12">
                             <h1>
-                                {{ 'INTROSUBHEADING2' | translate }}
+                                {{oneArray.INTROSUBHEADING2}}
                             </h1>
                         </div>
                         <div class="col-md-12 ">
-                            <p>{{ 'INTROSUBTEXT2' | translate }}</p>
+                            <p>{{oneArray.INTROSUBTEXT2}}</p>
                         </div>
                     </div>
                 </div>
@@ -142,11 +142,13 @@
                     <div class="col-md-12 inspect i-moodik">
                         <div class="col-md-12">
                             <h1>
-                                {{ 'INTROSUBHEADING3' | translate }}
+                                {{oneArray.INTROSUBHEADING3}}
                             </h1>
                         </div>
                         <div class="col-md-12 ">
-                            <p>{{ 'INTROSUBTEXT3' | translate }}</p>
+                            <p>
+                                {{oneArray.INTROSUBTEXT3}}
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -158,11 +160,13 @@
                     <div class="col-md-12 inspect i-planeerija">
                         <div class="col-md-12">
                             <h1>
-                                {{ 'INTROSUBHEADING4' | translate }}
+                                {{oneArray.INTROSUBHEADING4}}
                             </h1>
                         </div>
                         <div class="col-md-12">
-                            <p>{{ 'INTROSUBTEXT4' | translate }}</p>
+                            <p>
+                                {{oneArray.INTROSUBTEXT4}}
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -173,27 +177,31 @@
     <div scroll-bookmark="team" class="team">
         <div class="col-md-12">
             <div class="team-info col-md-8">
-                <h1 class="col-md-12">{{ 'SIDEMENUCREW' | translate }}</h1>
-                <p class="col-md-12">{{ 'CREWTEXT' | translate }}</p>
+                <h1 class="col-md-12">
+                    {{ 'SIDEMENUCREW' | translate }}
+                </h1>
+                <p class="col-md-12">
+                    {{oneArray.CREWTEXT}}
+                </p>
             </div>
             <div class="people col-md-4">
                 <div class="col-md-12 person">
-                    <h3 class="col-md-12">Priit Laur</h3>
+                    <h3 class="col-md-12">{{oneArray.CREWNAME1}}</h3>
                     <img class="name-pics1" src="img/Char_grey.png">
-                    <p class="col-md-12">{{ 'CREWPOS1' | translate }}</p>
-                    <p class="col-md-12">priit.laur@elektrosystem.ee</p>
+                    <p class="col-md-12">{{oneArray.CREWPOS1}}</p>
+                    <p class="col-md-12">{{oneArray.CREWMAIL1}}</p>
                 </div>
                 <div class="col-md-12 person">
-                    <h3 class="col-md-12">Marco Kruustük</h3>
+                    <h3 class="col-md-12">{{oneArray.CREWNAME2}}</h3>
                     <img class="name-pics" src="img/Char_fists.png">
-                    <p class="col-md-12">{{ 'CREWPOS2' | translate }}</p>
-                    <p class="col-md-12">marco.kruustuk@elektrosystem.ee</p>
+                    <p class="col-md-12">{{oneArray.CREWPOS2}}</p>
+                    <p class="col-md-12">{{oneArray.CREWMAIL2}}</p>
                 </div>
                 <div class="col-md-12 person">
-                    <h3 class="col-md-12">Sander Seene</h3>
+                    <h3 class="col-md-12">{{oneArray.CREWNAME3}}</h3>
                     <img class="name-pics2" src="img/dude.png">
-                    <p class="col-md-12">{{ 'CREWPOS3' | translate }}</p>
-                    <p class="col-md-12">sander.seene@elektrosystem.ee</p>
+                    <p class="col-md-12">{{oneArray.CREWPOS3}}</p>
+                    <p class="col-md-12">{{oneArray.CREWMAIL3}}</p>
                 </div>
             </div>
         </div>
@@ -285,9 +293,9 @@
                 </div>
             </div>
             <div class="info-box">
-                <h4>{{ 'CONTACTPHONE' | translate }}: +372 7366019</h4>
-                <h4>{{ 'CONTACTEMAIL' | translate }}: info@elektrosystem.ee</h4>
-                <h4>{{ 'CONTACTADDRESS' | translate }}: Tähe 127c, Tartu</h4>
+                <h4>{{ 'CONTACTPHONE' | translate }}:{{oneArray.PHONE}}</h4>
+                <h4>{{ 'CONTACTEMAIL' | translate }}: {{oneArray.MAIL}}</h4>
+                <h4>{{ 'CONTACTADDRESS' | translate }}: {{oneArray.ADDRESS}}</h4>
 
             </div>
             <div class="contact-information">
@@ -313,24 +321,32 @@
                 </div>
             </div>
         </div>
-        <!--<img class="dude" src="img/dude1.png">-->
-        <!--<h3 class="dude-text first">Külastage meid Tartus, Tähe 127c!</h3>
-        <h3 class="dude-text second">Või võtke meiega ühendust</h3>
-    -->
     </div>
 </div>
 
-<div class="hidden-md hidden-lg jumpFix">
+<div class="hidden-md hidden-lg jumpFix" ng-controller="demoCtrl">
     <div class="container-fluid ">
         <div class="row">
             <div class="col-xs-12 landingM">
-                <div class="col-xs-10 center-block brand"></div>
+                <div class="col-xs-10 center-block brand" ng-controller="mMenuCtrl">
+                    <button ng-click="toggleMmenu()" class="MmenuOpen"><span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span></button>
+                </div>
+                <div class="wrapper" ng-show="mMenu">
+                    <div class="point-side"></div>
+                    <div class="widget-2">
+                        <div class="lang-nav lang-navM text-center" ng-controller="mingiAsiCtrl">
+                            <button ng-click="lang('et')">Et</button>
+                            <button ng-click="lang('en')">En</button>
+                            <button ng-click="lang('ru')">Ru</button>
+                        </div>
+                    </div>
+                </div>
                 <div class="col-xs-12 landingM banner-blue text-center">
-                    <div class="hero-textM">
-                        <h1>{{ 'LANDINGTITLE1' | translate }}</h1>
-                        <h1 class="yellowM">{{ 'LANDINGMESSAGE' | translate }}</h1>
-                        <h1 class="heading2">{{ 'LANDINGTITLE2' | translate }}</h1>
-                        <a scroll-to-bookmark="introduction">{{ 'LANDINGBUTTON2' | translate }} <i
+                    <div class="hero-textM" ng-controller="scrollController">
+                        <h1>{{oneArray.LANDINGTITLE1}}</h1>
+                        <h1 class="yellowM">{{oneArray.LANDINGMESSAGE}}</h1>
+                        <h1 class="heading2">{{oneArray.LANDINGTITLE2}}</h1>
+                        <a ng-click="gotoTutvustus()">{{ 'LANDINGBUTTON2' | translate }} <i
                                 class="arrow right"></i></a>
                     </div>
                 </div>
@@ -348,28 +364,28 @@
         </div>
     </div>
 
-    <div class="container-fluid ">
+    <div scroll-bookmark="introductionM" class="container-fluid ">
         <div class="row">
             <div class="col-xs-12 landingM banner-right text-center">
                 <div class="row">
                     <h1 class="container-heading">{{ 'SIDEMENUINTRO' | translate }}</h1>
                     <div class="col-xs-6 para">
-                        <h1>{{ 'INTROSUBHEADING1' | translate }}</h1>
-                        <p>{{ 'INTROSUBTEXT1' | translate }}</p>
+                        <h1>{{oneArray.INTROSUBHEADING1}}</h1>
+                        <p>{{oneArray.INTROSUBTEXT1}}</p>
                     </div>
                     <div class="col-xs-6 para">
-                        <h1>{{ 'INTROSUBHEADING2' | translate }}</h1>
-                        <p>{{ 'INTROSUBTEXT2' | translate }}</p>
+                        <h1>{{oneArray.INTROSUBHEADING2}}</h1>
+                        <p>{{oneArray.INTROSUBTEXT2}}</p>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-xs-6 para">
-                        <h1>{{ 'INTROSUBHEADING3' | translate }}</h1>
-                        <p>{{ 'INTROSUBTEXT3' | translate }}</p>
+                        <h1>{{oneArray.INTROSUBHEADING3}}</h1>
+                        <p>{{oneArray.INTROSUBTEXT3}}</p>
                     </div>
                     <div class="col-xs-6 para">
-                        <h1>{{ 'INTROSUBHEADING4' | translate }}</h1>
-                        <p>{{ 'INTROSUBTEXT4' | translate }}</p>
+                        <h1>{{oneArray.INTROSUBHEADING4}}</h1>
+                        <p>{{oneArray.INTROSUBTEXT4}}</p>
                     </div>
                 </div>
             </div>
@@ -381,22 +397,22 @@
                 <h1 class="container-heading">{{ 'SIDEMENUCREW' | translate }}</h1>
                 <div class="peopleM col-xs-12">
                     <div class="col-xs-12 person">
-                        <h1 class="col-xs-12 name-heading">Priit Laur</h1>
+                        <h1 class="col-xs-12 name-heading">{{oneArray.CREWNAME1}}</h1>
                         <img class="name-picsM" src="img/Char_grey.png">
-                        <p class="col-xs-12">{{ 'CREWPOS1' | translate }}</p>
-                        <p class="col-xs-12">priit.laur@elektrosystem.ee</p>
+                        <p class="col-xs-12">{{oneArray.CREWPOS1}}</p>
+                        <p class="col-xs-12">{{oneArray.CREWMAIL1}}</p>
                     </div>
                     <div class="col-xs-12 person">
-                        <h1 class="col-xs-12 name-heading">Marco Kruustük</h1>
+                        <h1 class="col-xs-12 name-heading">{{oneArray.CREWNAME2}}</h1>
                         <img class="name-picsM" src="img/Char_fists.png">
-                        <p class="col-xs-12">{{ 'CREWPOS2' | translate }}</p>
-                        <p class="col-xs-12">marco.kruustuk@elektrosystem.ee</p>
+                        <p class="col-xs-12">{{oneArray.CREWPOS1}}</p>
+                        <p class="col-xs-12">{{oneArray.CREWMAIL1}}</p>
                     </div>
                     <div class="col-xs-12 person">
-                        <h1 class="col-xs-12 name-heading">Sander Seene</h1>
+                        <h1 class="col-xs-12 name-heading">{{oneArray.CREWNAME3}}</h1>
                         <img class="name-picsM" src="img/dude.png">
-                        <p class="col-xs-12">{{ 'CREWPOS3' | translate }}</p>
-                        <p class="col-xs-12">Sander Seene@elektrosystem.ee</p>
+                        <p class="col-xs-12">{{oneArray.CREWPOS1}}</p>
+                        <p class="col-xs-12">{{oneArray.CREWMAIL1}}</p>
                     </div>
                 </div>
             </div>
@@ -458,9 +474,9 @@
                 <div class="row">
                     <h1 class="container-heading">{{ 'SIDEMENUCONTACT' | translate }}</h1>
                     <div class="info-boxM center-block">
-                        <h4>{{ 'CONTACTPHONE' | translate }}: +372 7366019</h4>
-                        <h4>{{ 'CONTACTEMAIL' | translate }}: info@elektrosystem.ee</h4>
-                        <h4>{{ 'CONTACTADDRESS' | translate }}: Tähe 127c, Tartu</h4>
+                        <h4>{{ 'CONTACTPHONE' | translate }}: {{oneArray.PHONE}}</h4>
+                        <h4>{{ 'CONTACTEMAIL' | translate }}: {{oneArray.MAIL}}</h4>
+                        <h4>{{ 'CONTACTADDRESS' | translate }}: {{oneArray.ADDRESS}}</h4>
                     </div>
 
 

@@ -30,6 +30,7 @@ var myApp = angular.module('myApp', [
     'textAngular',
     'contactInfoService',
     'mapCtrl',
+    'mMenuCtrl',
     'landingContactCtrl',
     'addInfo',
     'landingProducts',
@@ -69,7 +70,7 @@ myApp.config(function ($stateProvider, $urlRouterProvider) {
             access: {restricted: false}
         })
         .state('admin.project', {
-            url: '/project',
+            url: '/project/:projectID',
             templateUrl: 'partials/project.html',
             access: {restricted: false}
         })

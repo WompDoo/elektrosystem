@@ -152,6 +152,7 @@ mingiAsiCtrl.controller('mingiAsiCtrl', function ($scope, $rootScope, $translate
     $rootScope.lang = function (key) {
         $rootScope.language = (key);
         $translate.use(key);
+        $rootScope.mMenu = false;
     };
 
 

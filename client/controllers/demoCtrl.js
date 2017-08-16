@@ -9,6 +9,10 @@ demoCtrl.controller('demoCtrl', function ($scope, demoService, $rootScope) {
         $scope.showLanding = !$scope.showLanding;
     }
 
+    demoService.getAll().then(function (data) {
+        $scope.projectArray = data;
+    })
+
 
     $rootScope.$watch('language', function () {
 
@@ -29,8 +33,12 @@ demoCtrl.controller('demoCtrl', function ($scope, demoService, $rootScope) {
         }
     }, true);
 
-    $scope.updateField = function(){
-        demoService.update(ANDMEBAASINIMI, ng-modelNimi).then(function(data){...})
+    $scope.updateFieldContent = function(dbName, model){
+        demoService.updateBlur(dbName, model, $rootScope.language).then(function(data){
+            console.log(data);
+        }, function(err){
+            console.log(err);
+        })
     }
 
 
