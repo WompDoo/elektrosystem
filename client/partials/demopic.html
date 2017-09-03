@@ -1,0 +1,75 @@
+<div class="container">
+    <h1>Modify project</h1>
+    <hr>
+    Project years:
+    <br>
+    <input type="text" name="project_years" ng-model="year" placeholder="ex. 2011-2012"/>
+    <br>
+    <div class="col-md-4">
+        <h2>Estonian texts</h2>
+        <div class="col-md-4">
+            <form>
+                Project name:
+                <br>
+                <input type="text" ng-model="estName">
+                <br>
+                Project category:
+                <br>
+                <input type="text" name="project_category" ng-model="estCat"/>
+                <br>
+                Project description:
+                <br>
+                <textarea ng-model="estDesc " rows="4" cols="50" name="projcet_description"></textarea>
+            </form>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <h2>English texts</h2>
+        <div class="col-md-4">
+            <form>
+                Project name:
+                <br>
+                <!--<input type="text" name="project_name" />-->
+                <input type="text" value="projectArray[$index].name" ng-model="estName"
+                       ng-blur="updateFieldContent('name', projectArray.name)">
+                <br>
+                Project category:
+                <br>
+                <input type="text" name="project_category" placeholder="ex. Toidupoed"/>
+                <br>
+                Project description:
+                <br>
+                <textarea rows="4" cols="50" name="projcet_description"
+                          placeholder="ex. Loodud erinevatel põhjustel..."></textarea>
+            </form>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <h2>Russian texts</h2>
+        <div class="col-md-4">
+            <form>
+                Project name:
+                <br>
+                <!--<input type="text" name="project_name" />-->
+                <input type="text" value="projectArray[$index].name" ng-model="estName"
+                       ng-blur="updateFieldContent('name', projectArray.name)">
+                <br>
+                Project category:
+                <br>
+                <input type="text" name="project_category" placeholder="ex. Toidupoed"/>
+                <br>
+                Project description:
+                <br>
+                <textarea rows="4" cols="50" name="projcet_description"
+                          placeholder="ex. Loodud erinevatel põhjustel..."></textarea>
+            </form>
+        </div>
+    </div>
+    <div class="col-md-12">
+        <h2>Project pictures</h2>
+        <div class="col-md-12">
+            <div class="image-upload"></div>
+        </div>
+    </div>
+</div>

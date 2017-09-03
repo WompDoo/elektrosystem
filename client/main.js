@@ -12,6 +12,7 @@ var myApp = angular.module('myApp', [
     'testtest',
     'projectController',
     'projectViewController',
+    'projectViewCtrl',
     'projectPicturesController',
     'idService',
     'changeProductCtrl',
@@ -37,6 +38,7 @@ var myApp = angular.module('myApp', [
     'productElement',
     'premierController',
     'demoCtrl',
+    'demoPicCtrl',
     'demoService',
     'tweetbutton',
     'dataService'
@@ -78,6 +80,18 @@ myApp.config(function ($stateProvider, $urlRouterProvider) {
             url: '/demo',
             controller: 'demoCtrl',
             templateUrl: 'partials/demo.html',
+            access: {restricted: false}
+        })
+        .state('admin.projectview', {
+            url: '/projectview',
+            templateUrl: 'partials/projectview.html',
+            controller: 'projectViewCtrl',
+            access: {restricted: false}
+        })
+        .state('admin.demopic', {
+            url: '/demopic/:id',
+            templateUrl: 'partials/demopic.html',
+            controller: 'demoPicCtrl',
             access: {restricted: false}
         })
         .state('login', {

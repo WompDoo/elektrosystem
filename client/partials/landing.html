@@ -247,7 +247,7 @@
                         <p class="col-md-6 col-md-offset-4">{{globalTekst}} </p>
                         <hr class="col-md-6 col-md-offset-4">
                         <button scroll-to-bookmark="contact" ng-click="hideProject()"
-                                class="col-md-6 col-md-offset-5 request project-request">{{ 'LANDINGBUTTON1' | translate
+                                class="col-md-6 col-md-offset-5 project-request request ">{{ 'LANDINGBUTTON1' | translate
                             }}
                             <i class="arrow right"></i></button>
                     </div>
@@ -450,15 +450,15 @@
         <div class="row">
             <div class="col-xs-12 landingM partner-bg text-center">
                 <div class="row">
-                    <h1 class="container-heading">{{ 'SIDEMENUPARTNERS' | translate }}</h1>
-                    <div class="slickClassM" ng-controller="CarouselDemoCtrl">
+                    <h1 class="container-heading partnersM text-center">{{ 'SIDEMENUPARTNERS' | translate }}</h1>
+                    <div class="slickClassM slickPartnersM" ng-controller="CarouselDemoCtrl">
                         <slick
                                 infinite="false"
                                 slides-to-show="1"
                                 slides-to-scroll="1"
                                 arrows="false"
                         >
-                            <div class="slick-item slick-overlay partner-item" ng-repeat="slide in slides">
+                            <div class="slick-item slick-overlay partner-itemM" ng-repeat="slide in slides">
                                 <a href="{{slide.link}}"><img class="slick-img center-block" src="{{slide.image}}"/></a>
                             </div>
                         </slick>
