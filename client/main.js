@@ -41,6 +41,7 @@ var myApp = angular.module('myApp', [
     'demoPicCtrl',
     'demoService',
     'tweetbutton',
+    'ngFileUpload',
     'dataService'
 
 ]);

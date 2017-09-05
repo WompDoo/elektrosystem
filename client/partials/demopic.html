@@ -69,7 +69,20 @@
     <div class="col-md-12">
         <h2>Project pictures</h2>
         <div class="col-md-12">
-            <div class="image-upload"></div>
+            <div class="jumbotron">
+                <button ngf-select="uploadFiles($files)" multiple accept="images/*">Upload files</button>
+                <h2>File names</h2>
+                <ul>
+                    <li ng-repeat="f in files">
+                        {{f.name}}
+                    </li>
+                </ul>
+                <ul ng-show="pildidOnOlemas">
+                    <li ng-repeat="i in images">
+                        <img src="i" />
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 </div>

@@ -21,16 +21,6 @@ var rusText = require('../models/rustext.js');
 var project = require('../models/project.js');
 var demoPic = require('../models/demoPic.js');
 
-var storage = multer.diskStorage({
-    destination: path.join(__dirname, '../../client/uploads'),
-    filename: function(req, file, cb) {
-        var extArray = file.mimestype.split('/');
-        var extension = extArray(extArray - 1);
-        cb(null, file.fieldname + Date.now() + '.' + extension)
-    }
-})
-
-var upload = multer({storage: storage})
 
 router.post('/test/demoPic', upload.array('images'), function (req, res) {
     var holder = [];
@@ -39,11 +29,11 @@ router.post('/test/demoPic', upload.array('images'), function (req, res) {
         var temp = {oPath: "", path: ""};
         temp.oPath = req.files[i].path;
         temp.path = '../uploads/' + req.files[i].filename;
-        holer.push(temp);
+        holder.push(temp);
     }
-    for(i = 0; i < holder.length; i++){
+    for(i = 0; i < holder.length; i+s+){
         imageUrls.push(holder[i].path);
-        DempPic.create({
+        demoPic.create({
             originalPath: holder[i].oPath,
             path: holder[i].path
         }, function (err, cb) {
@@ -54,12 +44,12 @@ router.post('/test/demoPic', upload.array('images'), function (req, res) {
     res.status(200).send(imageUrls);
 })
 
-router.get('/test/projectbyid/:project_id', function (req, res) {
+router.get('/test/projectbyid/:id', function (req, res) {
     project.findOne({
-        _id: req.params.project_id
+        _id: req.params.id
     }, function (err, cb) {
         if(err) res.status(500).send(err);
-        res.status(200).send(project);;
+        res.status(200).send(cb);;
     })
 })
 
